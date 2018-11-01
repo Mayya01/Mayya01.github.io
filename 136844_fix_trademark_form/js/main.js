@@ -1826,7 +1826,6 @@ var ShowContent = {
 
 	showContent: function (e) {
 		e.preventDefault();
-		console.log(5);
 
 		var needScroll = false;
 		if (!$(e.currentTarget).hasClass('open') && $(e.currentTarget).data('scroll-to')) {
@@ -2481,132 +2480,6 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
-var DisputesSlider = {
-	el: '.js-disputes-slider-lp',
-	name: 'DisputesSlider',
-	slider: null,
-	initialize: function () {
-		this.slider=this.$el.bxSlider({
-			slideMargin: 20,
-			//adaptiveHeight: true,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(DisputesSlider);
-
-var MainNavView = {
-    el: '.js-main-nav',
-    name: 'MainNavView',
-    initialize: function() {
-        this.mainNavBtn = this.$('.js-main-nav__btn');
-        this.mainNavList = this.$('.js-main-nav__list');
-        this.mainNavOffsetTop = this.$el.offset().top;
-        this.mainNavHeight = this.$el.outerHeight();
-
-        var self = this;
-
-        $(window).bind('resize', function () {
-            self.mainNavOffsetTop = self.$el.offset().top;
-        });
-
-        $(window).bind('scroll', function () {
-            self.fixedNav();
-        });
-    },
-
-    events: {
-        'click .js-main-nav__btn': 'toggleNav'
-    },
-
-    toggleNav: function() {
-        this.mainNavList.toggleClass('main-nav__list--open')
-    },
-
-    fixedNav: function() {
-        if ( $(window).scrollTop() > this.mainNavOffsetTop) {
-            this.$el.addClass('main-nav--fixed');
-        } else {
-            this.$el.removeClass('main-nav--fixed');
-        }
-    }
-};
-
-App.Control.install(MainNavView);
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true
-        });
-    }
-};
-
-App.Control.install(MainSlider);
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
-
-var VisitedPages = {
-	el: '.js-visited-pages',
-	name: 'VisitedPages',
-
-	initialize: function() {
-		this.mainSlider = $('.main-slider');
-		this.mainSliderOffsetTop = this.mainSlider.offset().top;
-		this.mainSliderHeight = this.mainSlider.outerHeight();
-
-		this.container = this.$el.parent('.container');
-		this.containerWidth = this.container.outerWidth();
-		this.elWidth = ($(window).width() - this.containerWidth) / 2;
-
-		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
-
-		var self = this;
-
-		this.setStickyBlockWidth();
-
-		$(window).bind('resize', function() {
-			self.elWidth = ($(window).width() - self.containerWidth) / 2;
-			self.setStickyBlockWidth();
-		});
-
-		$(window).bind('scroll', function() {
-			self.stickyOnScroll();
-		});
-	},
-
-	setStickyBlockWidth: function() {
-		this.$el.css({'width': this.elWidth});
-	},
-
-	stickyOnScroll: function() {
-		if($(window).scrollTop() >= this.pushPoint) {
-			this.$el.addClass('visited-pages--fixed');
-		} else {
-			this.$el.removeClass('visited-pages--fixed');
-		}
-	}
-};
-
-App.Control.install(VisitedPages);
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
@@ -2790,16 +2663,16 @@ App.Control.install({
 
 		this.iAr = 1;
 
+		this.count = 0;
+
 		this.inputName = this.$el.data('name');
 
 		if (this.$el.data('icon') || this.$el.data('inner-file')) {
-			if (this.$el.data('text')) {
+			if (this.$el.data('multiple-text')) {
 				this.$inputButton = $(document.createElement('span'))
 					.addClass('dotted dotted--has-clip-icon')
 					.html('или выберите несколько изображений для загрузки')
 					.prependTo(this.$el);
-				this.$('input[type=file]')
-					.attr('accept', 'image/jpeg,image/png,image/gif');
 			} else {
 				this.$inputButton = $(document.createElement('span'))
 					.addClass('dotted dotted--has-clip-icon')
@@ -2843,44 +2716,86 @@ App.Control.install({
 		$lastInput.trigger('click');
 		$lastInput.one('change', function () {
 			if (!_.isEmpty($lastInput.val())) {
-				self.addtitionsFile2List($(this));
+				var $dataMultiple = $(this).is('[data-multiple]');
+				self.addtitionsFile2List($(this), $dataMultiple);
+
 			} else {
 				$(this).off();
 			}
 		});
 	},
-	addtitionsFile2List: function ($input) {
+	addtitionsFile2List: function ($input, $dataMultiple) {
 		var self = this,
-			addFilePath = $input.val().replace('C:\\fakepath\\', '');
+			addFilePath = $input.val().replace('C:\\fakepath\\', ''),
 
-		$inputIndex = this.$el.find('input[type=file]').index($input);
+			$inputIndex = this.$el.find('input[type=file]').index($input);
+
 		if (_.isUndefined(this.$fileList.find('.input-multifile__file-item').get($inputIndex))) {
 
-			var $itemFileRemoveBtn = $(document.createElement('span'))
-				.addClass('input-multifile__file-item-remove')
-				.html('&times;')
-				.one('click', function () {
-					self.removeFile4List($(this));
-				});
 
-			var $itemFileName = $(document.createElement('span'))
-				.addClass('input-multifile__file-item-name')
-				.html(addFilePath);
+			if (!$dataMultiple) {
+				self.addFileList(addFilePath, $dataMultiple);
+			} else {
+				var fileList = $input[0].files;
+				var file,filePath;
+				console.log(fileList)
+				
+				
+				//получить
+				self.getNumber();
+				
+				for (var i = 0; i < fileList.length; i++) {
+					this.count++;
+					file = fileList[i];
+					filePath = file.name.replace('C:\\fakepath\\', '');
+					self.addFileList(filePath, $dataMultiple);
 
-			var $fileItem = $(document.createElement('div'))
-				.addClass('input-multifile__file-item')
-				.append($itemFileName)
-				.append($itemFileRemoveBtn)
-				.appendTo(this.$fileList);
+				}
 
-			var $nextFileInput = $(document.createElement('input'))
-				.attr('type', 'file')
-				.attr('name', this.inputName + '[' + (this.iAr++) + ']')
-				.addClass('file-hidden')
-				.appendTo(this.$el);
+			}
 
 		} else
 			return null;
+
+	},
+	getNumber:function(){
+		console.log(this.$fileList);
+	},
+	addFileList: function ($fileName, data) {
+		var self = this;
+		var $itemFileRemoveBtn = $(document.createElement('span'))
+			.addClass('input-multifile__file-item-remove')
+			.html('&times;')
+			.one('click', function () {
+				self.removeFile4List($(this));
+			});
+
+		var $itemFileName = $(document.createElement('span'))
+			.addClass('input-multifile__file-item-name')
+			.html($fileName);
+
+		var $fileItem = $(document.createElement('div'))
+			.addClass('input-multifile__file-item')
+			.append($itemFileName)
+			.append($itemFileRemoveBtn)
+			.appendTo(this.$fileList);
+
+		var $nextFileInput = $(document.createElement('input'))
+			.attr('type', 'file')
+			.attr('name', this.inputName + '[' + (this.iAr++) + ']')
+			.addClass('file-hidden')
+			.appendTo(this.$el);
+
+		//this.count++;
+
+
+		if (data) {
+			$nextFileInput
+				.attr('multiple', 'multiple')
+				.attr('accept', 'image/jpeg,image/png,image/gif')
+				.attr('data-multiple', 'true');
+
+		}
 
 	},
 	removeFile4List: function ($removeBtn) {
@@ -3002,3 +2917,129 @@ App.Control.install({
             return $();
     }
 });
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
+var MainNavView = {
+    el: '.js-main-nav',
+    name: 'MainNavView',
+    initialize: function() {
+        this.mainNavBtn = this.$('.js-main-nav__btn');
+        this.mainNavList = this.$('.js-main-nav__list');
+        this.mainNavOffsetTop = this.$el.offset().top;
+        this.mainNavHeight = this.$el.outerHeight();
+
+        var self = this;
+
+        $(window).bind('resize', function () {
+            self.mainNavOffsetTop = self.$el.offset().top;
+        });
+
+        $(window).bind('scroll', function () {
+            self.fixedNav();
+        });
+    },
+
+    events: {
+        'click .js-main-nav__btn': 'toggleNav'
+    },
+
+    toggleNav: function() {
+        this.mainNavList.toggleClass('main-nav__list--open')
+    },
+
+    fixedNav: function() {
+        if ( $(window).scrollTop() > this.mainNavOffsetTop) {
+            this.$el.addClass('main-nav--fixed');
+        } else {
+            this.$el.removeClass('main-nav--fixed');
+        }
+    }
+};
+
+App.Control.install(MainNavView);
+var DisputesSlider = {
+	el: '.js-disputes-slider-lp',
+	name: 'DisputesSlider',
+	slider: null,
+	initialize: function () {
+		this.slider=this.$el.bxSlider({
+			slideMargin: 20,
+			//adaptiveHeight: true,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(DisputesSlider);
+
+
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true
+        });
+    }
+};
+
+App.Control.install(MainSlider);
+var VisitedPages = {
+	el: '.js-visited-pages',
+	name: 'VisitedPages',
+
+	initialize: function() {
+		this.mainSlider = $('.main-slider');
+		this.mainSliderOffsetTop = this.mainSlider.offset().top;
+		this.mainSliderHeight = this.mainSlider.outerHeight();
+
+		this.container = this.$el.parent('.container');
+		this.containerWidth = this.container.outerWidth();
+		this.elWidth = ($(window).width() - this.containerWidth) / 2;
+
+		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
+
+		var self = this;
+
+		this.setStickyBlockWidth();
+
+		$(window).bind('resize', function() {
+			self.elWidth = ($(window).width() - self.containerWidth) / 2;
+			self.setStickyBlockWidth();
+		});
+
+		$(window).bind('scroll', function() {
+			self.stickyOnScroll();
+		});
+	},
+
+	setStickyBlockWidth: function() {
+		this.$el.css({'width': this.elWidth});
+	},
+
+	stickyOnScroll: function() {
+		if($(window).scrollTop() >= this.pushPoint) {
+			this.$el.addClass('visited-pages--fixed');
+		} else {
+			this.$el.removeClass('visited-pages--fixed');
+		}
+	}
+};
+
+App.Control.install(VisitedPages);
