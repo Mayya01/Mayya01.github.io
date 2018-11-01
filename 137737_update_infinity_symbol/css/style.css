@@ -6447,6 +6447,8 @@ input[type="search"] {
     width: 94px;
     height: 45px;
     background-position: bottom;
+    margin: 0 auto 15px auto;
+    display: block;
   }
 }
 @media (max-width: 1199px) {
