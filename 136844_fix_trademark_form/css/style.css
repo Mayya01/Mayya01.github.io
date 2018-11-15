@@ -9357,7 +9357,7 @@ textarea.field-text__input {
   text-align: center;
   overflow: hidden;
   border: 5px solid #e6ebed;
-  display: block;
+  display: inline-block;
 }
 .logos__item-inner:hover {
   border-bottom-color: #e6ebed;
@@ -17384,6 +17384,9 @@ html [type="button"],
   height: 0.1px !important;
   overflow: hidden !important;
   z-index: -1 !important;
+}
+.input-multifile__highlighted-text {
+  margin-bottom: 15px;
 }
 .input-multifile__file-item {
   padding: 3px 0 4px;
