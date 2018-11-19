@@ -3235,6 +3235,18 @@ input[type="search"] {
     font-size: 114.3%;
   }
 }
+.hidden {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+}
 .nobr {
   white-space: nowrap;
 }

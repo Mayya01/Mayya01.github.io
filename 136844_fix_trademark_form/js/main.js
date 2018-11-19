@@ -2497,6 +2497,19 @@ var DisputesSlider = {
 
 App.Control.install(DisputesSlider);
 
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
 
 var MainNavView = {
     el: '.js-main-nav',
@@ -2536,20 +2549,6 @@ var MainNavView = {
 };
 
 App.Control.install(MainNavView);
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
@@ -2606,6 +2605,7 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
+
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
@@ -2793,7 +2793,7 @@ App.Control.install({
 
 
 		this.inputName = this.$el.data('name');
-		this.inputHighlightedText = this.$el.find('.input-multifile__highlighted-text');
+		this.hiddenLink = this.$el.find('.input-multifile-link');
 
 		if (this.$el.data('icon') || this.$el.data('inner-file')) {
 			if (this.$el.data('multiple-text')) {
@@ -2869,26 +2869,21 @@ App.Control.install({
 				var fileList = $input[0].files;
 				var file, filePath, fileSize;
 
-				
-				//for(var y=0; y<fileList.length;y++) {
-					//fileSize = fileList[y].size;
-					//console.log(fileList);
-				//}
-
 				var currentFileLenght = self.getChildLength();
-
 				var terminateSum = currentFileLenght + fileList.length;
-				if (terminateSum <= maxFiles) {
-					this.inputHighlightedText.hide();
+				
+				var checkFileSize = self.checkFileSize(fileList);
+
+				if (terminateSum <= maxFiles && checkFileSize) {
+					//this.inputHighlightedText.hide();
 					for (var i = 0; i < fileList.length; i++) {
 						file = fileList[i];
 						filePath = file.name.replace('C:\\fakepath\\', '');
 						self.addFileList(filePath, $dataMultiple);
 
 					}
-				} else if (terminateSum > maxFiles && this.inputHighlightedText.is(':hidden')) {
-					this.inputHighlightedText.insertBefore(this.$inputButton);
-					this.inputHighlightedText.show();
+				} else if (terminateSum > maxFiles || !checkFileSize) {
+					this.hiddenLink.trigger('click');
 				}
 
 
@@ -2901,6 +2896,23 @@ App.Control.install({
 	getChildLength: function (files) {
 		var parentListChild = this.$el.find('.input-multifile__file-list').children();
 		return parentListChild.length;
+	},
+	checkFileSize: function (fileList) {
+		var file, filePath, fileSizeMg;
+		var arr = [];
+		var maxFileSize=5;
+		for (var i = 0; i < fileList.length; i++) {
+			file = fileList[i];
+			fileSizeMg = file.size/1024/1024;
+			arr.push(fileSizeMg);
+			for(var y =0;y<arr.length;y++) {
+				if(arr[i]>=maxFileSize) {
+					return false;
+				}
+			}
+
+		}
+		return true;
 	},
 
 	addFileList: function ($fileName, data) {
@@ -2950,10 +2962,10 @@ App.Control.install({
 		$fileItem.remove();
 		$input.remove();
 
-		var currentFile = self.getChildLength();
+		/*var currentFile = self.getChildLength();
 		if (currentFile == minFiles) {
 			this.inputHighlightedText.hide();
-		}
+		}*/
 
 
 	}
