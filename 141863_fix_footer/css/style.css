@@ -13983,6 +13983,9 @@ h2.section-lp__title--sr-only {
 .page-footer__location-block:not(:last-child) {
   margin-bottom: 20px;
 }
+.page-footer__location-block--mt40 {
+  margin-top: 40px;
+}
 @media (min-width: 992px) {
   .page-footer__city-info {
     margin-left: -18px;
