@@ -2497,20 +2497,6 @@ var DisputesSlider = {
 
 App.Control.install(DisputesSlider);
 
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
 
 var MainNavView = {
     el: '.js-main-nav',
@@ -2606,6 +2592,20 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
