@@ -2487,6 +2487,7 @@ var DisputesSlider = {
 	initialize: function () {
 		this.slider=this.$el.bxSlider({
 			slideMargin: 20,
+			//mode:'fade',
 			//adaptiveHeight: true,
 			infiniteLoop: true
 		});
@@ -2550,6 +2551,19 @@ var MainNavView = {
 };
 
 App.Control.install(MainNavView);
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
@@ -2593,19 +2607,6 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true
-        });
-    }
-};
-
-App.Control.install(MainSlider);
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
