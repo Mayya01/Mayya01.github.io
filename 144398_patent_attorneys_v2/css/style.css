@@ -21013,7 +21013,7 @@ span.que-lp::after {
   fill: #ff1037 !important;
 }
 
-.vertical-tabs-lp__tab.is-active svg#icon-scroll path {
+/*.vertical-tabs-lp__tab.is-active svg#icon-scroll path {
   fill: #ff1037 !important;
 }
 
@@ -21024,7 +21024,7 @@ span.que-lp::after {
 
 .vertical-tabs-lp__tab.is-active path {
   fill: #ff1037 !important;
-}
+}*/
 @media (min-width: 992px) {
   .vertical-tabs-lp__tab {
     height: 102px;
