@@ -11604,6 +11604,28 @@ textarea.field-text__input {
 .process-slider__btn.is-hide {
   display: none;
 }
+.product-card {
+  max-width: 360px;
+}
+.product-card__img-holder img {
+  vertical-align: middle;
+}
+.product-card__info-wrapper {
+  padding: 35px 30px 50px 30px;
+  background-color: #f5f6fa;
+  text-align: center;
+}
+.product-card__title {
+  font-family: "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.2;
+  margin-bottom: 22px;
+  font-size: 1.764705882352941em;
+}
+@media (min-width: 768px) {
+  .product-card__title {
+    font-size: 2.142857142857143em;
+  }
+}
 .promo-post {
   position: relative;
   height: 255px;
@@ -20987,7 +21009,7 @@ span.que-lp::after {
     background-size: 356px 3852px;
   }
 }
-.vertical-tabs-lp__tab.is-active svg {
+.vertical-tabs-lp__tab.is-active path {
   fill: #ff1037;
 }
 @media (min-width: 992px) {
@@ -21126,28 +21148,6 @@ span.que-lp::after {
 @media (min-width: 1200px) {
   .vertical-tabs-lp__col .unstyled-links-list__link {
     font-size: 1.714285714285714em;
-  }
-}
-.product-card {
-  max-width: 360px;
-}
-.product-card__img-holder img {
-  vertical-align: middle;
-}
-.product-card__info-wrapper {
-  padding: 35px 30px 50px 30px;
-  background-color: #f5f6fa;
-  text-align: center;
-}
-.product-card__title {
-  font-family: "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.2;
-  margin-bottom: 22px;
-  font-size: 1.764705882352941em;
-}
-@media (min-width: 768px) {
-  .product-card__title {
-    font-size: 2.142857142857143em;
   }
 }
 .video img {

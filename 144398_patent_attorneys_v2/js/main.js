@@ -2480,6 +2480,7 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
+
 var DisputesSlider = {
 	el: '.js-disputes-slider-lp',
 	name: 'DisputesSlider',
@@ -2497,7 +2498,6 @@ var DisputesSlider = {
 };
 
 App.Control.install(DisputesSlider);
-
 
 var InfoSlider = {
 	el: '.js-info-slider',
