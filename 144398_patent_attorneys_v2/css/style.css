@@ -21009,7 +21009,7 @@ span.que-lp::after {
     background-size: 356px 3852px;
   }
 }
-.vertical-tabs-lp__tab.is-active svg#icon-scroll {
+.vertical-tabs-lp__tab.is-active svg {
   fill: #ff1037 !important;
 }
 
