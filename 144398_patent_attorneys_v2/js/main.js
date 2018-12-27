@@ -1854,6 +1854,7 @@ var ShowContent = {
 			this.dataTarget = $(e.currentTarget).attr('data-attribute');
 			$('[data-target=' + this.dataTarget + ']').slideToggle();
 		}
+		
 
 		//Если скрытая информация должна скрывать только на мобильных разрешениях
 		//Если кнопка-триггер есть только на мобильных разрешениях
@@ -2480,23 +2481,6 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
-var DisputesSlider = {
-	el: '.js-info-slider-lp',
-	name: 'DisputesSlider',
-	slider: null,
-	initialize: function () {
-		this.slider=this.$el.bxSlider({
-			slideMargin: 20,
-			//mode:'fade',
-			//adaptiveHeight: true,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(DisputesSlider);
 
 var InfoSlider = {
 	el: '.js-info-slider',
@@ -2511,6 +2495,23 @@ var InfoSlider = {
 	}
 };
 App.Control.install(InfoSlider);
+
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
 
 var MainNavView = {
     el: '.js-main-nav',
@@ -2563,7 +2564,6 @@ var MainSlider = {
 };
 
 App.Control.install(MainSlider);
-
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
