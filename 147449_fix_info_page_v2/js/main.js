@@ -2481,6 +2481,23 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
+
 
 var InfoSlider = {
 	el: '.js-info-slider',
@@ -2496,6 +2513,19 @@ var InfoSlider = {
 };
 App.Control.install(InfoSlider);
 
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 var MainNavView = {
     el: '.js-main-nav',
     name: 'MainNavView',
@@ -2534,36 +2564,6 @@ var MainNavView = {
 };
 
 App.Control.install(MainNavView);
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true
-        });
-    }
-};
-
-App.Control.install(MainSlider);
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
