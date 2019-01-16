@@ -2499,20 +2499,6 @@ var InfoSliderLp = {
 App.Control.install(InfoSliderLp);
 
 
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
@@ -2526,44 +2512,6 @@ var MainSlider = {
 };
 
 App.Control.install(MainSlider);
-var MainNavView = {
-    el: '.js-main-nav',
-    name: 'MainNavView',
-    initialize: function() {
-        this.mainNavBtn = this.$('.js-main-nav__btn');
-        this.mainNavList = this.$('.js-main-nav__list');
-        this.mainNavOffsetTop = this.$el.offset().top;
-        this.mainNavHeight = this.$el.outerHeight();
-
-        var self = this;
-
-        $(window).bind('resize', function () {
-            self.mainNavOffsetTop = self.$el.offset().top;
-        });
-
-        $(window).bind('scroll', function () {
-            self.fixedNav();
-        });
-    },
-
-    events: {
-        'click .js-main-nav__btn': 'toggleNav'
-    },
-
-    toggleNav: function() {
-        this.mainNavList.toggleClass('main-nav__list--open')
-    },
-
-    fixedNav: function() {
-        if ( $(window).scrollTop() > this.mainNavOffsetTop) {
-            this.$el.addClass('main-nav--fixed');
-        } else {
-            this.$el.removeClass('main-nav--fixed');
-        }
-    }
-};
-
-App.Control.install(MainNavView);
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
@@ -2607,6 +2555,58 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
+var MainNavView = {
+    el: '.js-main-nav',
+    name: 'MainNavView',
+    initialize: function() {
+        this.mainNavBtn = this.$('.js-main-nav__btn');
+        this.mainNavList = this.$('.js-main-nav__list');
+        this.mainNavOffsetTop = this.$el.offset().top;
+        this.mainNavHeight = this.$el.outerHeight();
+
+        var self = this;
+
+        $(window).bind('resize', function () {
+            self.mainNavOffsetTop = self.$el.offset().top;
+        });
+
+        $(window).bind('scroll', function () {
+            self.fixedNav();
+        });
+    },
+
+    events: {
+        'click .js-main-nav__btn': 'toggleNav'
+    },
+
+    toggleNav: function() {
+        this.mainNavList.toggleClass('main-nav__list--open')
+    },
+
+    fixedNav: function() {
+        if ( $(window).scrollTop() > this.mainNavOffsetTop) {
+            this.$el.addClass('main-nav--fixed');
+        } else {
+            this.$el.removeClass('main-nav--fixed');
+        }
+    }
+};
+
+App.Control.install(MainNavView);
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
