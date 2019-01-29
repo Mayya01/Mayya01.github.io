@@ -2481,6 +2481,23 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
+var DisputesSlider = {
+	el: '.js-disputes-slider-lp',
+	name: 'DisputesSlider',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(DisputesSlider);
+
 
 var InfoSlider = {
 	el: '.js-info-slider',
@@ -2534,23 +2551,6 @@ var MainNavView = {
 };
 
 App.Control.install(MainNavView);
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
