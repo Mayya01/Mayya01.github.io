@@ -346,12 +346,17 @@ App.Control.install({
 	name: 'FancyMedia',
 	initialize: function () {
 		var self = this;
+		if(this.$el.is('[data-fullscreen]')) {
+			this.padding = 0;
+		} else {
+			this.padding = 15;
+		}
 		var fitToView = this.$el.data('fullsize') ? false : true;
 		this.$el.fancybox({
 			wrapCSS: 'fancy-media',
 			margin: ($(window).width() > 937) ? 20 : 5,
 			fitToView: fitToView,
-			padding: 15,
+			padding: self.padding,
 			autoResize: true,
 			maxWidth: '100%',
 			helpers: {
@@ -2481,6 +2486,21 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
+
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
 var DisputesSlider = {
 	el: '.js-disputes-slider-lp',
 	name: 'DisputesSlider',
@@ -2497,21 +2517,6 @@ var DisputesSlider = {
 };
 
 App.Control.install(DisputesSlider);
-
-
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
 
 var MainNavView = {
     el: '.js-main-nav',
@@ -2607,6 +2612,23 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
+
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
