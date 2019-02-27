@@ -300,11 +300,10 @@ var EqualHeight = {
 
 			if (blockHeight > maxHeight) {
 				maxHeight = blockHeight;
-				//console.log(maxHeight);
 			}
 		});
 
-		this.block.css('height', maxHeight);
+		 this.block.css('height', maxHeight);
 
 		if (isActive) {
 			var newMaxHeight = maxHeight + 20;
@@ -2088,6 +2087,12 @@ var SliderPriceCards = {
 	},
 
 	initSlider: function() {
+		var self = this;
+		if(this.$el.is('[data-adaptive-height]') && $(window).outerWidth() < 768) {
+			this.adaptive = true;
+		} else {
+			this.adaptive = false;
+		}
 		if(!this.slider) {
 			this.slider = this.$el.bxSlider({
 				pager: false,
@@ -2097,7 +2102,7 @@ var SliderPriceCards = {
 				maxSlides: 1,
 				infiniteLoop: true,
 				startSlide: 1,
-				adaptiveHeight:true
+				adaptiveHeight:self.adaptive
 			});
 		}
 	},
@@ -2488,20 +2493,6 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
 var DisputesSlider = {
 	el: '.js-disputes-slider-lp',
 	name: 'DisputesSlider',
@@ -2518,6 +2509,24 @@ var DisputesSlider = {
 };
 
 App.Control.install(DisputesSlider);
+
+
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
 
 var MainNavView = {
     el: '.js-main-nav',
@@ -2557,24 +2566,33 @@ var MainNavView = {
 };
 
 App.Control.install(MainNavView);
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
 	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
 		});
 	}
+};
+App.Control.install(InfoSlider);
 
-
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true
+        });
+    }
 };
 
-App.Control.install(InfoSliderLp);
-
-
+App.Control.install(MainSlider);
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
@@ -2618,19 +2636,6 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true
-        });
-    }
-};
-
-App.Control.install(MainSlider);
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
