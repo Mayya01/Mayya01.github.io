@@ -2096,7 +2096,8 @@ var SliderPriceCards = {
 				minSlides: 1,
 				maxSlides: 1,
 				infiniteLoop: true,
-				startSlide: 1
+				startSlide: 1,
+				adaptiveHeight:true
 			});
 		}
 	},
@@ -2501,24 +2502,6 @@ var InfoSlider = {
 };
 App.Control.install(InfoSlider);
 
-
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
 var DisputesSlider = {
 	el: '.js-disputes-slider-lp',
 	name: 'DisputesSlider',
@@ -2574,6 +2557,24 @@ var MainNavView = {
 };
 
 App.Control.install(MainNavView);
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
+
+
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
