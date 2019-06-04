@@ -247,11 +247,13 @@ var ExpertsBlock = {
 	events: {
 		'click .js-experts-block__btn': 'activeExperts'
 	},
-	activeExperts: function(evt){
+	activeExperts: function (evt) {
 		var target = $(evt.currentTarget);
+		this.targetId = target.data('id');
 		this.btn.removeClass('experts-block-lp__img-expert--active js-experts-active');
 		target.addClass('experts-block-lp__img-expert--active js-experts-active');
-		this.expertSections.removeClass('is-active').eq(target.index()).addClass('is-active');
+		this.expertSections.removeClass('is-active');
+		$('#' + this.targetId).addClass('is-active');
 	}
 };
 
@@ -2472,7 +2474,7 @@ var ExpertsSlider = {
 	initialize: function () {
 		var self = this;
 		var sliderOpts = {
-			slideMargin: 142,
+			slideMargin: 42,
 			adaptiveHeight :true,
 			onSliderLoad: function (index) {
 				$('.js-experts-slider__slide').eq(index + 1).addClass('active');
@@ -2488,6 +2490,23 @@ var ExpertsSlider = {
 };
 
 App.Control.install(ExpertsSlider);
+
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
 
 var MainNavView = {
     el: '.js-main-nav',
@@ -2540,23 +2559,6 @@ var MainSlider = {
 };
 
 App.Control.install(MainSlider);
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
