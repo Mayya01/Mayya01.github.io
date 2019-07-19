@@ -72,34 +72,40 @@
 		</div>
 	</nav>
 </header>
-<section class="section-lp section-lp--light-gray">
+	<ul class="breadcrumbs-rd">
+		<li><a class="breadcrumbs-rd__link" href="/">Главная</a></li>
+		<li>Заявка на проверку товарного знака</li>
+	</ul>
+<section class="section-lp section-lp--light-gray section-lp--before-breadcrumbs">
 	<div class="container-lg">
+		<h1 class="section-lp__title section-lp__title--lg">Заявка на первичное обследование</h1>
+		<p class="section-lp__h3 text-center">Эксперт бесплатно проведет оценку активов, отправит отчет на почту и свяжется с вами для консультации.</p>
 		<form class="form-rd form-rd--centered font-size-md-15">
 			<div class="form-rd__row">
 				<div class="form-rd__col">
 					<div class="form-rd__group">
-						<label class="form-rd__label" for="name">Имя</label>
-						<input class="form-rd__input-text field-rd field-rd--text" id="name" type="text" name="name">
+						<label class="form-rd__label" for="name">Имя *</label>
+						<input class="form-rd__input-text field-rd field-rd--text" id="name" type="text" name="name" required>
 					</div>
 				</div>
 				<div class="form-rd__col">
 					<div class="form-rd__group">
-						<label class="form-rd__label" for="inn">ИНН</label>
-						<input class="form-rd__input-text field-rd field-rd--text" id="inn" type="text" name="inn">
+						<label class="form-rd__label" for="inn">ИНН *</label>
+						<input class="form-rd__input-text field-rd field-rd--text" id="inn" type="text" name="inn" required>
 					</div>
 				</div>
 			</div>
 			<div class="form-rd__row">
 				<div class="form-rd__col">
 					<div class="form-rd__group">
-						<label class="form-rd__label" for="phone">Телефон</label>
-						<input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ ">
+						<label class="form-rd__label" for="phone">Телефон *</label>
+						<input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
 					</div>
 				</div>
 				<div class="form-rd__col">
 					<div class="form-rd__group">
-						<label class="form-rd__label" for="email">Email</label>
-						<input class="form-rd__input-text field-rd field-rd--text" id="email" type="email" name="email" placeholder="mail@mail.ru">
+						<label class="form-rd__label" for="email">Email *</label>
+						<input class="form-rd__input-text field-rd field-rd--text" id="email" type="email" name="email" placeholder="mail@mail.ru" required>
 					</div>
 				</div>
 			</div>
