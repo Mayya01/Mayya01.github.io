@@ -7937,9 +7937,7 @@ textarea.field-text__input {
 .form-rd__textarea {
   width: 100%;
   resize: both;
-  overflow: hidden;
   display: block;
-  padding-bottom: 30px !important;
 }
 .form-rd__btn {
   margin-bottom: 42px;
