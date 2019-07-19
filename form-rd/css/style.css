@@ -12998,6 +12998,18 @@ h2.section-lp__title--white {
 .section-lp__subtitle--white {
   color: #fff;
 }
+.section-lp__subtitle-lg {
+  margin-bottom: 35px;
+  font-family: "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 1.617647058823529em;
+}
+@media (min-width: 768px) {
+  .section-lp__subtitle-lg {
+    font-size: 2.142857142857143em;
+  }
+}
 .section-lp__h3-like {
   font-family: "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.2;
