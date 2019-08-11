@@ -264,8 +264,8 @@ var ExpertsBlock = {
 	activeExperts: function (evt) {
 		var target = $(evt.currentTarget);
 		this.targetId = target.data('id');
-		this.btn.removeClass('experts-block-lp__img-expert--active js-experts-active');
-		target.addClass('experts-block-lp__img-expert--active js-experts-active');
+		this.btn.removeClass('is-active js-experts-active');
+		target.addClass('is-active js-experts-active');
 		this.expertSections.removeClass('is-active');
 		$('#' + this.targetId).addClass('is-active');
 	}
@@ -1132,6 +1132,55 @@ App.Control.extend('FormFabric', {
 	}
 
 });
+
+var ExpertSliderRd = {
+	el: '.js-logos-slider',
+	name: 'ExpertSliderRd',
+	breakpoint: 768,
+	slider: null,
+	scroll: null,
+	elementsCount: 0,
+
+	initialize: function () {
+		var self = this;
+		this.logosSlide = this.$('.js-logos-slider__slide');
+		this.removedElement = this.logosSlide.not(":eq(0)");
+
+		this.renderMode();
+
+		$(window).bind('resize', function () {
+			self.renderMode();
+		});
+	},
+
+	renderMode: function () {
+		var self = this;
+
+		if ($(window).outerWidth() < self.breakpoint) {
+			this.removedElement.detach();
+			self.destroySlider();
+		} else {
+			this.$el.append(this.removedElement);
+			self.initSlider();
+		}
+	},
+
+	initSlider: function () {
+		if (!this.slider) {
+			this.slider = this.$el.bxSlider({
+			});
+		}
+	},
+
+	destroySlider: function () {
+		if (this.slider) {
+			this.slider.destroySlider();
+			this.slider = null;
+		}
+	}
+};
+
+App.Control.install(ExpertSliderRd);
 
 var MainOfficeMap = {
     el: '#main-office',
@@ -2538,6 +2587,78 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
+
+var ExpertSliderRd = {
+	el: '.js-expert-slider-rd',
+	name: 'ExpertSliderRd',
+	breakpoint: 768,
+	slider: null,
+	scroll: null,
+	elementsCount: 0,
+
+	initialize: function () {
+		var self = this;
+		this.movedChild = this.$el.find('.js-experts-block__btn--moved');
+		this.deletedOnMobileElement =this.$el.find('.js-experts-slider__slide--deleted-on-mobile').find('.expert-rd__previews-section');
+
+		this.renderMode();
+
+		$(window).bind('resize', function () {
+			self.renderMode();
+		});
+	},
+
+	renderMode: function () {
+		var self = this;
+
+		if ($(window).outerWidth()< self.breakpoint) {
+			self.destroySlider();
+		} else {
+			self.initSlider();
+		}
+	},
+
+	initSlider: function () {
+		this.movedChild.detach();
+		this.deletedOnMobileElement.append(this.movedChild);
+		
+		if (!this.slider) {
+			this.slider = this.$el.bxSlider({
+				controls: false,
+				pagerCustom: '#bx-pager',
+			});
+		}
+	},
+
+	destroySlider: function () {
+		if (this.slider) {
+			this.slider.destroySlider();
+			this.slider = null;
+		}
+		this.movedChild.detach();
+		$('.js-experts-slider__slide--scroll-on-mobile').find('.expert-rd__previews-section').append(this.movedChild);
+	}
+};
+
+App.Control.install(ExpertSliderRd);
+
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
+
 var ExpertsSlider = {
 	el: '.js-experts-slider',
 	name: 'ExpertsSlider',
@@ -2562,7 +2683,6 @@ var ExpertsSlider = {
 
 App.Control.install(ExpertsSlider);
 
-
 var InfoSlider = {
 	el: '.js-info-slider',
 	name: 'InfoSlider',
@@ -2577,6 +2697,19 @@ var InfoSlider = {
 };
 App.Control.install(InfoSlider);
 
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true,
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 var MainNavView = {
 	el: '.js-main-nav',
 	name: 'MainNavView',
@@ -2603,10 +2736,10 @@ var MainNavView = {
 	},
 
 	toggleNav: function (evt) {
+		this.$el.toggleClass('main-nav--open');
 		this.mainNavList.toggleClass('main-nav__list--open');
 		this.mainNavListWrapper.toggleClass('main-nav__list-wrapper--open');
 		this.mainNavBtn.toggleClass('main-nav__menu-btn--open');
-
 	},
 
 	fixedNav: function () {
@@ -2664,36 +2797,6 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true,
-        });
-    }
-};
-
-App.Control.install(MainSlider);
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
