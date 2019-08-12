@@ -9066,25 +9066,25 @@ textarea.field-text__input {
 .form-card-rd__input-text::-webkit-input-placeholder {
   color: #929fab;
   font-size: 0.933333333333333em;
-  line-height: 1.1;
+  line-height: normal !important;
   font-weight: 700;
 }
 .form-card-rd__input-text:-moz-placeholder {
   color: #929fab;
   font-size: 0.933333333333333em;
-  line-height: 1.1;
+  line-height: normal !important;
   font-weight: 700;
 }
 .form-card-rd__input-text::-moz-placeholder {
   color: #929fab;
   font-size: 0.933333333333333em;
-  line-height: 1.1;
+  line-height: normal !important;
   font-weight: 700;
 }
 .form-card-rd__input-text:-ms-input-placeholder {
   color: #929fab;
   font-size: 0.933333333333333em;
-  line-height: 1.1;
+  line-height: normal !important;
   font-weight: 700;
 }
 .form-card-rd__input-text:hover::-webkit-input-placeholder {
