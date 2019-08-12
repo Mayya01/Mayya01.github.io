@@ -9056,6 +9056,7 @@ textarea.field-text__input {
   border: 1px solid #dde0e9;
   box-shadow: inset 0px 1px 5px #ebedf3;
   padding: 12.5px 5px;
+  line-height: normal !important;
 }
 @media (min-width: 768px) {
   .form-card-rd__input-text {
