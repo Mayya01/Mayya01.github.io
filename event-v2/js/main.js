@@ -2745,6 +2745,19 @@ var ExpertSliderRd = {
 
 App.Control.install(ExpertSliderRd);
 
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
 
 var ExpertsSlider = {
 	el: '.js-experts-slider',
@@ -2786,20 +2799,6 @@ var InfoSliderLp = {
 };
 
 App.Control.install(InfoSliderLp);
-
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
 
 var MainNavView = {
 	el: '.js-main-nav',
@@ -2888,6 +2887,20 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true,
+        });
+    }
+};
+
+App.Control.install(MainSlider);
+
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',
@@ -2986,19 +2999,6 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true,
-        });
-    }
-};
-
-App.Control.install(MainSlider);
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
