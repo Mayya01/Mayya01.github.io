@@ -2691,60 +2691,6 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
-var ExpertSliderRd = {
-	el: '.js-expert-slider-rd',
-	name: 'ExpertSliderRd',
-	breakpoint: 768,
-	slider: null,
-	scroll: null,
-	elementsCount: 0,
-
-	initialize: function () {
-		var self = this;
-		this.movedChild = this.$el.find('.js-experts-block__btn--moved');
-		this.deletedOnMobileElement =this.$el.find('.js-experts-slider__slide--deleted-on-mobile').find('.expert-rd__previews-section');
-
-		this.renderMode();
-
-		$(window).bind('resize', function () {
-			self.renderMode();
-		});
-	},
-
-	renderMode: function () {
-		var self = this;
-
-		if ($(window).outerWidth()< self.breakpoint) {
-			self.destroySlider();
-		} else {
-			self.initSlider();
-		}
-	},
-
-	initSlider: function () {
-		this.movedChild.detach();
-		this.deletedOnMobileElement.append(this.movedChild);
-		
-		if (!this.slider) {
-			this.slider = this.$el.bxSlider({
-				controls: false,
-				pagerCustom: '#bx-pager',
-			});
-		}
-	},
-
-	destroySlider: function () {
-		if (this.slider) {
-			this.slider.destroySlider();
-			this.slider = null;
-		}
-		this.movedChild.detach();
-		$('.js-experts-slider__slide--scroll-on-mobile').find('.expert-rd__previews-section').append(this.movedChild);
-	}
-};
-
-App.Control.install(ExpertSliderRd);
-
 var ExpertsSlider = {
 	el: '.js-experts-slider',
 	name: 'ExpertsSlider',
@@ -2800,6 +2746,60 @@ var InfoSliderLp = {
 };
 
 App.Control.install(InfoSliderLp);
+
+var ExpertSliderRd = {
+	el: '.js-expert-slider-rd',
+	name: 'ExpertSliderRd',
+	breakpoint: 768,
+	slider: null,
+	scroll: null,
+	elementsCount: 0,
+
+	initialize: function () {
+		var self = this;
+		this.movedChild = this.$el.find('.js-experts-block__btn--moved');
+		this.deletedOnMobileElement =this.$el.find('.js-experts-slider__slide--deleted-on-mobile').find('.expert-rd__previews-section');
+
+		this.renderMode();
+
+		$(window).bind('resize', function () {
+			self.renderMode();
+		});
+	},
+
+	renderMode: function () {
+		var self = this;
+
+		if ($(window).outerWidth()< self.breakpoint) {
+			self.destroySlider();
+		} else {
+			self.initSlider();
+		}
+	},
+
+	initSlider: function () {
+		this.movedChild.detach();
+		this.deletedOnMobileElement.append(this.movedChild);
+		
+		if (!this.slider) {
+			this.slider = this.$el.bxSlider({
+				controls: false,
+				pagerCustom: '#bx-pager',
+			});
+		}
+	},
+
+	destroySlider: function () {
+		if (this.slider) {
+			this.slider.destroySlider();
+			this.slider = null;
+		}
+		this.movedChild.detach();
+		$('.js-experts-slider__slide--scroll-on-mobile').find('.expert-rd__previews-section').append(this.movedChild);
+	}
+};
+
+App.Control.install(ExpertSliderRd);
 
 var MainNavView = {
 	el: '.js-main-nav',
@@ -2888,6 +2888,61 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
+var MainSliderRd = {
+	el: '.js-main-slider-rd',
+	name: 'MainSliderRd',
+	breakpoint: 768,
+	slider: null,
+	scroll: null,
+	elementsCount: 0,
+
+	initialize: function () {
+		var self = this;
+		this.slide = this.$('.js-main-slider-rd__slide');
+		this.removedElement = this.slide.not(":eq(0)");
+
+		this.renderMode();
+
+		$(window).bind('resize', function () {
+			self.renderMode();
+		});
+	},
+
+	renderMode: function () {
+		var self = this;
+
+		if ($(window).outerWidth() < self.breakpoint) {
+			this.removedElement.detach();
+			self.destroySlider();
+		} else {
+			this.$el.append(this.removedElement);
+			self.initSlider();
+		}
+	},
+
+	initSlider: function () {
+		if (!this.slider) {
+			this.slider = this.$el.bxSlider({
+				mode: 'fade',
+				pager: false,
+				auto: true,
+				controls:false,
+				pause: 3000,
+				speed:1000
+			});
+		}
+	},
+
+	destroySlider: function () {
+		if (this.slider) {
+			this.slider.destroySlider();
+			this.slider = null;
+		}
+	}
+};
+
+App.Control.install(MainSliderRd);
+
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
@@ -2944,61 +2999,6 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
-var MainSliderRd = {
-	el: '.js-main-slider-rd',
-	name: 'MainSliderRd',
-	breakpoint: 768,
-	slider: null,
-	scroll: null,
-	elementsCount: 0,
-
-	initialize: function () {
-		var self = this;
-		this.slide = this.$('.js-main-slider-rd__slide');
-		this.removedElement = this.slide.not(":eq(0)");
-
-		this.renderMode();
-
-		$(window).bind('resize', function () {
-			self.renderMode();
-		});
-	},
-
-	renderMode: function () {
-		var self = this;
-
-		if ($(window).outerWidth() < self.breakpoint) {
-			this.removedElement.detach();
-			self.destroySlider();
-		} else {
-			this.$el.append(this.removedElement);
-			self.initSlider();
-		}
-	},
-
-	initSlider: function () {
-		if (!this.slider) {
-			this.slider = this.$el.bxSlider({
-				mode: 'fade',
-				pager: false,
-				auto: true,
-				controls:false,
-				pause: 3000,
-				speed:1000
-			});
-		}
-	},
-
-	destroySlider: function () {
-		if (this.slider) {
-			this.slider.destroySlider();
-			this.slider = null;
-		}
-	}
-};
-
-App.Control.install(MainSliderRd);
-
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
