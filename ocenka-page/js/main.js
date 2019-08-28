@@ -2793,20 +2793,21 @@ var ExpertsSlider = {
 
 App.Control.install(ExpertsSlider);
 
-
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true,
-        });
-    }
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
 };
+App.Control.install(InfoSlider);
 
-App.Control.install(MainSlider);
+
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
 	name: 'InfoSliderLp',
@@ -2911,20 +2912,6 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',
@@ -2980,6 +2967,19 @@ var MainSliderRd = {
 
 App.Control.install(MainSliderRd);
 
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true,
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
