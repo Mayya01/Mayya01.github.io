@@ -11454,14 +11454,6 @@ textarea.field-text__input {
     display: block;
   }
 }
-.form-rd--transform-on-mobile .form-rd__group {
-  margin-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .form-rd--transform-on-mobile .form-rd__group {
-    margin-bottom: 27px;
-  }
-}
 .form-rd--transform-on-mobile .form-rd__input-text:not([type="tel"])::-webkit-input-placeholder,
 .form-rd--transform-on-mobile .form-rd__textarea:not([type="tel"])::-webkit-input-placeholder {
   font-size: 1em;
@@ -11599,8 +11591,13 @@ textarea.field-text__input {
   }
 }
 .form-rd__group {
-  margin-bottom: 27px;
   position: relative;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .form-rd__group {
+    margin-bottom: 27px;
+  }
 }
 .form-rd__group--files {
   margin-top: 3px;
@@ -11791,7 +11788,9 @@ textarea.field-text__input {
 .form-rd__btn + .form-rd__agreement-text {
   margin-bottom: 0;
   margin-top: 22px;
-breakpoit-md()
+}
+.form-rd__btn + .form-rd__agreement-text +breakpoiтt-md() {
+  margin-top: 42px;
 }
 .form-rd__btn + .form-rd__guarantee-block {
   margin-top: 29px;
@@ -29925,7 +29924,7 @@ a[href^="tel:"].link-lp--unstyled-white {
   padding-bottom: 10px;
 }
 .modal-rd--sm .modal-rd__bottom {
-  padding: 30px 15px 20px 15px;
+  padding: 30px 0px 20px 0px;
 }
 .modal-table-rd {
   font-size: 1em;
