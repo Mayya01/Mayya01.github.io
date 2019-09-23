@@ -72,6 +72,7 @@ body {
 	height: 22px;
 	font-size: 18px;
 	line-height: 22px;
+	position: relative;
 	position: absolute;
 	top: -30px;
 }
@@ -108,6 +109,11 @@ body {
 .ui-slider-mark--4 {
 	left: 57%;
 }
+
+.ui-slider-mark--4 {
+	left: 57%;
+}
+
 .ui-slider-mark--5 {
 	left: 76%;
 }
@@ -121,6 +127,7 @@ body {
 	left: auto;
 	right: 0;
 }
+
 
 .ui-slider-mark label {
 	position: relative;

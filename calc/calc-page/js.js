@@ -1,12 +1,12 @@
 $(document).ready(function () {
 	var newStep;
-	var sliderValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+	var sliderValue = [10,20,30,40,60,80,100,400,700,1000];
 	$('.js-slider')
 		.slider({
 			step: 1,
 			min: 0,
 			max: sliderValue.length-1,
-			marks: ['до 10', '10', '40', '100', '1000', '1000+'],
+			marks: ['до 10','10', '40', '100', '1000', '1000+'],
 			slide: function (event, ui) {
 				calcSumm(ui.value);
 				if (ui.value <= 6) {
