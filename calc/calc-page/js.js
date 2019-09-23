@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	var newStep;
-	var sliderValue = [10,20,30,40,60,80,100,400,700,1000];
+	var sliderValue = [1,10,20,30,40,60,80,100,400,700,1000];
 	$('.js-slider')
 		.slider({
 			step: 1,
