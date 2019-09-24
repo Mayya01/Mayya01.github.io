@@ -6,7 +6,6 @@ $(document).ready(function () {
 	$('.js-slider__users').html(0 + ' пользователей');
 	$('.js-slider__sum').html('0 ₽ ');
 	$('.tooltip').hide();
-	$('.js-slider').draggable();
 
 
 	$('.js-slider')
@@ -18,7 +17,7 @@ $(document).ready(function () {
 			slide: function (event, ui) {
 				leftStyle= ui.handle.style.left;
 				$('.tooltip').show().css('left',leftStyle);
-				$('.ui-handle').draggable();
+				
 				if (ui.value <= 210) {
 					var num = Math.floor(ui.value / 20);
 					usersNum = getUsersNum(num);
