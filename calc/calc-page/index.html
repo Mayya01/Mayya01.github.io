@@ -4,7 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,16 +14,17 @@
 	<div class="container">
 		<div class="calc">
 			<div class="calc__range">
-				<span>Количество пользователей</span>
+				<span class="calc__users">Количество пользователей</span>
 				<div class="calc__slider">
 					<div class="js-slider">
+						<div class="tooltip"></div>
 					</div>
 				</div>
-				<span>Лимиты запросов к API сервисов внешних интеграций: kad.arbitr.ru, СОЮ, ФССП, ЕФРСБ, Контур.Фокус оплачиваются отдельно.</span>
+				<span>Лимиты запросов к API сервисов внешних интеграций: kad.arbitr.ru, <br> СОЮ, ФССП, ЕФРСБ, Контур.Фокус оплачиваются отдельно.</span>
 			</div>
 			<div class="calc__num">
-				<div class="calc__users js-slider__users">1 пользователей</div>
-				<div class="calc__sum"><span class="js-slider__sum">0</span> ₽</div>
+				<div class="calc__users-num js-slider__users"></div>
+				<div class="calc__sum js-slider__sum"></div>
 				<a href="#" class="btn calc__btn">Получить предложение</a>
 			</div>
 		</div>
@@ -29,6 +32,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="jquery.ui.touch-punch.min.js"></script>
 	<script src="js.js"></script>
 </body>
 
