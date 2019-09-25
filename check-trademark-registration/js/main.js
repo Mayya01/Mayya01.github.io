@@ -560,6 +560,8 @@ App.Control.install({
 	el: '.js-fancy-modal-rd',
 	name: 'FancyModalRd',
 	breakpoint: 768,
+	wrapCss: 'fancy-modal-rd',
+	maxWidth:1030,
 	initialize: function () {
 		var self = this;
 
@@ -570,11 +572,11 @@ App.Control.install({
 		}
 
 		this.$el.fancybox({
-			wrapCSS: 'fancy-modal-rd',
+			wrapCSS: this.wrapCss,
+			maxWidth:this.maxWidth,
 			padding: 0,
 			margin: ($(window).width() > 937) ? 20 : 10,
 			width: '100%',
-			maxWidth: 860,
 			height: 'auto',
 			autoSize: false,
 			fitToView: false,
@@ -588,6 +590,19 @@ App.Control.install({
 			}
 		});
 	}
+});
+
+App.Control.extend('FancyModalRd', {
+	el: '.js-fancy-modal-rd--fixed-btn',
+	wrapCss: 'fancy-modal-rd fancy-modal-rd--fixed-btn',
+	name: 'FancyModalRdFixedBtn',
+	maxWidth: 345
+});
+
+App.Control.extend('FancyModalRd', {
+	el: '.js-fancy-modal-rd--lg',
+	name: 'FancyModalRdFixedBtn',
+	maxWidth: 860
 });
 
 App.Control.install({
@@ -2719,74 +2734,6 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
-var ExpertSliderRd = {
-	el: '.js-expert-slider-rd',
-	name: 'ExpertSliderRd',
-	breakpoint: 768,
-	slider: null,
-	scroll: null,
-	elementsCount: 0,
-
-	initialize: function () {
-		var self = this;
-		this.movedChild = this.$el.find('.js-experts-block__btn--moved');
-		this.deletedOnMobileElement =this.$el.find('.js-experts-slider__slide--deleted-on-mobile').find('.expert-rd__previews-section');
-
-		this.renderMode();
-
-		$(window).bind('resize', function () {
-			self.renderMode();
-		});
-	},
-
-	renderMode: function () {
-		var self = this;
-
-		if ($(window).outerWidth()< self.breakpoint) {
-			self.destroySlider();
-		} else {
-			self.initSlider();
-		}
-	},
-
-	initSlider: function () {
-		this.movedChild.detach();
-		this.deletedOnMobileElement.append(this.movedChild);
-		
-		if (!this.slider) {
-			this.slider = this.$el.bxSlider({
-				controls: false,
-				pagerCustom: '#bx-pager',
-			});
-		}
-	},
-
-	destroySlider: function () {
-		if (this.slider) {
-			this.slider.destroySlider();
-			this.slider = null;
-		}
-		this.movedChild.detach();
-		$('.js-experts-slider__slide--scroll-on-mobile').find('.expert-rd__previews-section').append(this.movedChild);
-	}
-};
-
-App.Control.install(ExpertSliderRd);
-
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
@@ -3259,6 +3206,60 @@ App.Control.install({
             return $();
     }
 });
+var ExpertSliderRd = {
+	el: '.js-expert-slider-rd',
+	name: 'ExpertSliderRd',
+	breakpoint: 768,
+	slider: null,
+	scroll: null,
+	elementsCount: 0,
+
+	initialize: function () {
+		var self = this;
+		this.movedChild = this.$el.find('.js-experts-block__btn--moved');
+		this.deletedOnMobileElement =this.$el.find('.js-experts-slider__slide--deleted-on-mobile').find('.expert-rd__previews-section');
+
+		this.renderMode();
+
+		$(window).bind('resize', function () {
+			self.renderMode();
+		});
+	},
+
+	renderMode: function () {
+		var self = this;
+
+		if ($(window).outerWidth()< self.breakpoint) {
+			self.destroySlider();
+		} else {
+			self.initSlider();
+		}
+	},
+
+	initSlider: function () {
+		this.movedChild.detach();
+		this.deletedOnMobileElement.append(this.movedChild);
+		
+		if (!this.slider) {
+			this.slider = this.$el.bxSlider({
+				controls: false,
+				pagerCustom: '#bx-pager',
+			});
+		}
+	},
+
+	destroySlider: function () {
+		if (this.slider) {
+			this.slider.destroySlider();
+			this.slider = null;
+		}
+		this.movedChild.detach();
+		$('.js-experts-slider__slide--scroll-on-mobile').find('.expert-rd__previews-section').append(this.movedChild);
+	}
+};
+
+App.Control.install(ExpertSliderRd);
+
 var ExpertsSlider = {
 	el: '.js-experts-slider',
 	name: 'ExpertsSlider',
@@ -3283,6 +3284,21 @@ var ExpertsSlider = {
 
 App.Control.install(ExpertsSlider);
 
+
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
 	name: 'InfoSliderLp',
@@ -3300,6 +3316,74 @@ var InfoSliderLp = {
 
 App.Control.install(InfoSliderLp);
 
+var MainSliderRd = {
+	el: '.js-main-slider-rd',
+	name: 'MainSliderRd',
+	breakpoint: 768,
+	slider: null,
+	scroll: null,
+	elementsCount: 0,
+
+	initialize: function () {
+		var self = this;
+		this.slide = this.$('.js-main-slider-rd__slide');
+		this.removedElement = this.slide.not(":eq(0)");
+
+		this.renderMode();
+
+		$(window).bind('resize', function () {
+			self.renderMode();
+		});
+	},
+
+	renderMode: function () {
+		var self = this;
+
+		if ($(window).outerWidth() < self.breakpoint) {
+			this.removedElement.detach();
+			self.destroySlider();
+		} else {
+			this.$el.append(this.removedElement);
+			self.initSlider();
+		}
+	},
+
+	initSlider: function () {
+		if (!this.slider) {
+			this.slider = this.$el.bxSlider({
+				mode: 'fade',
+				pager: false,
+				auto: true,
+				controls:false,
+				pause: 3000,
+				speed:1000
+			});
+		}
+	},
+
+	destroySlider: function () {
+		if (this.slider) {
+			this.slider.destroySlider();
+			this.slider = null;
+		}
+	}
+};
+
+App.Control.install(MainSliderRd);
+
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true,
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 var MainNavView = {
 	el: '.js-main-nav',
 	name: 'MainNavView',
@@ -3430,71 +3514,3 @@ var VisitedPages = {
 };
 
 App.Control.install(VisitedPages);
-
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true,
-        });
-    }
-};
-
-App.Control.install(MainSlider);
-var MainSliderRd = {
-	el: '.js-main-slider-rd',
-	name: 'MainSliderRd',
-	breakpoint: 768,
-	slider: null,
-	scroll: null,
-	elementsCount: 0,
-
-	initialize: function () {
-		var self = this;
-		this.slide = this.$('.js-main-slider-rd__slide');
-		this.removedElement = this.slide.not(":eq(0)");
-
-		this.renderMode();
-
-		$(window).bind('resize', function () {
-			self.renderMode();
-		});
-	},
-
-	renderMode: function () {
-		var self = this;
-
-		if ($(window).outerWidth() < self.breakpoint) {
-			this.removedElement.detach();
-			self.destroySlider();
-		} else {
-			this.$el.append(this.removedElement);
-			self.initSlider();
-		}
-	},
-
-	initSlider: function () {
-		if (!this.slider) {
-			this.slider = this.$el.bxSlider({
-				mode: 'fade',
-				pager: false,
-				auto: true,
-				controls:false,
-				pause: 3000,
-				speed:1000
-			});
-		}
-	},
-
-	destroySlider: function () {
-		if (this.slider) {
-			this.slider.destroySlider();
-			this.slider = null;
-		}
-	}
-};
-
-App.Control.install(MainSliderRd);
