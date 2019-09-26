@@ -3836,7 +3836,7 @@ input[type="tel"] {
   padding: 25px;
 }
 .fancybox-overlay-fixed {
-  z-index: 99999;
+  z-index: 8010;
 }
 .fancy-modal-lp,
 .fancy-modal-lp-sm,
@@ -15458,7 +15458,7 @@ textarea.field-text__input {
     padding-left: 10px;
     padding-right: 10px;
     width: 58.33334%;
-    z-index: 9999;
+    z-index: 8009;
     left: auto;
     top: 10px;
   }
