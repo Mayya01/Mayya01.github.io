@@ -13,6 +13,8 @@ body {
 	margin: 0 auto;
 }
 
+/*Стили для калькулятора*/
+
 .calc {
 	background: linear-gradient(212.65deg, #FBEED1 0%, #F2DCD8 100%);
 	border-radius: 10px;
@@ -22,6 +24,7 @@ body {
 	font-size: 15px;
 	line-height: 22px;
 	margin: 30px 0;
+	position: relative;
 }
 
 .calc__slider {
@@ -31,24 +34,24 @@ body {
 	margin-bottom: 25px;
 }
 
-.calc__range span {
+.calc__range p {
 	color: #8f8787;
 	font-size: 15px;
 	line-height: 22px;
-}
-
-.calc__range {
-	margin-bottom: 25px;
+	display: inline-block;
+	text-align: center;
+	width: 100%;margin: 0;
 }
 
 .calc__btn {
 	width: 100%;
+	margin-bottom: 30px;
 }
 
 .calc__sum {
 	font-weight: 700;
-	font-size: 30px;
-	line-height: 40px;
+	font-size: 40px;
+	line-height: 42px;
 	margin-bottom: 30px;
 }
 
@@ -63,6 +66,10 @@ body {
 	font-size: 20px;
 	line-height: 27px;
 	margin-bottom: 10px;
+}
+
+.calc__num {
+	text-align: center;
 }
 
 .ui-slider {
@@ -201,6 +208,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+
 @media(max-width:767px) {
 	.tooltip {
 		left: 0 !important;
@@ -209,8 +217,9 @@ body {
 }
 
 @media (min-width:768px) {
+
 	.calc {
-		padding: 61px 100px 40px 40px;
+		padding: 40px;
 	}
 
 	.calc::before {
@@ -230,27 +239,16 @@ body {
 		font-size: 15px;
 		line-height: 22px;
 	}
-	
+
 	.tooltip__wrapper::before {
 		left: 35px;
 		margin-left: 0;
 	}
+
 }
 
 @media (min-width:992px) {
-	.calc {
-		display: flex;
-		flex-wrap: wrap;
-	}
 
-	.calc__range {
-		width: 660px;
-		margin-bottom: 0;
-	}
-
-	.calc__num {
-		width: calc(100% - 660px);
-	}
 
 	.calc__sum {
 		font-size: 60px;
@@ -267,11 +265,48 @@ body {
 		line-height: 22px;
 	}
 
-
 	.ui-slider-handle {
 		width: 34px;
 		height: 30px;
 		margin-left: -18px;
+
+	}
+}
+
+@media (min-width:1200px) {
+
+	.calc {
+		padding: 61px 100px 40px 40px;
+	}
+
+	.calc {
+		min-height: 310px;
+	}
+
+	.calc__num {
+		position: absolute;
+		right: 100px;
+		top: 60px;
+		width: 100%;
+		max-width: 380px;
+		text-align: left;
+	}
+
+	.calc__btn {
+		margin-bottom: 0;
+	}
+
+	.calc__range {
+		max-width: 660px;
+		margin-bottom: 0;
+	}
+
+	.calc__range p {
+		text-align: left;
+	}
+
+	.calc__subtitle {
+		max-width: 540px;
 
 	}
 }

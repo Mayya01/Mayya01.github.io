@@ -1,8 +1,7 @@
 $(document).ready(function () {
 	var usersNum;
 	var leftStyle;
-	$('.js-slider__sum').html('0 ₽ ');
-	
+
 	$('.js-slider')
 		.slider({
 			step: 1,
@@ -19,39 +18,36 @@ $(document).ready(function () {
 				$('.tooltip').show().css('left', leftStyle);
 
 				if (ui.value <= 210) {
-					var num = Math.floor(ui.value / 20);
+					var num = Math.ceil(ui.value / 20);
 					usersNum = getUsersNum(num);
 					calcSumm(usersNum);
-					
+
 					setTooltip('Для небольших юридических отделов у нас есть решение для автоматизации судебно претензионной работы на <a href="#">платформе Битрикс24<a>');
-				}
-				else if (ui.value > 210 && ui.value <= 410) {
+				} else if (ui.value > 210 && ui.value <= 410) {
 					var num = ((7 - Math.ceil((400 - ui.value) / 33.3333)) * 5) + 5;
 					usersNum = getUsersNum(num);
 					calcSumm(usersNum);
-					setTooltip('Для крупных департаментов от 40 пользователей стоимость фиксированная, без ограничений числа лицензий.');
+					setTooltip();
 
-				}
-				else if (ui.value > 410 && ui.value <= 610) {
+				} else if (ui.value > 410 && ui.value <= 610) {
 					var num = ((7 - Math.ceil((600 - ui.value) / 33.3333)) * 10) + 30;
 					usersNum = getUsersNum(num);
 					calcSumm(usersNum);
-					setTooltip('В отличии от облачных решений, Юрайт на 1С позволяет вести десятки тысяч дел одновременно и подходит для крупного бизнеса.');
-				}
-				else if (ui.value > 610 && ui.value <= 810) {
+					setTooltip('Для крупных департаментов от 40 пользователей стоимость фиксированная, без ограничений числа лицензий.');
+				} else if (ui.value > 610 && ui.value <= 810) {
 					var num = ((10 - Math.ceil((800 - ui.value) / 22.2222)) * 100);
 					usersNum = getUsersNum(num);
 					calcSumm(usersNum);
 
-				}
-				else if (ui.value > 810 && ui.value <= 1000) {
+				} else if (ui.value > 810 && ui.value <= 1000) {
 					var num = ((5 - Math.ceil((1000 - ui.value) / 50)) * 1000);
 					usersNum = getUsersNum(num);
 					calcSumm(usersNum);
+					setTooltip('В отличии от облачных решений, Юрайт на 1С позволяет вести десятки тысяч дел одновременно и подходит для крупного бизнеса.');
 				}
 			},
 			stop: function (event, ui) {
-				$('.tooltip').hide();
+				/*$('.tooltip').hide();*/
 			}
 		}).each(function () {
 
@@ -87,20 +83,33 @@ $(document).ready(function () {
 
 	function calcSumm(val) {
 		var sum;
+		var str;
+
 
 		if (val >= 1 && val <= 40) {
 			sum = val * 46800;
+			str = "" + sum;
+			str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')
+			sum = str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 			$('.js-slider__sum').html(sum + ' ₽');
 		} else if (val > 40) {
-			$('.js-slider__sum').html('2000000 ₽');
-		} else {
-			$('.js-slider__sum').html('0 ₽');
+			$('.js-slider__sum').html('2 000 000 ₽');
 		}
 	}
-	
-	function setTooltip(html){
-		$('.tooltip').html('<div class="tooltip__wrapper">' + html + '</div>');
-		
+
+	function setTooltip(html) {
+		if (html) {
+			$('.tooltip').html('<div class="tooltip__wrapper">' + html + '</div>');
+		} else {
+			$('.tooltip').hide();
+		}
 	}
 
+}).mouseup(function (evt) {
+	var tooltip = $('.tooltip');
+	var handle = $('.ui-slider-handle');
+
+	if (!tooltip.is(evt.target) && tooltip.has(evt.target).length === 0 && !handle.is(evt.target)) {
+		tooltip.hide();
+	}
 });
