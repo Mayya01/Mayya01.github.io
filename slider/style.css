@@ -81,6 +81,7 @@ body {
 
 .slider__img-wrapper {
 	margin-bottom: 18px;
+	text-align: center;
 }
 
 .bx-wrapper {
@@ -123,9 +124,13 @@ body {
 	.slider__title {
 		text-align: left;
 	}
-	
+
 	.slider__text {
 		font-size: 18px;
+		text-align: left;
+	}
+
+	.slider__img-wrapper {
 		text-align: left;
 	}
 }
@@ -175,7 +180,7 @@ body {
 		max-width: 280px;
 		top: 40px;
 	}
-	
+
 	.slider__link {
 		display: inline-block;
 	}
