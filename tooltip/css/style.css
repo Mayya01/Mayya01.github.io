@@ -11953,7 +11953,18 @@ textarea.field-text__input {
 }
 .form-card-lp__name {
   color: #307abd;
-  display: none;
+}
+@media (max-width: 767px) {
+  .form-card-lp__name {
+    width: 0.1px;
+    height: 0.1px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
 }
 .form-card-lp__name:hover {
   color: #ff1037;
@@ -12635,12 +12646,17 @@ textarea.field-text__input {
   z-index: -1;
 }
 .form-rd__block-inner {
-  margin-top: 0;
-  position: absolute;
-  width: auto;
-  height: 100%;
-  right: 0;
-  bottom: 0;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .form-rd__block-inner {
+    margin-top: 0;
+    position: absolute;
+    width: auto;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+  }
 }
 .form-rd__block-inner--has-label {
   height: -webkit-calc(100% - 16px);
@@ -12693,12 +12709,6 @@ textarea.field-text__input {
 }
 .form-rd__name {
   color: #307abd;
-  display: none;
-}
-@media (min-width: 768px) {
-  .form-rd__name {
-    display: block;
-  }
 }
 .form-rd__name:hover {
   color: #ff1037;
@@ -13010,29 +13020,27 @@ textarea.field-text__input {
   margin-bottom: -6px;
 }
 .form-tooltip {
-  position: absolute;
-  border-radius: 5px;
   padding: 9px 15px 9px 15px;
-  bottom: 60px;
   min-width: 100%;
   height: 40px;
-  right: 0;
   z-index: 999;
   background-size: contain;
-  left: 0;
   background-repeat: no-repeat;
   background: #f4f5fa;
   border: 1px solid #e0e2eb;
   box-sizing: border-box;
   box-shadow: 0 3px 6px rgba(105,133,154,0.1);
   border-radius: 5px;
+  margin-top: 10px;
 }
 @media (min-width: 768px) {
   .form-tooltip {
     min-width: 356px;
+    margin-top: 0;
     bottom: 55px;
     right: 0;
     left: auto;
+    position: absolute;
   }
 }
 .form-tooltip__wrapper {
@@ -13044,15 +13052,6 @@ textarea.field-text__input {
   overflow: hidden;
   white-space: nowrap;
   padding-right: 20px;
-/*&::after
-			content ''
-			position absolute
-			background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDQuMzA4IiBoZWlnaHQ9IjQwNC4zMDkiIGZpbGw9IiNGNEY1RkEiPjxwYXRoIGQ9Ik0wIDEwMS4wOGg0MDQuMzA4TDIwMi4xNTEgMzAzLjIyOSAwIDEwMS4wOHoiLz48L3N2Zz4=")
-			background-repeat no-repeat
-			size 13px 13px
-			background-size cover
-			bottom -16px
-			right 0*/
 }
 .form-tooltip__arrow {
   position: absolute;
@@ -13063,6 +13062,12 @@ textarea.field-text__input {
   background-size: cover;
   bottom: -9px;
   right: 15px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .form-tooltip__arrow {
+    display: block;
+  }
 }
 .form-tooltip__close {
   right: 0;
