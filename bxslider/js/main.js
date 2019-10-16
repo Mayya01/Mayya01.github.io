@@ -2905,6 +2905,7 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
+
 var ExpertSliderRd = {
 	el: '.js-expert-slider-rd',
 	name: 'ExpertSliderRd',
@@ -2983,7 +2984,6 @@ var ExpertsSlider = {
 
 App.Control.install(ExpertsSlider);
 
-
 var InfoSlider = {
 	el: '.js-info-slider',
 	name: 'InfoSlider',
@@ -2997,6 +2997,23 @@ var InfoSlider = {
 	}
 };
 App.Control.install(InfoSlider);
+
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
 
 var MainNavView = {
 	el: '.js-main-nav',
@@ -3085,23 +3102,6 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
