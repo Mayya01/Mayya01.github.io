@@ -10,19 +10,15 @@
     <script src="../../js/core.js"></script>
   </head>
   <body>
-    <div class="hellobar">
-      <div class="container-rd">
-        <div class="hellobar__wrapper">
-          <div class="hellobar__text">Капитализация интеллектуальной собственности</div><a class="btn-lp btn-lp--lg" href="/services/intellect/uluchshenie-finansovyh-pokazatelei/">как мы это делаем</a>
-        </div>
-      </div>
-    </div>
     <header class="page-header-rd">
       <div class="page-header-rd__top">
         <div class="container-rd">
           <div class="page-header-rd__row">
             <!-- для всех регионов-->
-            <div class="page-header-rd__left-col"><a class="page-header-rd__logo page-header-rd__logo--hidden-on-mobile" href="/"><img src="../../assets/images/logos/logo.png" width="213" height="71" alt="Гардиум - патентные поверенные и судебные адвокаты"></a><a class="page-header-rd__logo page-header-rd__logo--hidden-on-desktop" href="/"><img src="../../assets/images/logos/logo--sm.png" width="132" height="33" alt="Гардиум - патентные поверенные и судебные адвокаты"></a>
+            <div class="page-header-rd__left-col"><a class="page-header-rd__logo" href="/">
+                <picture>
+                  <source media="(min-width:768px)" srcset="../../assets/images/logos/logo.png, ../../assets/images/logos/logo@2x.png"><img src="../../assets/images/logos/logo--sm.png" srcset="../../assets/images/logos/logo--sm@2x.png" alt="Гардиум - патентные поверенные и судебные адвокаты">
+                </picture></a>
               <div class="page-header-rd__address-block hide-up-to-lg">
                 <div class="page-header-rd__title">Надёжность и ответственность в Федеральном Масштабе</div>
                 <div class="page-header-rd__wrapper">
@@ -44,7 +40,7 @@
       </div>
       <nav class="main-nav main-nav--lp main-nav--rd js-main-nav">
         <div class="main-nav__inner">
-          <div class="main-nav__conctacts-wrapper"><a class="main-nav__phone-link" href="tel:88006658258">8 800 665-82-58</a>
+          <div class="main-nav__conctacts-wrapper"><a class="main-nav__phone-link" href="tel:74956658258">+7 (495) 665-82-58</a>
             <button class="main-nav__menu-btn js-main-nav__btn" type="button"></button>
           </div>
           <div class="main-nav__list-wrapper js-main-nav__list-wrapper">
@@ -58,13 +54,15 @@
                     <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">программы</a></li>
                     <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">договоры</a></li>
                     <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">споры</a></li>
+                    <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">консалтинг</a></li>
                   </ul>
                 </div>
               </li>
               <li class="main-nav__item"><a class="main-nav__link" href="#">Клиенты</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="#">Инфо</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">Мероприятия</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
-            </ul>
+            </ul><a class="main-nav__phone" href="tel:+74956658258">+7 (495) 665-82-58</a>
             <div class="main-nav__bottom-mobile-block"><a class="main-nav__bottom-link" href="tel:+74956658258">+7 (495) 665-82-58</a><a class="main-nav__bottom-link" href="mailto:info+dav003@gardium.ru">info+dav003@gardium.ru</a>
               <ul class="logos-features main-nav__logos">
                 <li class="logos-features__item"><img src="../../assets/images/logos/img-iso-2.png" width="128" height="53" alt="Сертификат ISO"></li>
@@ -76,9 +74,9 @@
               <form class="page-header__search-form">
                 <input class="page-header__search-input" type="search" placeholder="Поиск по сайту">
                 <button class="page-header__search-btn" type="submit">Найти
-                        <svg width="14" height="14">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-search-v2"></use>
-                        </svg>
+                      <svg width="14" height="14">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-search-v2"></use>
+                      </svg>
                 </button>
               </form>
             </div>
@@ -86,15 +84,78 @@
         </div>
       </nav>
     </header>
+        <ul class="breadcrumbs-rd">
+          <li><a class="breadcrumbs-rd__link" href="/">Главная</a></li>
+          <li>Заявка на проверку товарного знака</li>
+        </ul>
     <main>
-      <div class="events-schedule">
+      <section class="section-rd section-rd--has-padding-bottom">
         <div class="container-rd">
-                <ul class="breadcrumbs-rd">
-                  <li><a class="breadcrumbs-rd__link" href="/">Главная</a></li>
-                  <li>Информация</li>
-                  <li>Блог</li>
-                </ul>
-          <h1 class="section-rd__title">Расписание мероприятий</h1>
+          <h1 class="section-rd__title section-rd__title--before-text">Заявка на первичное обследование</h1>
+          <p class="section-rd__subtitle">Эксперт бесплатно проведет оценку активов, отправит отчет на почту и свяжется с вами  <br class="hide-up-to-md"> для консультации.</p>
+          <form class="form-rd form-rd--centered section-rd__last-text-block">
+            <div class="form-rd__row-md">
+              <div class="form-rd__col-1-2-md">
+                <div class="form-rd__group">
+                  <label class="form-rd__label" for="name">Имя *</label>
+                  <input class="form-rd__input-text field-rd field-rd--text" id="name" type="text" name="name" required>
+                </div>
+              </div>
+              <div class="form-rd__col-1-2-md">
+                <div class="form-rd__group">
+                  <label class="form-rd__label" for="inn">ИНН *</label>
+                  <input class="form-rd__input-text field-rd field-rd--text" id="inn" type="text" name="inn" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-rd__row-md">
+              <div class="form-rd__col-1-2-md form-rd__col-1-2-md--change-order-md">
+                <div class="form-rd__group">
+                  <label class="form-rd__label" for="email">Email *</label>
+                  <input class="form-rd__input-text field-rd field-rd--text" id="email" type="email" name="email" placeholder="mail@mail.ru" required>
+                </div>
+              </div>
+              <div class="form-rd__col-1-2-md">
+                <div class="form-rd__group js-form-card-block-file">
+                  <label class="form-rd__label" for="phone">Телефон *</label>
+                  <input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
+                  <div class="form-rd__block-inner hide-md">
+                    <label class="form-rd__label-wrapper">
+                      <div class="form-rd__name js-form-card-block-file__download-field">Файл с логотипом</div>
+                      <input class="form-rd__input-file" id="form-card-lp-2-4" type="file" name="file">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-rd__group form-rd__group--files hide-up-to-md">
+              <label class="form-rd__label" for="comment">Комментарии</label>
+              <textarea class="form-rd__textarea field-rd field-rd--textarea field-rd--no-box-shadow" type="textarea" id="comment"></textarea>
+              <div class="form-rd__files">
+                <div class="input-multifile" data-icon="true" data-name="form-input-3-10[]">
+                  <input id="form-input-3-10" type="file" name="form-input-3-10[]">
+                </div>
+              </div>
+            </div>
+            <div class="form-rd__footer">
+              <div class="form-rd__btn">
+                <button class="btn-lp btn-full js-fancy-modal-lp" type="button" data-fancybox-type="inline" data-fancybox-href="#order-success-modal">Получить расчёт</button>
+              </div>
+              <div class="form-rd__licence-info">
+                <input type="checkbox" checked id="licence-info" name="licence-info">
+                <label for="licence-info"><span>Нажимая кнопку «Заказать услугу», я принимаю условия <a class="link-unstyled-blue" href="https://legal-support.ru/local/files/legal-support_ru_politika-v-otnoshenii-obrabotki-personalnyh-dannyh.pdf ">Пользовательского соглашения</a> и&nbsp;даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных  <a class="link-unstyled-blue" href="#">Политикой конфиденциальности</a></span></label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <div class="call-me call-me--pro">
+        <div class="container-rd">
+          <h2 class="call-me__heading">Обращайтесь <br>к профессионалам!</h2>
+          <form class="call-me__form" action="/">
+            <input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
+            <button class="btn-lp" type="button">Позвоните мне</button>
+          </form>
         </div>
       </div>
     </main>
@@ -182,13 +243,13 @@
                 <div class="partners-logos__img"><img src="../../assets/images/logos/logo-inta--sm.png" width="45" height="45" alt="Логотип Инта"></div><span class="partners-logos__logo-text">Член международной ассоциации по товарным знакам INTA</span></a></div>
             <ul class="social-links social-links--rd">
               <li class="social-links__item"><a class="social-links__link social-links__link--vk" href="https://vk.com/gardium" target="_blank" rel="noopener noreferrer"><span>
-                                <svg width="20" height="20">
-                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-vk-gray"></use>
-                                </svg></span></a></li>
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-vk-gray"></use>
+                              </svg></span></a></li>
               <li class="social-links__item"><a class="social-links__link social-links__link--fb" href="https://www.facebook.com/gardiumrussia" target="_blank" rel="noopener noreferrer"><span>
-                                <svg width="16" height="16">
-                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-fb-gray"></use>
-                                </svg></span></a></li>
+                              <svg width="16" height="16">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-fb-gray"></use>
+                              </svg></span></a></li>
             </ul>
             <button class="page-footer-rd__link page-footer-rd__link--go-to-top js-back-to-top-lp" type="button">Наверх</button>
           </div>
@@ -253,8 +314,13 @@
         </div>
       </div>
     </div>
-    <div class="modal-lp modal-lp--success" id="callback-success">
-      <div class="modal-lp__title">Спасибо! Ваша заявка принята.</div>
+    <div class="modal-rd" id="order-success-modal">
+      <div class="modal-rd__top text-center">
+        <h3 class="modal-rd__title">Заявка принята. <br> Спасибо!</h3>
+      </div>
+      <div class="modal-rd__bottom">
+        <p>Наш эксперт отправит анализ на почту, после чего свяжется для консультации. Мы работаем по будням с 9.00 до 19.00 по московскому времени</p>
+      </div>
     </div>
     <div class="tooltipster-overlay"></div>
     <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>

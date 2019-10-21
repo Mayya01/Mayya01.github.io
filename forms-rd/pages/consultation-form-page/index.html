@@ -91,8 +91,8 @@
     <main>
       <section class="section-rd section-rd--has-padding-bottom">
         <div class="container-rd">
-          <h1 class="section-rd__title section-rd__title--before-text">Заявка на первичное обследование</h1>
-          <p class="section-rd__subtitle">Эксперт бесплатно проведет оценку активов, отправит отчет на почту и свяжется с вами  <br class="hide-up-to-md"> для консультации.</p>
+          <h1 class="section-rd__title section-rd__title--before-text">Консультация эксперта</h1>
+          <p class="section-rd__subtitle">Эксперт свяжется с вами в течение 30 минут в рабочее время</p>
           <form class="form-rd form-rd--centered section-rd__last-text-block">
             <div class="form-rd__row-md">
               <div class="form-rd__col-1-2-md">
@@ -101,21 +101,7 @@
                   <input class="form-rd__input-text field-rd field-rd--text" id="name" type="text" name="name" required>
                 </div>
               </div>
-              <div class="form-rd__col-1-2-md">
-                <div class="form-rd__group">
-                  <label class="form-rd__label" for="inn">ИНН *</label>
-                  <input class="form-rd__input-text field-rd field-rd--text" id="inn" type="text" name="inn" required>
-                </div>
-              </div>
-            </div>
-            <div class="form-rd__row-md">
-              <div class="form-rd__col-1-2-md form-rd__col-1-2-md--change-order-md">
-                <div class="form-rd__group">
-                  <label class="form-rd__label" for="email">Email *</label>
-                  <input class="form-rd__input-text field-rd field-rd--text" id="email" type="email" name="email" placeholder="mail@mail.ru" required>
-                </div>
-              </div>
-              <div class="form-rd__col-1-2-md">
+              <div class="form-rd__col-1-2-md hide-up-to-md">
                 <div class="form-rd__group js-form-card-block-file">
                   <label class="form-rd__label" for="phone">Телефон *</label>
                   <input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
@@ -128,14 +114,24 @@
                 </div>
               </div>
             </div>
-            <div class="form-rd__group form-rd__group--files hide-up-to-md">
-              <label class="form-rd__label" for="comment">Комментарии</label>
+            <div class="form-rd__group form-rd__group--files js-form-card-block-file">
+              <label class="form-rd__label" for="comment">Опишите суть вашего вопроса</label>
               <textarea class="form-rd__textarea field-rd field-rd--textarea field-rd--no-box-shadow" type="textarea" id="comment"></textarea>
-              <div class="form-rd__files">
+              <div class="form-rd__block-inner hide-md">
+                <label class="form-rd__label-wrapper">
+                  <div class="form-rd__name js-form-card-block-file__download-field">Файл с логотипом</div>
+                  <input class="form-rd__input-file" id="form-card-lp-2-4" type="file" name="file">
+                </label>
+              </div>
+              <div class="form-rd__files hide-up-to-md">
                 <div class="input-multifile" data-icon="true" data-name="form-input-3-10[]">
                   <input id="form-input-3-10" type="file" name="form-input-3-10[]">
                 </div>
               </div>
+            </div>
+            <div class="form-rd__group hide-md">
+              <label class="form-rd__label" for="phone">Телефон *</label>
+              <input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
             </div>
             <div class="form-rd__footer">
               <div class="form-rd__btn">
@@ -149,15 +145,6 @@
           </form>
         </div>
       </section>
-      <div class="call-me call-me--pro">
-        <div class="container-rd">
-          <h2 class="call-me__heading">Обращайтесь <br>к профессионалам!</h2>
-          <form class="call-me__form" action="/">
-            <input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
-            <button class="btn-lp" type="button">Позвоните мне</button>
-          </form>
-        </div>
-      </div>
     </main>
     <footer class="page-footer-rd">
       <div class="container-rd">
