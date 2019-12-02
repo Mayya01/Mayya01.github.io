@@ -3665,6 +3665,7 @@ input[type="tel"] {
   bottom: 0;
   -webkit-animation: opacity 1s;
   animation: opacity 1s;
+  margin-top: 0 !important;
 }
 @media (min-width: 768px) {
   .block-md {
@@ -4265,8 +4266,8 @@ input[type="tel"] {
 }
 @-moz-keyframes opacity {
   0% {
-    position: fixed;
-    bottom: 100%;
+    bottom: -webkit-calc(100% - 57px);
+    bottom: calc(100% - 57px);
   }
   100% {
     bottom: 0;
@@ -4274,8 +4275,8 @@ input[type="tel"] {
 }
 @-webkit-keyframes opacity {
   0% {
-    position: fixed;
-    bottom: 100%;
+    bottom: -webkit-calc(100% - 57px);
+    bottom: calc(100% - 57px);
   }
   100% {
     bottom: 0;
@@ -4283,8 +4284,8 @@ input[type="tel"] {
 }
 @-o-keyframes opacity {
   0% {
-    position: fixed;
-    bottom: 100%;
+    bottom: -webkit-calc(100% - 57px);
+    bottom: calc(100% - 57px);
   }
   100% {
     bottom: 0;
@@ -4292,8 +4293,8 @@ input[type="tel"] {
 }
 @keyframes opacity {
   0% {
-    position: fixed;
-    bottom: 100%;
+    bottom: -webkit-calc(100% - 57px);
+    bottom: calc(100% - 57px);
   }
   100% {
     bottom: 0;
@@ -21576,6 +21577,7 @@ textarea.field-text__input {
   }
 }
 .process-block-rd__number--lg {
+  padding-left: 10px;
   width: 35px;
   font-size: 4.666666666666667em;
 }
