@@ -3663,8 +3663,8 @@ input[type="tel"] {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-animation: opacity 1s;
-  animation: opacity 1s;
+  -webkit-animation: opacity 0.5s;
+  animation: opacity 0.5s;
   margin-top: 0 !important;
 }
 @media (min-width: 768px) {
@@ -4266,8 +4266,7 @@ input[type="tel"] {
 }
 @-moz-keyframes opacity {
   0% {
-    bottom: -webkit-calc(100% - 57px);
-    bottom: calc(100% - 57px);
+    bottom: -57px;
   }
   100% {
     bottom: 0;
@@ -4275,8 +4274,7 @@ input[type="tel"] {
 }
 @-webkit-keyframes opacity {
   0% {
-    bottom: -webkit-calc(100% - 57px);
-    bottom: calc(100% - 57px);
+    bottom: -57px;
   }
   100% {
     bottom: 0;
@@ -4284,8 +4282,7 @@ input[type="tel"] {
 }
 @-o-keyframes opacity {
   0% {
-    bottom: -webkit-calc(100% - 57px);
-    bottom: calc(100% - 57px);
+    bottom: -57px;
   }
   100% {
     bottom: 0;
@@ -4293,8 +4290,7 @@ input[type="tel"] {
 }
 @keyframes opacity {
   0% {
-    bottom: -webkit-calc(100% - 57px);
-    bottom: calc(100% - 57px);
+    bottom: -57px;
   }
   100% {
     bottom: 0;
