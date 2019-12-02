@@ -656,9 +656,9 @@ var FixedBtn = {
 
 	fixedNav: function () {
 		if ($(window).scrollTop() > this.blockOffset) {
-			this.btn.addClass('intro-banner__btn-fixed');
+			this.btn.addClass('fixed-bottom-btn');
 		} else {
-			this.btn.removeClass('intro-banner__btn-fixed');
+			this.btn.removeClass('fixed-bottom-btn');
 		}
 
 	}
@@ -3106,23 +3106,6 @@ var InfoSlider = {
 };
 App.Control.install(InfoSlider);
 
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
 var MainNavView = {
 	el: '.js-main-nav',
 	name: 'MainNavView',
@@ -3210,6 +3193,23 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
+	initialize: function () {
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
+		});
+	}
+
+
+};
+
+App.Control.install(InfoSliderLp);
+
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
