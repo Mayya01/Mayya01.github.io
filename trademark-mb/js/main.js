@@ -632,6 +632,40 @@ App.Control.extend('FancyModalRd', {
 	maxWidth: 860
 });
 
+var FixedBtn = {
+	el: '.js-fixed-btn',
+	name: 'FixedBtn',
+	initialize: function () {
+		this.btn = this.$('.js-fixed-btn__btn');
+		//		this.mainNavOffsetTop = this.$el.offset().top;
+		//		this.mainNavHeight = this.$el.outerHeight();
+
+		this.blockOffset = this.$el.offset().top;
+		this.blockHeight = this.$el.outerHeight();
+
+		var self = this;
+
+		$(window).bind('resize', function () {
+			self.mainNavOffsetTop = self.$el.offset().top;
+		});
+
+		$(window).bind('scroll', function () {
+			self.fixedNav();
+		});
+	},
+
+	fixedNav: function () {
+		if ($(window).scrollTop() > this.blockOffset) {
+			this.btn.addClass('intro-banner__btn-fixed');
+		} else {
+			this.btn.removeClass('intro-banner__btn-fixed');
+		}
+
+	}
+};
+
+App.Control.install(FixedBtn);
+
 App.Control.install({
 	el: '.js-form',
 	name: 'FormFabric',
@@ -2979,31 +3013,6 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
-
-var ExpertsSlider = {
-	el: '.js-experts-slider',
-	name: 'ExpertsSlider',
-	currentExperts:null,
-	initialize: function () {
-		var self = this;
-		var sliderOpts = {
-			slideMargin: 42,
-			adaptiveHeight :true,
-			onSliderLoad: function (index) {
-				$('.js-experts-slider__slide').eq(index + 1).addClass('active');
-				
-			},
-			onSlideBefore: function ($slideElement, oldIndex, newIndex) {
-				$('.js-experts-slider__slide').removeClass('active');
-				$slideElement.addClass('active');
-			}
-		};
-		this.$el.bxSlider(sliderOpts);
-	}
-};
-
-App.Control.install(ExpertsSlider);
-
 var ExpertSliderRd = {
 	el: '.js-expert-slider-rd',
 	name: 'ExpertSliderRd',
@@ -3058,19 +3067,30 @@ var ExpertSliderRd = {
 
 App.Control.install(ExpertSliderRd);
 
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
+
+var ExpertsSlider = {
+	el: '.js-experts-slider',
+	name: 'ExpertsSlider',
+	currentExperts:null,
 	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
+		var self = this;
+		var sliderOpts = {
+			slideMargin: 42,
+			adaptiveHeight :true,
+			onSliderLoad: function (index) {
+				$('.js-experts-slider__slide').eq(index + 1).addClass('active');
+				
+			},
+			onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+				$('.js-experts-slider__slide').removeClass('active');
+				$slideElement.addClass('active');
+			}
+		};
+		this.$el.bxSlider(sliderOpts);
 	}
 };
-App.Control.install(InfoSlider);
+
+App.Control.install(ExpertsSlider);
 
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
@@ -3089,6 +3109,33 @@ var InfoSliderLp = {
 
 App.Control.install(InfoSliderLp);
 
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true,
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 var MainNavView = {
 	el: '.js-main-nav',
 	name: 'MainNavView',
@@ -3176,62 +3223,6 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true,
-        });
-    }
-};
-
-App.Control.install(MainSlider);
-var VisitedPages = {
-	el: '.js-visited-pages',
-	name: 'VisitedPages',
-
-	initialize: function() {
-		this.mainSlider = $('.main-slider');
-		this.mainSliderOffsetTop = this.mainSlider.offset().top;
-		this.mainSliderHeight = this.mainSlider.outerHeight();
-
-		this.container = this.$el.parent('.container');
-		this.containerWidth = this.container.outerWidth();
-		this.elWidth = ($(window).width() - this.containerWidth) / 2;
-
-		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
-
-		var self = this;
-
-		this.setStickyBlockWidth();
-
-		$(window).bind('resize', function() {
-			self.elWidth = ($(window).width() - self.containerWidth) / 2;
-			self.setStickyBlockWidth();
-		});
-
-		$(window).bind('scroll', function() {
-			self.stickyOnScroll();
-		});
-	},
-
-	setStickyBlockWidth: function() {
-		this.$el.css({'width': this.elWidth});
-	},
-
-	stickyOnScroll: function() {
-		if($(window).scrollTop() >= this.pushPoint) {
-			this.$el.addClass('visited-pages--fixed');
-		} else {
-			this.$el.removeClass('visited-pages--fixed');
-		}
-	}
-};
-
-App.Control.install(VisitedPages);
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',
@@ -3287,6 +3278,49 @@ var MainSliderRd = {
 
 App.Control.install(MainSliderRd);
 
+var VisitedPages = {
+	el: '.js-visited-pages',
+	name: 'VisitedPages',
+
+	initialize: function() {
+		this.mainSlider = $('.main-slider');
+		this.mainSliderOffsetTop = this.mainSlider.offset().top;
+		this.mainSliderHeight = this.mainSlider.outerHeight();
+
+		this.container = this.$el.parent('.container');
+		this.containerWidth = this.container.outerWidth();
+		this.elWidth = ($(window).width() - this.containerWidth) / 2;
+
+		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
+
+		var self = this;
+
+		this.setStickyBlockWidth();
+
+		$(window).bind('resize', function() {
+			self.elWidth = ($(window).width() - self.containerWidth) / 2;
+			self.setStickyBlockWidth();
+		});
+
+		$(window).bind('scroll', function() {
+			self.stickyOnScroll();
+		});
+	},
+
+	setStickyBlockWidth: function() {
+		this.$el.css({'width': this.elWidth});
+	},
+
+	stickyOnScroll: function() {
+		if($(window).scrollTop() >= this.pushPoint) {
+			this.$el.addClass('visited-pages--fixed');
+		} else {
+			this.$el.removeClass('visited-pages--fixed');
+		}
+	}
+};
+
+App.Control.install(VisitedPages);
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
