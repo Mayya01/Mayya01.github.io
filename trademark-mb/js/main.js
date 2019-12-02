@@ -639,14 +639,14 @@ var FixedBtn = {
 		this.btn = this.$('.js-fixed-btn__btn');
 		//		this.mainNavOffsetTop = this.$el.offset().top;
 		//		this.mainNavHeight = this.$el.outerHeight();
-
-		this.blockOffset = this.$el.offset().top;
 		this.blockHeight = this.$el.outerHeight();
+
+		this.blockOffset = this.$el.offset().top+this.blockHeight;
 
 		var self = this;
 
 		$(window).bind('resize', function () {
-			self.mainNavOffsetTop = self.$el.offset().top;
+			self.blockOffset = self.$el.offset().top;
 		});
 
 		$(window).bind('scroll', function () {
@@ -3067,7 +3067,6 @@ var ExpertSliderRd = {
 
 App.Control.install(ExpertSliderRd);
 
-
 var ExpertsSlider = {
 	el: '.js-experts-slider',
 	name: 'ExpertsSlider',
@@ -3092,6 +3091,21 @@ var ExpertsSlider = {
 
 App.Control.install(ExpertsSlider);
 
+
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
 	name: 'InfoSliderLp',
@@ -3109,33 +3123,6 @@ var InfoSliderLp = {
 
 App.Control.install(InfoSliderLp);
 
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true,
-        });
-    }
-};
-
-App.Control.install(MainSlider);
 var MainNavView = {
 	el: '.js-main-nav',
 	name: 'MainNavView',
@@ -3223,6 +3210,19 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true,
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',

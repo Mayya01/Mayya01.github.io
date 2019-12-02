@@ -68,10 +68,35 @@
           </div>
         </nav>
     </header>
-    <div class="intro-banner intro-banner--deep-blue js-fixed-btn">
+    <div class="intro-banner intro-banner--deep-blue">
       <div class="container-rd">
         <h1 class="intro-banner__title">Бесплатно проверим товарный знак <span>за 30 минут</span></h1>
-        <p class="intro-banner__slogan intro-banner__slogan--sm">Получите заключение эксперта с рекомендациями на e-mail</p><a class="js-scroll-to btn-lp btn-full btn-lp-circled js-fixed-btn__btn" href="#order-form">Проверить знак</a>
+        <p class="intro-banner__slogan intro-banner__slogan--sm">Оставьте заявку сейчас, чтобы получить отчет с заключением и рекомендациями эксперта в <span>15:35</span></p>
+        <form class="form-rd" id="order-form">
+          <div class="form-rd__group form-rd__group--lg">
+            <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="sign" type="text" name="sign" placeholder="Название вашего знака *" required>
+          </div>
+          <div class="form-rd__group form-rd__group--lg">
+            <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="name" type="text" name="name" required placeholder="Ваше имя">
+          </div>
+          <div class="form-rd__group form-rd__group--lg">
+            <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
+          </div>
+          <div class="form-rd__group form-rd__group--lg js-form-card-block-file">
+            <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="email" placeholder=" Email * " type="email" name="email">
+            <div class="form-rd__block-inner form-rd__block-inner--transformed">
+              <label class="form-rd__label-wrapper">
+                <div class="form-rd__name js-form-card-block-file__download-field">Прикрепить файл с логотипом</div>
+                <input class="form-rd__input-file" id="form-card-lp-2-4" type="file" name="file">
+              </label>
+            </div>
+          </div>
+          <div class="form-rd__footer text-center">
+            <div class="form-rd__btn">
+              <button class="btn-lp btn-full btn-lp-circled" type="button">Получить отчет</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     <main>
@@ -96,7 +121,7 @@
           </div>
         </div>
       </section>
-      <section class="section-rd section-rd--has-padding-bottom">
+      <section class="section-rd">
         <div class="container-rd">
           <h2 class="section-rd__h2 section-rd__h2--no-center section-rd__h2--blue section-rd__h2--lg">Как проходит проверка?</h2>
           <div class="process-blocks-rd">
@@ -125,12 +150,15 @@
               </div>
             </div>
           </div>
+          <div class="section-banner-rd section-banner-rd--lg">
+            <p class="section-banner-rd__large-text">Убедитесь, что <br class="hide-md"> ваш знак уникален! Оставьте заявку на бесплатную проверку</p><a class="js-scroll-to btn-lp btn-lp-circled btn-full" href="#order-form">проверить знак</a>
+          </div>
         </div>
       </section>
       <section class="section-rd section-rd--has-padding-bottom">
         <div class="container-rd">
           <h2 class="section-rd__h2 section-rd__h2--no-center section-rd__h2--blue section-rd__h2--lg">Почему проверяя товарный знак, вы поступаете верно?</h2>
-          <div class="stats-block section-rd__last-text-block">
+          <div class="stats-block">
             <div class="stats-block__element">
               <div class="stats-block__number stats-block__number--blue">450 <span>тысяч</span></div>
               <div class="stats-block__text">
@@ -149,44 +177,9 @@
                 <p>являются действительно уникальными и могут быть зарегистрированы</p>
               </div>
             </div>
-          </div><!--div.section-banner-rd.section-banner-rd--lg.section-rd__last-block
-          <p class="section-banner-rd__large-text">Убедитесь, что <br class="hide-md"> ваш знак уникален! Оставьте заявку на бесплатную проверку--></p>
+          </div><a class="section-rd__last-block js-scroll-to btn-lp btn-lp-circled btn-full" href="#order-form">проверить знак</a>
         </div>
       </section>
-      <div class="section-rd section-rd--has-padding-bottom section-rd--deep-blue-form hide-menu" id="order-form">
-        <div class="container-rd">
-          <h2 class="section-rd__h2 section-rd__h2--white section-rd__h2--lg">Убедитесь, что ваш знак уникален</h2>
-          <p class="section-rd__subtitle text-white">Оставьте заявку на бесплатную проверку</p>
-          <form class="form-rd">
-            <div class="form-rd__group form-rd__group--lg">
-              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="sign" type="text" name="sign" placeholder="Название вашего знака *" required>
-            </div>
-            <div class="form-rd__group form-rd__group--lg">
-              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="name" type="text" name="name" required placeholder="Ваше имя">
-            </div>
-            <div class="form-rd__group form-rd__group--lg">
-              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
-            </div>
-            <div class="form-rd__group form-rd__group--lg js-form-card-block-file">
-              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="email" placeholder=" Email * " type="email" name="email">
-              <div class="form-rd__block-inner form-rd__block-inner--transformed">
-                <label class="form-rd__label-wrapper">
-                  <div class="form-rd__name js-form-card-block-file__download-field">Прикрепить файл с логотипом</div>
-                  <input class="form-rd__input-file" id="form-card-lp-2-4" type="file" name="file">
-                </label>
-              </div>
-            </div>
-            <div class="form-rd__footer text-center">
-              <div class="form-rd__btn">
-                <button class="btn-lp btn-full btn-lp-circled js-fancy-modal-lp" type="button" data-fancybox-type="inline" data-fancybox-href="#order-success-modal">Получить отчет</button>
-              </div>
-              <div class="form-rd__guarantee-block form-rd__guarantee-block--no-icon">
-                <div class="form-rd__guarantee-title form-rd__guarantee-title--no-transform form-rd__guarantee-title--gray">Гарантируем  конфиденциальность</div>
-              </div><a class="link-unstyled-blue form-rd__agreement-text section-rd__last-text-block" href="/local/files/legal-support_ru_politika-v-otnoshenii-obrabotki-personalnyh-dannyh.pdf">Нажимая на кнопку вы соглашаетесь на обработку персональных данных</a>
-            </div>
-          </form>
-        </div>
-      </div>
     </main>
     <footer class="page-footer-rd">
       <div class="container-rd">
