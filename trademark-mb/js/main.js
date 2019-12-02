@@ -655,8 +655,10 @@ var FixedBtn = {
 	fixedNav: function () {
 		if ($(window).scrollTop() > this.blockOffset) {
 			this.btn.addClass('fixed-bottom-btn');
+			this.$el.css('height',this.blockHeight);
 		} else {
 			this.btn.removeClass('fixed-bottom-btn');
+			this.$el.css('height','auto');
 		}
 
 	}
@@ -3065,6 +3067,7 @@ var ExpertSliderRd = {
 
 App.Control.install(ExpertSliderRd);
 
+
 var ExpertsSlider = {
 	el: '.js-experts-slider',
 	name: 'ExpertsSlider',
@@ -3103,7 +3106,6 @@ var InfoSlider = {
 };
 App.Control.install(InfoSlider);
 
-
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
 	name: 'InfoSliderLp',
@@ -3121,19 +3123,6 @@ var InfoSliderLp = {
 
 App.Control.install(InfoSliderLp);
 
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true,
-        });
-    }
-};
-
-App.Control.install(MainSlider);
 var MainNavView = {
 	el: '.js-main-nav',
 	name: 'MainNavView',
@@ -3221,49 +3210,6 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
-var VisitedPages = {
-	el: '.js-visited-pages',
-	name: 'VisitedPages',
-
-	initialize: function() {
-		this.mainSlider = $('.main-slider');
-		this.mainSliderOffsetTop = this.mainSlider.offset().top;
-		this.mainSliderHeight = this.mainSlider.outerHeight();
-
-		this.container = this.$el.parent('.container');
-		this.containerWidth = this.container.outerWidth();
-		this.elWidth = ($(window).width() - this.containerWidth) / 2;
-
-		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
-
-		var self = this;
-
-		this.setStickyBlockWidth();
-
-		$(window).bind('resize', function() {
-			self.elWidth = ($(window).width() - self.containerWidth) / 2;
-			self.setStickyBlockWidth();
-		});
-
-		$(window).bind('scroll', function() {
-			self.stickyOnScroll();
-		});
-	},
-
-	setStickyBlockWidth: function() {
-		this.$el.css({'width': this.elWidth});
-	},
-
-	stickyOnScroll: function() {
-		if($(window).scrollTop() >= this.pushPoint) {
-			this.$el.addClass('visited-pages--fixed');
-		} else {
-			this.$el.removeClass('visited-pages--fixed');
-		}
-	}
-};
-
-App.Control.install(VisitedPages);
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',
@@ -3319,6 +3265,62 @@ var MainSliderRd = {
 
 App.Control.install(MainSliderRd);
 
+var VisitedPages = {
+	el: '.js-visited-pages',
+	name: 'VisitedPages',
+
+	initialize: function() {
+		this.mainSlider = $('.main-slider');
+		this.mainSliderOffsetTop = this.mainSlider.offset().top;
+		this.mainSliderHeight = this.mainSlider.outerHeight();
+
+		this.container = this.$el.parent('.container');
+		this.containerWidth = this.container.outerWidth();
+		this.elWidth = ($(window).width() - this.containerWidth) / 2;
+
+		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
+
+		var self = this;
+
+		this.setStickyBlockWidth();
+
+		$(window).bind('resize', function() {
+			self.elWidth = ($(window).width() - self.containerWidth) / 2;
+			self.setStickyBlockWidth();
+		});
+
+		$(window).bind('scroll', function() {
+			self.stickyOnScroll();
+		});
+	},
+
+	setStickyBlockWidth: function() {
+		this.$el.css({'width': this.elWidth});
+	},
+
+	stickyOnScroll: function() {
+		if($(window).scrollTop() >= this.pushPoint) {
+			this.$el.addClass('visited-pages--fixed');
+		} else {
+			this.$el.removeClass('visited-pages--fixed');
+		}
+	}
+};
+
+App.Control.install(VisitedPages);
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true,
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
