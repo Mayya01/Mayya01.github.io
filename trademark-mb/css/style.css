@@ -3662,6 +3662,9 @@ input[type="tel"] {
   z-index: 999;
   left: 0;
   right: 0;
+  bottom: 0;
+  -webkit-animation: opacity 1s;
+  animation: opacity 1s;
 }
 @media (min-width: 768px) {
   .block-md {
@@ -4258,6 +4261,42 @@ input[type="tel"] {
   .hide-menu {
     position: relative;
     z-index: 8010;
+  }
+}
+@-moz-keyframes opacity {
+  0% {
+    position: fixed;
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@-webkit-keyframes opacity {
+  0% {
+    position: fixed;
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@-o-keyframes opacity {
+  0% {
+    position: fixed;
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes opacity {
+  0% {
+    position: fixed;
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0;
   }
 }
 .news .news-preview {
