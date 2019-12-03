@@ -13419,6 +13419,30 @@ textarea.field-text__input {
 .form-rd__input-text {
   width: 100%;
 }
+.form-rd__input-text:focus+.form-rd__placeholder-like {
+  display: none;
+}
+.form-rd__input-text:hover+.form-rd__placeholder-like {
+  display: none;
+}
+.form-rd__placeholder-like {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  font-size: 1em;
+  line-height: 1.46;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #929fab;
+  z-index: 1;
+}
+.form-rd__placeholder-like span {
+  color: #ff1037;
+}
+.form-rd__input-wrapper {
+  position: relative;
+}
 .form-rd__textarea {
   width: 100%;
   resize: none;
@@ -15946,17 +15970,11 @@ textarea.field-text__input {
 .intro-banner--deep-blue {
   background-color: #051426;
 }
-@media (max-width: 767px) {
-  .intro-banner--full-height {
-    padding-bottom: 0;
-    height: 100vh;
-  }
-}
 @media (min-width: 992px) {
   .intro-banner {
     padding-top: 50px;
     padding-bottom: 118px;
-    height: 500px;
+    min-height: 500px;
   }
 }
 @media (min-width: 992px) {
@@ -16004,6 +16022,7 @@ textarea.field-text__input {
 @media (max-width: 767px) {
   .intro-banner__slogan--sm {
     font-size: 1.333333333333333em;
+    line-height: 1.4;
   }
   .intro-banner__slogan--sm + .btn-lp {
     margin-top: 28px;
@@ -16021,7 +16040,7 @@ textarea.field-text__input {
   font-family: "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
   line-height: 110%;
   max-width: 800px;
-  margin-bottom: 45px;
+  margin-bottom: 23px;
 }
 @media (min-width: 768px) {
   .intro-banner__title {
@@ -17924,6 +17943,11 @@ textarea.field-text__input {
   .main-nav--light-blue .main-nav__phone-link,
   .main-nav--light-blue .main-nav__menu-btn {
     background-color: #307abd;
+  }
+}
+@media (max-width: 899px) {
+  .main-nav--not-fixed.main-nav--rd {
+    position: absolute;
   }
 }
 .main-slider-rd {
@@ -21720,6 +21744,14 @@ textarea.field-text__input {
 }
 .process-blocks-rd + .section-banner-rd {
   margin-top: 29px;
+}
+@media (min-width: 992px) {
+  .process-blocks-rd--four-columns .process-block-rd {
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
 .process-slider {
   margin-bottom: 25px;

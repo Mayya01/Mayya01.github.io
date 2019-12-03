@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-        <nav class="main-nav main-nav--lp main-nav--rd js-main-nav main-nav--light-blue">
+        <nav class="main-nav main-nav--lp main-nav--rd js-main-nav main-nav--light-blue main-nav--not-fixed">
           <div class="main-nav__inner">
             <div class="main-nav__conctacts-wrapper"><a class="main-nav__phone-link" href="tel:74956658258">+7 (495) 665-82-58</a>
               <button class="main-nav__menu-btn js-main-nav__btn" type="button"></button>
@@ -158,18 +158,24 @@
         <div class="container-rd">
           <h2 class="section-rd__h2 section-rd__h2--white section-rd__h2--lg">Убедитесь, что ваш знак уникален</h2>
           <p class="section-rd__subtitle text-white">Оставьте заявку на бесплатную проверку</p>
-          <form class="form-rd">
+          <form class="form-rd" id="order-form">
             <div class="form-rd__group form-rd__group--lg">
-              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="sign" type="text" name="sign" placeholder="Название вашего знака *" required>
+              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="sign" type="text" name="sign" required>
+              <div class="form-rd__placeholder-like">Название вашего знака <span>*</span></div>
             </div>
             <div class="form-rd__group form-rd__group--lg">
-              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="name" type="text" name="name" required placeholder="Ваше имя">
+              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="name" type="text" name="name">
+              <div class="form-rd__placeholder-like">Ваше имя</div>
             </div>
             <div class="form-rd__group form-rd__group--lg">
-              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
+              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="phone" type="tel" name="phone" required>
+              <div class="form-rd__placeholder-like">Ваш телефон <span>*</span></div>
             </div>
             <div class="form-rd__group form-rd__group--lg js-form-card-block-file">
-              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="email" placeholder=" Email * " type="email" name="email">
+              <div class="form-rd__input-wrapper">
+                <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="email" type="email" name="email" required>
+                <div class="form-rd__placeholder-like">Email <span>*</span></div>
+              </div>
               <div class="form-rd__block-inner form-rd__block-inner--transformed">
                 <label class="form-rd__label-wrapper">
                   <div class="form-rd__name js-form-card-block-file__download-field">Прикрепить файл с логотипом</div>
@@ -179,11 +185,11 @@
             </div>
             <div class="form-rd__footer text-center">
               <div class="form-rd__btn">
-                <button class="btn-lp btn-full btn-lp-circled js-fancy-modal-lp" type="button" data-fancybox-type="inline" data-fancybox-href="#order-success-modal">Получить отчет</button>
+                <button class="btn-lp btn-full btn-lp-circled js-fancy-modal-lp" type="button" data-fancybox-type="inline" data-fancybox-href="#order-success-modal">Проверит знак</button>
               </div>
               <div class="form-rd__guarantee-block form-rd__guarantee-block--no-icon">
                 <div class="form-rd__guarantee-title form-rd__guarantee-title--no-transform form-rd__guarantee-title--gray">Гарантируем  конфиденциальность</div>
-              </div><a class="link-unstyled-blue form-rd__agreement-text section-rd__last-text-block" href="/local/files/legal-support_ru_politika-v-otnoshenii-obrabotki-personalnyh-dannyh.pdf">Нажимая на кнопку вы соглашаетесь на обработку персональных данных</a>
+              </div><a class="link-unstyled-blue form-rd__agreement-text section-rd__last-text-block" href="/local/files/legal-support_ru_politika-v-otnoshenii-obrabotki-personalnyh-dannyh.pdf">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</a>
             </div>
           </form>
         </div>
@@ -194,7 +200,7 @@
         <div class="page-footer-rd__middle">
           <div class="page-footer-rd__middle-section hide-up-to-md"><a class="page-footer-rd__logo" href="#"><img src="../../assets/images/logos/logo-footer.png" alt="Гардиум - патентные поверенные и судебные адвокаты" width="155" height="56"></a></div>
           <div class="page-footer-rd__middle-section page-footer-rd__middle-section--change-order">
-            <address>Центральный офис: Москва, Рязанский проспект,&nbsp;75к4 <br><span class="page-footer-rd__phone-text">+7 (495) 665-82-58</span><a class="js-fancy-modal-rd page-footer-rd__map-link dashed-gray" href="#road-map-rd">Схема проезда</a>
+            <address>Москва, Рязанский проспект,&nbsp;75к4 <br><span class="page-footer-rd__phone-text">+7 (495) 665-82-58</span><a class="js-fancy-modal-rd page-footer-rd__map-link dashed-gray" href="#road-map-rd">Схема проезда</a>
               <div class="hide-md">Часы работы: пн-пт, 09:00—19:00</div>
             </address>
           </div>
@@ -215,7 +221,7 @@
               <li class="logos-features__item"><img src="../../assets/images/logos/img-300-2.png" width="128" height="53" alt="Право 300"></li>
               <li class="logos-features__item"><img src="../../assets/images/logos/img-raex-2.png" width="128" height="53" alt="Раекс"></li>
             </ul>
-            <div class="page-footer-rd__copyright">© 2004–2018, ООО «Гардиум». Все права защищены.</div>
+            <div class="page-footer-rd__copyright">© 2004–2019, ООО «Гардиум». Все права защищены.</div>
           </div>
           <div class="page-footer-rd__bottom-section">
             <button class="page-footer-rd__link page-footer-rd__link--go-to-top js-back-to-top-lp" type="button">Наверх</button>
