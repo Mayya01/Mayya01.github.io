@@ -3013,30 +3013,6 @@ var VerticalTabs = {
 
 App.Control.install(VerticalTabs);
 
-var ExpertsSlider = {
-	el: '.js-experts-slider',
-	name: 'ExpertsSlider',
-	currentExperts:null,
-	initialize: function () {
-		var self = this;
-		var sliderOpts = {
-			slideMargin: 42,
-			adaptiveHeight :true,
-			onSliderLoad: function (index) {
-				$('.js-experts-slider__slide').eq(index + 1).addClass('active');
-				
-			},
-			onSlideBefore: function ($slideElement, oldIndex, newIndex) {
-				$('.js-experts-slider__slide').removeClass('active');
-				$slideElement.addClass('active');
-			}
-		};
-		this.$el.bxSlider(sliderOpts);
-	}
-};
-
-App.Control.install(ExpertsSlider);
-
 var ExpertSliderRd = {
 	el: '.js-expert-slider-rd',
 	name: 'ExpertSliderRd',
@@ -3091,6 +3067,30 @@ var ExpertSliderRd = {
 
 App.Control.install(ExpertSliderRd);
 
+var ExpertsSlider = {
+	el: '.js-experts-slider',
+	name: 'ExpertsSlider',
+	currentExperts:null,
+	initialize: function () {
+		var self = this;
+		var sliderOpts = {
+			slideMargin: 42,
+			adaptiveHeight :true,
+			onSliderLoad: function (index) {
+				$('.js-experts-slider__slide').eq(index + 1).addClass('active');
+				
+			},
+			onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+				$('.js-experts-slider__slide').removeClass('active');
+				$slideElement.addClass('active');
+			}
+		};
+		this.$el.bxSlider(sliderOpts);
+	}
+};
+
+App.Control.install(ExpertsSlider);
+
 
 var InfoSlider = {
 	el: '.js-info-slider',
@@ -3106,60 +3106,22 @@ var InfoSlider = {
 };
 App.Control.install(InfoSlider);
 
-var MainSliderRd = {
-	el: '.js-main-slider-rd',
-	name: 'MainSliderRd',
-	breakpoint: 768,
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
 	slider: null,
-	scroll: null,
-	elementsCount: 0,
-
 	initialize: function () {
-		var self = this;
-		this.slide = this.$('.js-main-slider-rd__slide');
-		this.removedElement = this.slide.not(":eq(0)");
-
-		this.renderMode();
-
-		$(window).bind('resize', function () {
-			self.renderMode();
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
 		});
-	},
-
-	renderMode: function () {
-		var self = this;
-
-		if ($(window).outerWidth() < self.breakpoint) {
-			this.removedElement.detach();
-			self.destroySlider();
-		} else {
-			this.$el.append(this.removedElement);
-			self.initSlider();
-		}
-	},
-
-	initSlider: function () {
-		if (!this.slider) {
-			this.slider = this.$el.bxSlider({
-				mode: 'fade',
-				pager: false,
-				auto: true,
-				controls:false,
-				pause: 3000,
-				speed:1000
-			});
-		}
-	},
-
-	destroySlider: function () {
-		if (this.slider) {
-			this.slider.destroySlider();
-			this.slider = null;
-		}
 	}
+
+
 };
 
-App.Control.install(MainSliderRd);
+App.Control.install(InfoSliderLp);
 
 var MainNavView = {
 	el: '.js-main-nav',
@@ -3248,23 +3210,6 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
@@ -3278,6 +3223,61 @@ var MainSlider = {
 };
 
 App.Control.install(MainSlider);
+var MainSliderRd = {
+	el: '.js-main-slider-rd',
+	name: 'MainSliderRd',
+	breakpoint: 768,
+	slider: null,
+	scroll: null,
+	elementsCount: 0,
+
+	initialize: function () {
+		var self = this;
+		this.slide = this.$('.js-main-slider-rd__slide');
+		this.removedElement = this.slide.not(":eq(0)");
+
+		this.renderMode();
+
+		$(window).bind('resize', function () {
+			self.renderMode();
+		});
+	},
+
+	renderMode: function () {
+		var self = this;
+
+		if ($(window).outerWidth() < self.breakpoint) {
+			this.removedElement.detach();
+			self.destroySlider();
+		} else {
+			this.$el.append(this.removedElement);
+			self.initSlider();
+		}
+	},
+
+	initSlider: function () {
+		if (!this.slider) {
+			this.slider = this.$el.bxSlider({
+				mode: 'fade',
+				pager: false,
+				auto: true,
+				controls:false,
+				pause: 3000,
+				speed:1000
+			});
+		}
+	},
+
+	destroySlider: function () {
+		if (this.slider) {
+			this.slider.destroySlider();
+			this.slider = null;
+		}
+	}
+};
+
+App.Control.install(MainSliderRd);
+
 var VisitedPages = {
 	el: '.js-visited-pages',
 	name: 'VisitedPages',
