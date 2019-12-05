@@ -21776,6 +21776,16 @@ textarea.field-text__input {
     margin-top: 35px;
   }
 }
+.process-block-rd__stat--no-center {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
+.process-block-rd__stat--no-center .process-block-rd__number {
+  line-height: 1;
+  margin-top: -7px;
+}
 .process-block-rd--not-inline .process-block-rd__stat {
   display: block;
 }
@@ -21819,7 +21829,7 @@ textarea.field-text__input {
 .process-block-rd__title {
   font-family: "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.466666666666667em;
-  line-height: 110%;
+  line-height: 1.272;
   font-weight: 300;
   max-width: 204px;
   margin-left: 17px;
