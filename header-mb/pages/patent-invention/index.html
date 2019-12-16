@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html class="rd rd--white" lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gardium-bx-site-redesign</title>
+    <link rel="stylesheet" href="../../css/style.css" media="screen"><!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="../../js/core.js"></script>
+  </head>
+  <body>
+    <header class="page-header-rd">
+      <div class="page-header-rd__top">
+        <div class="container-rd">
+          <div class="page-header-rd__row">
+            <!-- для всех регионов-->
+            <div class="page-header-rd__left-col"><a class="page-header-rd__logo" href="/">
+                <picture>
+                  <source media="(min-width:768px)" srcset="../../assets/images/logos/logo.png, ../../assets/images/logos/logo@2x.png"><img src="../../assets/images/logos/logo--sm.png" srcset="../../assets/images/logos/logo--sm@2x.png" alt="Гардиум - патентные поверенные и судебные адвокаты">
+                </picture></a>
+              <div class="page-header-rd__address-block hide-up-to-lg">
+                <div class="page-header-rd__title">Надёжность и ответственность в Федеральном Масштабе</div>
+                <div class="page-header-rd__wrapper">
+                  <div class="page-header-rd__text-col">
+                    <address class="page-header-rd__address">Центральный офис: Москва,<br> Рязанский проспект, 75к4<span class="page-header-rd__phone-text">+7 (495) 665-82-58</span><a class="page-header-rd__map-link js-fancy-modal-rd dashed-gray" href="#road-map-rd">Схема проезда</a></address>
+                  </div>
+                  <div class="page-header-rd__text-col">
+                    <address class="page-header-rd__address">Офис в Санкт-Петербурге:<br> Синопская набережная, 22<a class="page-header-rd__map-link js-fancy-modal-rd dashed-gray" href="#road-map-rd">Схема проезда</a></address>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-header-rd__right-col">
+              <div class="page-header-rd__change-lang"><a class="active" href="#">Рус</a><a href="#">Eng</a></div>
+              <div class="page-header-rd__contacts"><a class="page-header-rd__phone-link" href="tel:88006658258">8 800 665-82-58</a><a class="page-header-rd__callback-btn js-fancy-modal-lp" href="#form-callback-order">Заказать звонок</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <nav class="main-nav main-nav--lp main-nav--rd js-main-nav">
+          <div class="main-nav__inner">
+            <div class="main-nav__conctacts-wrapper"><a class="main-nav__phone-link" href="tel:74956658258">+7 495 665 82 58</a>
+              <button class="main-nav__menu-btn js-main-nav__btn" type="button"></button>
+            </div>
+            <div class="main-nav__list-wrapper js-main-nav__list-wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Услуги и цены</a>
+                  <div class="main-nav__mobile-subsection">
+                    <ul class="main-nav__mobile-list">
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="../price-page/index.html#rere">знаки</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">патенты</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">программы</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">договоры</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">споры</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">консалтинг</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Клиенты</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Инфо</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Мероприятия</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+              </ul><a class="main-nav__phone" href="tel:+74956658258">+7 (495) 665-82-58</a>
+              <div class="main-nav__bottom-mobile-block"><a class="main-nav__bottom-link" href="tel:+74956658258">+7 (495) 665-82-58</a><a class="main-nav__bottom-link" href="mailto:info+dav003@gardium.ru">info+dav003@gardium.ru</a>
+                <ul class="logos-features main-nav__logos">
+                  <li class="logos-features__item"><img src="../../assets/images/logos/img-iso-2.png" width="128" height="53" alt="Сертификат ISO"></li>
+                  <li class="logos-features__item"><img src="../../assets/images/logos/img-300-2.png" width="128" height="53" alt="Право 300"></li>
+                  <li class="logos-features__item"><img src="../../assets/images/logos/img-raex-2.png" width="128" height="53" alt="Раекс"></li>
+                </ul>
+              </div>
+              <div class="page-header__search page-header__search--lp">
+                <form class="page-header__search-form">
+                  <input class="page-header__search-input" type="search" placeholder="Поиск по сайту">
+                  <button class="page-header__search-btn" type="submit">Найти
+                      <svg width="14" height="14">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-search-v2"></use>
+                      </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+      <ul class="breadcrumbs-rd breadcrumbs-rd--white">
+        <li><a class="breadcrumbs-rd__link" href="/">Главная</a></li>
+        <li><a class="breadcrumbs-rd__link" href="/">Услуги и цены</a></li>
+        <li><a class="breadcrumbs-rd__link" href="/">Патенты</a></li>
+        <li><a class="breadcrumbs-rd__link" href="/">Патент</a></li>
+        <li>Патент на изобретение</li>
+      </ul>
+      <div class="container-rd">
+        <h1 class="main-title-rd">Патент на изобретение</h1>
+      </div>
+    <main>
+      <div class="text-container-rd">
+        <div class="container-rd">
+          <div class="row">
+            <div class="col col--2-5-lg order-2-lg">
+              <div class="col-block-rd">
+                <div class="contents-navigation contents-navigation--alternate">
+                  <h3 class="contents-navigation__heading">Содержание</h3>
+                  <div class="contents-navigation__element"><a class="contents-navigation__link dotted js-scroll-to js-scroll-to--title-visible" href="#kakie-obekty-nelzya-zaregistrirovat-v-kachestve-izobreteniya">Какие объекты нельзя зарегистрировать в качестве изобретения?</a></div>
+                  <div class="contents-navigation__element"><a class="contents-navigation__link dotted js-scroll-to js-scroll-to--title-visible" href="#zachem-proveryat-patentosposobnost-izobreteniya">Зачем проверять патентоспособность изобретения?</a></div>
+                  <div class="contents-navigation__element"><a class="contents-navigation__link dotted js-scroll-to js-scroll-to--title-visible" href="#kto-mozhet-poluchit-patent-na-izobretenie">Кто может получить патент на изобретение?</a></div>
+                  <div class="contents-navigation__element"><a class="contents-navigation__link dotted js-scroll-to js-scroll-to--title-visible" href="#kak-zaregistrirovat-izobretenie-v-rossii">Как зарегистрировать изобретение в России?</a></div>
+                  <div class="contents-navigation__element"><a class="contents-navigation__link dotted js-scroll-to js-scroll-to--title-visible" href="#srok-deistviya-patenta-na-izobretenie">Срок действия патента на изобретение</a></div>
+                  <div class="contents-navigation__element"><a class="contents-navigation__link dotted js-scroll-to js-scroll-to--title-visible" href="#presechenie-nezakonnogo-ispolzovaniya-izobreteniya">Пресечение незаконного использования изобретения</a></div>
+                  <div class="contents-navigation__element"><a class="contents-navigation__link dotted js-scroll-to js-scroll-to--title-visible" href="#stoimost-i-sroki">Стоимость и сроки</a></div>
+                </div>
+              </div>
+              <div class="col-block-rd">
+                <div class="free-consult-rd">
+                  <div class="free-consult-rd__image"><img src="../../assets/images/photo/img-employee--aleksei-abramov-full-height-2.png" alt="Алексей Абрамов"></div>
+                  <div class="free-consult-rd__details">
+                    <div class="free-consult-rd__heading">Алексей Абрамов</div>
+                    <p class="free-consult-rd__text">Управляющий партнер патентно-адвокатского бюро «Гардиум», патентный поверенный № 2003</p>
+                    <div class="free-consult-rd__control"><a class="btn-lp" href="/o-nas/menedzhment-kompanii/aleksei-abramov/">Консультация эксперта</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-block-rd">
+                <div class="promo-price-rd">
+                  <h4 class="promo-price-rd__heading"><span>от</span> 123 600 руб <span>от</span> 18 месяцев</h4>
+                  <div class="promo-price-rd__controls"><a class="btn-lp js-fancy-modal-lp-sm" data-fancybox-type="inline" data-fancybox-href="#form-price-plan-order" href="javascript:void(0);">Оставить заявку</a><a class="promo-price-rd__prices-link js-scroll-to js-scroll-to--title-visible" href="#stoimost-i-sroki"><span>Перейти к ценам</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col col--3-5-lg">
+              <p>Патент на изобретение позволяет защититься от распространения контрафакта и избежать привлечения к ответственности в случае, если на аналогичное изобретение будет получен патент Вашими конкурентами. К тому же наличие авторства или свидетельства о том, что Вы являетесь правообладателем позволит получить прибыль от передачи права на его использование.</p>
+              <p>В соответствии с Российским законодательством в качестве изобретения охраняется техническое решение в любой области, относящееся к <a href="#modal-product" class="js-fancy-modal-rd dotted">продукту</a> или <a href="#modal-tech" class="js-fancy-modal-rd dotted">способу (технологии)</a>, в том числе к применению продукта или способа по определенному назначению.</p>
+              <h2 id="kakie-obekty-nelzya-zaregistrirovat-v-kachestve-izobreteniya">Какие объекты нельзя зарегистрировать в качестве изобретения?</h2>
+              <p>В качестве изобретений не могут получить защиту открытия; научные теории и математические методы;  решения, касающиеся только внешнего вида изделий и направленные на удовлетворение эстетических потребностей; правила и методы игр, интеллектуальной или хозяйственной деятельности; программы для ЭВМ; решения, заключающиеся только в представлении информации; сорта растений, породы животных и биологические способы их получения; а также топологии интегральных микросхем.</p>
+              <h2 id="zachem-proveryat-patentosposobnost-izobreteniya">Зачем проверять патентоспособность изобретения?</h2>
+              <p>Перед тем, как начать оформлять соответствующие документы, необходимо удостовериться, что Ваша разработка не нарушает права третьих лиц, а также соответствует всем необходимым критериям. Это поможет избежать лишних затрат и выявит все риски еще до подачи документов на регистрацию изобретения.</p>
+              <p>К критериям патентоспособности изобретения в РФ относятся:</p>
+              <ul class="blue-circle-list">
+                <li><strong>Новизна.</strong> Техническое решение до момента подачи заявки не должно быть известно.</li>
+                <li><strong>Изобретательский уровень.</strong> Техническое решение не должно явно следовать из существующего уровня техники.</li>
+                <li><strong>Промышленная применимость.</strong> Решение должно быть применимо в промышленности, сельском хозяйстве, здравоохранении, других отраслях экономики или в социальной сфере.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container-rd">
+          <p>В случае если Вы производите разработку по государственному контракту или отказ в регистрации может повлечь весомые материальные убытки, рекомендуем до начала разработки провести исследование технического уровня и тенденций развития отрасли, а перед подачей документов на регистрацию — провести <a href="/services/patent/proverka-patentnoi-chistoty/">исследование его патентоспособности</a>.</p>
+        </div>
+        <div class="form-trademark-check-rd">
+          <div class="container-rd">
+            <h2 class="form-trademark-check-rd__heading">Бесплатная оценка объекта патентования</h2>
+            <p class="form-trademark-check-rd__text">Поможем определить к чему относится ваша разработка: изобретения, полезная модель, другое</p>
+            <form class="form-rd form-trademark-check-rd__form js-form" action="" method="">
+              <div class="form-rd__row-lg">
+                <div class="form-rd__col-1-2-lg">
+                  <div class="form-rd__group">
+                    <label class="form-rd__label" for="form-input-trademark-1-1">Выберите описание разработки</label>
+                    <div class="form-select-wrapper form-trademark-check__select">
+                      <select class="js-form-select-trademark" id="form-input-trademark-1-1">
+                        <option>Устройство, оборудование, средство</option>
+                        <option>Алгоритм работы программы, ПО, сайт</option>
+                        <option>Технология производства, методика получения</option>
+                        <option>Внешний вид, дизайн</option>
+                        <option>Другое</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-rd__group">
+                    <label class="form-rd__label" for="form-input-trademark-1-2">Комментарий</label>
+                    <textarea class="form-rd__textarea" placeholder="Кратко опишите особенности вашего изобретения для патентоведа" id="form-input-trademark-1-2"></textarea>
+                  </div>
+                </div>
+                <div class="form-rd__col-1-2-lg">
+                  <div class="form-trademark-check-rd__confidentiality form-trademark-check-rd__confidentiality--margin-top">
+                    <h3 class="form-trademark-check-rd__confidentiality-heading">Конфиденциальность <br>гарантирована</h3>
+                    <p class="form-trademark-check-rd__confidentiality-text">Cоглашение о конфиденциальности действует бессрочно. Если вам требуются дополнительные гарантии:</p>
+                    <p class="form-trademark-check-rd__confidentiality-text"><span class="input-multifile" data-inner-file="true" data-name="form-input-3-10[]">
+                        <input type="file" name="form-input-3-10[]" id="form-input-3-10"></span> <span class="mobile-block">с реквизитами  и мы пришлем вам подписанное соглашение до конца рабочего дня.</span></p>
+                  </div>
+                  <button class="btn-lp btn-full js-fancy-modal-rd" type="button" data-fancybox-type="inline" data-fancybox-href="#patents-search-results-order">Заказать</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="container-rd">
+          <h2 id="kto-mozhet-poluchit-patent-na-izobretenie">Кто может получить патент на изобретение?</h2>
+          <p>Право на регистрацию изобретения первоначально принадлежит его автору. При этом право может перейти к другому лицу (правопреемнику) или быть передано по трудовому договору (работодателю), а также — по договору уступки права.</p>
+          <p>Поэтому, если Вы не являетесь автором или работодателем автора, с которым заключен договор на разработку, ничего не остается кроме как получить патент с помощью уступки заявки.</p>
+          <h2 id="kak-zaregistrirovat-izobretenie-v-rossii">Как зарегистрировать изобретение в России?</h2>
+          <p>Для получения патента необходимо подать комплект документов в Федеральный институт промышленной собственности. Необходимые документы: заявка на выдачу патента, формула и описание изобретения, реферат, а также чертежи. Патентование изобретения в России занимает в среднем от 20 до 24 месяцев. Максимальный срок не определен, так как в зависимости от полноты и правильности подготовленных документов экспертиза Федерального института промышленной собственности может запрашивать дополнительные сведения или пояснения по регистрируемому объекту.</p>
+          <h2>Процесс патентования изобретения</h2><a class="js-fancy-media link-unstyled zoom-image" data-fullsize="true" href="../../assets/images/img-patent-process.jpg"><img src="../../assets/images/img-patent-process.jpg" title="Этапы патентования изобретений в Роспатенте" alt="Процесс оформления патента на изобретение в России от и до"><span class="zoom-image__button">Увеличить</span></a>
+        </div>
+        <div class="container-rd">
+          <h2>Подготовительный этап</h2>
+          <div class="row">
+            <div class="col col--2-5-lg order-2-lg">
+              <div class="highlighted-block-rd">
+                <div class="highlighted-block-rd__icon highlighted-block-rd__icon--info"></div>
+                <div class="highlighted-block-rd__details">
+                  <p>Формула изобретения является самым важным документом заявки, поскольку именно ею определяются рамки правовой охраны.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col col--3-5-lg">
+              <p>Заявка на выдачу патента на изобретение состоит из нескольких документов: собственно заявки, описания изобретения, формулы, реферата (сокращенное изложение описания продукта), чертежей и иных материалов, если они необходимы.</p>
+              <p>Помните, что охрана изобретения предоставляется только в объеме, определяемом содержащейся в патенте формулой. Крайне важно описать формулу так, чтобы можно было пройти регистрацию с максимальным объемом прав, не нарушая при этом права третьих лиц.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-rd">
+          <h2>Рассмотрение заявки Роспатентом</h2>
+          <div class="row">
+            <div class="col col--2-5-lg order-2-lg">
+              <div class="highlighted-block-rd">
+                <div class="highlighted-block-rd__icon highlighted-block-rd__icon--clock"></div>
+                <div class="highlighted-block-rd__details"><span>2 месяца</span>
+                  <p>дает Роспатент заявителю на подготовку ответа на запрос экспертизы. Если ответ не будет предоставлен в срок заявка считается отозванной</p>
+                </div>
+              </div>
+              <div class="highlighted-block-rd">
+                <div class="highlighted-block-rd__icon highlighted-block-rd__icon--pdf"></div>
+                <div class="highlighted-block-rd__details">
+                  <p>Пример патента на изобретение</p>
+                  <div class="highlighted-block-rd__control"><a class="btn-lp btn-lp--light-blue" href="/upload/content/7c5/patent.pdf">Скачать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col col--3-5-lg">
+              <p>Заявка на изобретение проходит несколько этапов проверки. Регистрирующее ведомство проводит формальную экспертизу заявки, на этапе которой производится проверка правильности подачи и полноты предоставленных документов, правильность классификации по международному классификатору, а также соблюдение требования единства изобретения. Если заявка не соответствует требованиям формальной экспертизы, регистрирующее ведомство отправляет запрос экспертизы лицу, подавшему заявку.</p>
+              <p>Запрос недостающих и исправленных документов может направляться заявителю неограниченное количество раз. В случае если заявитель не ответит на запрос экспертизы в установленные сроки, заявка будет считаться отозванной.</p>
+              <p>После успешного завершения формальной экспертизы заявка на регистрацию патента проходит экспертизу по существу.</p>
+              <p>На этом этапе устанавливается приоритет на изобретение, производится проверка формулы и всех приложений к заявке, производится поиск для определения уровня техники и установления соответствия разработки критериям патентоспособности.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-rd">
+          <p>Регистрирующее ведомство, в случае необходимости, направляет запрос заявителю на предоставление пояснения, либо дополнений к имеющимся материалам. Заявитель должен предоставить все запрашиваемые сведения точно в срок, иначе заявка на регистрацию будет отозвана.</p>
+          <p>Количество запросов экспертизы, отправляемых в адрес заявителя зависит от профессиональности и опыта самого заявителя или патентного поверенного, который сопровождает процесс регистрации. Специалисты нашего Бюро имеют достаточный опыт подготовки исчерпывающих ответов на запросы, что обеспечивает нашим клиентам минимальную отсрочку при появлении запросов ведомства.</p>
+          <p>В случае если Ваша разработка соответствует всем необходимым критериям, регистрирующий орган принимает положительное решение и в скором времени происходит регистрация изобретения и выдача патента.</p>
+        </div>
+        <div class="container-rd">
+          <h2 id="srok-deistviya-patenta-na-izobretenie">Срок действия патента на изобретение</h2>
+          <div class="row">
+            <div class="col col--2-5-lg order-2-lg">
+              <div class="highlighted-block-rd">
+                <div class="highlighted-block-rd__icon highlighted-block-rd__icon--clock"></div>
+                <div class="highlighted-block-rd__details"><span>20 лет</span>
+                  <p>действует патент на изобретение. Срок действия основной части патентов продлить невозможно</p>
+                </div>
+              </div>
+            </div>
+            <div class="col col--3-5-lg">
+              <p>Патент на российские изобретения действует 20 лет с момента подачи заявки на регистрацию. Продлить срок действия можно только по отдельным <a href="#modal-category" class="js-fancy-modal-rd dotted">категориям изобретений</a>. Для недопущения <a href="/services/patent/dosrochnoe-prekrashhenie-deistviya-patenta/">досрочного прекращения действия патента</a> необходимо ежегодно оплачивать пошлину за его поддержание.</p>
+              <p>Также причиной досрочного прекращения может стать признание его недействительным.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-rd">
+          <h2 id="presechenie-nezakonnogo-ispolzovaniya-izobreteniya">Пресечение незаконного использования изобретения</h2>
+          <p>За нарушение Вашего исключительного права нарушителя можно привлечь к административной, уголовной или гражданской ответственности. В том числе могут быть возмещены убытки правообладателя или получена компенсация за нарушение исключительного права. Важно помнить, что правообладатель в соответствии со <a class="js-fancy-modal-rd" href="#modal-article">статьей 1250</a>. Гражданского кодекса Российской Федерации для пресечения нарушения своих прав и привлечения к ответственности нарушителя не должен доказывать вину последнего.</p>
+          <p>Для того чтобы аргументировать свою позицию в правоохранительных органах, суде, а также иных ведомствах, перед обращением за помощью правообладателю, необходимо получить официальное <a href="/services/patent/patentnaya-ekspertiza/">заключение экспертизы о нарушении его прав</a>. Такую экспертизу проводят специализированные патентные поверенные.</p>
+        </div>
+      </div>
+      <section class="section-rd section-rd--dark" id="stoimost-i-sroki">
+        <div class="container-rd">
+          <h2 class="section-rd__h2">Стоимость и сроки</h2>
+          <div class="price-cards-rd js-price-cards">
+            <div class="price-cards-rd__element">
+              <div class="price-card-rd js-price-card mobile-hidden js-show-content">
+                <header class="price-card-rd__header">
+                  <h3 class="price-card-rd__heading">Международное патентование</h3>
+                </header>
+                <div class="price-card-rd__body mobile-hidden__body" data-target="price-block">
+                  <div class="price-card-rd__description">В цену входят все услуги пакета «Все включено», а также:</div>
+                  <ul class="check-marker-list check-marker-list--light-grey">
+                    <li>Подача международной заявки</li>
+                    <li>Возврат до 100% пошлин на международное патентование</li>
+                    <li>Международная публикация в базе МБ ВОИС</li>
+                  </ul>
+                </div><a class="mobile-hidden__link js-show-content__btn js-show-content__btn--change-text" href="javascript:void(0);" data-mh-collapsed="Показать подробности" data-mh-expanded="Скрыть подробности" data-attribute="price-block"><span>Показать подробности</span></a>
+                <footer class="price-card-rd__footer">
+                  <div class="price-card-rd__price"><strong>от 148&nbsp;200 руб.</strong>, от 24 месяцев</div>
+                  <button class="btn-lp js-fancy-modal-lp-sm" type="button" data-fancybox-type="inline" data-fancybox-href="#form-price-plan-order">Заказать</button>
+                </footer>
+              </div>
+            </div>
+            <div class="price-cards-rd__element">
+              <div class="price-card-rd js-price-card js-price-card-default mobile-hidden js-show-content price-card-rd--active">
+                <header class="price-card-rd__header">
+                  <h3 class="price-card-rd__heading">«Все включено»</h3>
+                </header>
+                <div class="price-card-rd__body mobile-hidden__body" data-target="price-block">
+                  <ul class="check-marker-list check-marker-list--light-grey">
+                    <li>Проверка патентной чистоты и патентоспособности</li>
+                    <li>Консультация по доработке</li>
+                    <li>Составление формулы изобретения</li>
+                    <li>Подготовка и подача заявки в Роспатент</li>
+                    <li>Оплата пошлин со скидкой 30%</li>
+                    <li>Ответы на неограниченное количество запросов Роспатента</li>
+                    <li>Претензионное производство в течение 1 года после получения патента</li>
+                  </ul>
+                </div><a class="mobile-hidden__link js-show-content__btn js-show-content__btn--change-text" href="javascript:void(0);" data-mh-collapsed="Показать подробности" data-mh-expanded="Скрыть подробности" data-attribute="price-block"><span>Показать подробности</span></a>
+                <footer class="price-card-rd__footer">
+                  <div class="price-card-rd__price"><strong>от 123&nbsp;600 руб.</strong>, от 18 месяцев</div>
+                  <button class="btn-lp js-fancy-modal-lp-sm" type="button" data-fancybox-type="inline" data-fancybox-href="#form-price-plan-order">Заказать</button>
+                </footer>
+              </div>
+            </div>
+            <div class="price-cards-rd__element">
+              <div class="price-card-rd js-price-card mobile-hidden js-show-content">
+                <header class="price-card-rd__header">
+                  <h3 class="price-card-rd__heading">«Драйв +»</h3>
+                </header>
+                <div class="price-card-rd__body mobile-hidden__body" data-target="price-block">
+                  <div class="price-card-rd__description">В цену входят все услуги пакета «Все включено», а также:</div>
+                  <ul class="check-marker-list check-marker-list--light-grey">
+                    <li>Патент через  3 месяца</li>
+                    <li>Гарантия 1 год</li>
+                    <li>Срочная подготовка и подача заявки в Роспатент</li>
+                    <li>Судебное производство в случае нарушения прав патентообладателя</li>
+                    <li>Оспаривание решения об отказе в патентовании в Палате по патентным спорам</li>
+                  </ul>
+                  <div class="price-card-rd__more price-card-rd__more--mobile"><a href="/services/patent/uskorennoe-patentovanie-izobreteniya-v-rossii/">Подробная информация</a></div>
+                </div><a class="mobile-hidden__link js-show-content__btn js-show-content__btn--change-text" href="javascript:void(0);" data-mh-collapsed="Показать подробности" data-mh-expanded="Скрыть подробности" data-attribute="price-block"><span>Показать подробности</span></a>
+                <footer class="price-card-rd__footer">
+                  <div class="price-card-rd__more"><a href="/services/patent/uskorennoe-patentovanie-izobreteniya-v-rossii/">Подробная информация</a></div>
+                  <div class="price-card-rd__price"><strong>от 297&nbsp;600 руб.</strong>, от 3 месяцев</div>
+                  <button class="btn-lp js-fancy-modal-lp-sm" type="button" data-fancybox-type="inline" data-fancybox-href="#form-price-plan-order">Заказать</button>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-rd section-rd--dark">
+        <div class="container-rd">
+          <h2 class="section-rd__h2">Наши преимущества</h2>
+          <div class="features-block-rd">
+            <div class="feature-block-rd feature-block-rd--user">
+              <div class="feature-block-rd__icon"></div><span class="feature-block-rd__title js-tooltip" title="Средний опыт работы специалистов 10–12 лет, все патентные поверенные прошли профессиональную сертификацию">Компетентные патентные поверенные</span>
+            </div>
+            <div class="feature-block-rd feature-block-rd--users">
+              <div class="feature-block-rd__icon"></div><span class="feature-block-rd__title js-tooltip" title="WiseAdvice является крупнейшей консалтинговой группой, основанной с нуля после 2003 года">Входим в группу компаний «WiseAdvice»</span>
+            </div>
+            <div class="feature-block-rd feature-block-rd--map">
+              <div class="feature-block-rd__icon"></div><span class="feature-block-rd__title js-tooltip" title="Представительства бюро обеспечивают оперативную связь с клиентами и эффективное представительство интересов в регионах">10 региональных представительств по России</span>
+            </div>
+            <div class="feature-block-rd feature-block-rd--handshake">
+              <div class="feature-block-rd__icon"></div><span class="feature-block-rd__title js-tooltip" title="Мы знаем как решать вопросы клиентов в минимально короткие сроки">Тесные связи с <br class="hide-up-to-lg"> ФИПС Роспатента</span>
+            </div>
+            <div class="feature-block-rd feature-block-rd--briefcase">
+              <div class="feature-block-rd__icon"></div><span class="feature-block-rd__title js-tooltip" title="В том числе товарных знаков, патентов, договоров, программ ЭВМ и баз данных в России и по всему миру">Регистрация более <br class="hide-up-to-lg"> 1000 объектов</span>
+            </div>
+          </div>
+        </div>
+      </section>
+        <section class="section-rd section-rd--dark" id="clients">
+          <div class="container-rd">
+            <h2 class="section-rd__h2">Нам доверяют более 12000 клиентов</h2>
+            <div class="logos-rd logos-rd--six-columns">
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client--pik--sm.png" alt="Логотип Pik"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client--rzhd-logistika.png" alt="Логотип компании Российские железные дороги"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-uaz--sm.png" alt="Логотип УАЗ"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client--gazprom-sm.jpg" alt="Логотип Газпром"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-lactalis--sm.png" alt="Логотип Лакталис"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client--grundfos.jpg" alt="Логотип Grundfos"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client-vtb.png" alt="Логотип банка ВТБ"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client-alrosa-sm.png" alt="Логотип Альроса"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client-knauf--sm.png" alt="Логотип Knauf"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client--president.png" alt="Логотип President"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-client-svecha.png" alt="Логотип Свеча"></div>
+                </div>
+                <div class="logos-rd__col">
+                  <div class="logo-rd"><img class="logo-rd__img" src="../../assets/images/logos/logo-uaz--myso.png" alt="Логотип компании Первый Мясокомбинат"></div>
+                </div>
+            </div>
+            <div class="linked-block"><a href=" /clients/">Посмотреть всех клиентов</a></div>
+          </div>
+        </section>
+      <section class="achievments-rd section-rd section-rd--dark section-rd--has-padding-bottom">
+        <div class="container-rd">
+          <h2 class="section-rd__h2 section-rd__h2--before-two-cols">Наши достижения</h2>
+          <div class="row">
+            <div class="col col--1-2-md">
+              <p class="achievments-rd__slogan">Патентно-адвокатское бюро «Гардиум» входит в&nbsp;ТОП компаний по мнению крупнейших юридических рейтингов РФ</p>
+              <ul class="check-marker-list-rd achievments-rd__list">
+                <li> 6 место из 300 в списке крупнейших юридических фирм по версии рейтинга Право-300</li>
+                <li>Является официально аккредитованным партнером Российского Экспортного Центра</li>
+                <li>Имеет членство в международной ассоциации по товарным знакам INTA (ИНТА)</li>
+              </ul>
+            </div>
+            <div class="col col--1-2-md">
+              <div class="achievments-rd__logos">
+                    <div class="logos-rd logos-rd--two-columns">
+                          <div class="logos-rd__col">
+                            <div class="logo-rd logo-rd--gray"><img class="logo-rd__img" src="../../assets/images/logos/logo-pravo--300-2.jpg" alt="Лого право"></div>
+                          </div>
+                          <div class="logos-rd__col">
+                            <div class="logo-rd logo-rd--gray"><img class="logo-rd__img" src="../../assets/images/logos/logo-rec-2.png" alt="Логотип РЭЦ"></div>
+                          </div>
+                          <div class="logos-rd__col">
+                            <div class="logo-rd logo-rd--gray"><img class="logo-rd__img" src="../../assets/images/logos/img-raex-3.png" alt="Логотип Raex"></div>
+                          </div>
+                          <div class="logos-rd__col">
+                            <div class="logo-rd logo-rd--gray"><img class="logo-rd__img" src="../../assets/images/logos/logo-inta-2.png" alt="Логотип Инта"></div>
+                          </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+              <div class="achievements-block-rd">
+                <div class="achievements-block-rd__item">
+                  <div class="achievements-block-rd__number">15 лет</div>
+                  <p class="achievements-block-rd__text">успешной работы в России и за рубежом. Арбитражная практика, интеллектуальная собственность, банкротство</p>
+                </div>
+                <div class="achievements-block-rd__item">
+                  <div class="achievements-block-rd__number">12 000</div>
+                  <p class="achievements-block-rd__text">довольных клиентов <br class="hide-up-to-md"> от «Газпрома» до «ПИК». Каждый проект защищается соглашением о конфиденциальности</p>
+                </div>
+                <div class="achievements-block-rd__item">
+                  <div class="achievements-block-rd__number">2 года</div>
+                  <p class="achievements-block-rd__text">находимся в Российском рейтинге юридических фирм, показавших лучшие результаты в арбитражных процессах по версии Право.ру</p>
+                </div>
+                <div class="achievements-block-rd__item">
+                  <div class="achievements-block-rd__number">17 000</div>
+                  <p class="achievements-block-rd__text">зарегистрированных объектов интеллектуальной собственности. Совместная работа судебных адвокатов и патентных поверенных</p>
+                </div>
+              </div>
+          <div class="row">
+            <div class="col col--1-2-md">
+              <p>Мы являемся частью самой крупной консалтинговой группой, созданной после 2003 года с нуля. <a class="link-unstyled-blue" href="https://wiseadvice.ru/">Подробнее о консалтинговой группе</a></p>
+            </div>
+            <div class="col col--1-2-md">
+              <p>Специалисты бюро имеют опыт работы в Федеральном институте промышленной собственности, иных ведомствах и государственных органах.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="call-me call-me--pro">
+        <div class="container-rd">
+          <h2 class="call-me__heading">Обращайтесь <br>к профессионалам!</h2>
+          <form class="call-me__form" action="/">
+            <input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
+            <button class="btn-lp" type="button">Позвоните мне</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <div class="modal-lp" id="form-price-plan-order">
+      <div class="form-card-lp form-card-lp--modal form-card-lp--no-title">
+        <form action="" method="">
+          <div class="form-card-lp__block">
+            <input class="form-card-lp__input" id="form-card-lp-modal-2-1" type="text" name="name" required>
+            <label class="form-card-lp__label form-card-lp__label--inner" for="form-card-lp-modal-1-1">Ваше имя <span class="asterisk">*</span></label>
+          </div>
+          <div class="form-card-lp__block">
+            <input class="form-card-lp__input" id="form-card-lp-modal-1-2" type="text" name="name" required>
+            <label class="form-card-lp__label form-card-lp__label--inner" for="form-card-lp-modal-2-2">Ваш телефон <span class="asterisk">*</span></label>
+          </div>
+          <div class="form-card-lp__block">
+            <button class="btn-lp btn-lp--full btn-full js-fancy-modal-lp" type="submit" data-fancybox-type="inline" data-fancybox-href="#callback-success">Заказать</button>
+          </div>
+          <div class="form-card-lp__block">
+            <input class="form-card-lp__checkbox" id="form-card-lp-modal-2-3" type="checkbox" name="personal" required checked>
+            <label class="form-card-lp__label-checkbox" for="form-card-lp-modal-2-3">Соглашаюсь на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-rd" hidden id="modal-product">
+      <div class="modal-rd__top">
+        <div class="modal-rd__title">Продукт — предмет как результат человеческого труда</div>
+      </div>
+      <div class="modal-rd__middle">
+        <p>В том числе охраняются в качестве изобретения:</p>
+        <ul class="white-bullet-list">
+          <li>устройства (конструкции или изделия)</li>
+          <li>вещества (химические соединения, составы, смеси, продукты ядерного превращения)</li>
+          <li>штаммы микроорганизмов (бактерий, вирусов, бактериофагов, микроводорослей, микроскопических грибов, консорциумы микроорганизмов)</li>
+          <li>культуры клеток растений и животных</li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-rd" hidden id="modal-tech">
+      <div class="modal-rd__top">
+        <div class="modal-rd__title">Способ — процесс выполнения действий над материальным объектами</div>
+      </div>
+      <div class="modal-rd__middle">
+        <p>В том числе:</p>
+        <ul class="white-bullet-list">
+          <li>процессы, направленные на изготовление изделий и веществ процессы, направленные на изменение состояния предметов (управление, регулирование, транспортировка)</li>
+          <li>процесс, с помощью которого определяется состояние предметов (измерение, диагностика)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-rd" hidden id="modal-category">
+      <div class="modal-rd__top">
+        <div class="modal-rd__title">Категориям изобретений</div>
+      </div>
+      <div class="modal-rd__middle">
+        <ul class="white-bullet-list">
+          <li>Лекарственные средства</li>
+          <li>Пестициды</li>
+          <li>Агрохимикаты</li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-rd" hidden id="modal-article">
+      <div class="modal-rd__top">
+        <div class="modal-rd__title">Статья 1250. Защита интеллектуальных прав</div>
+      </div>
+      <div class="modal-rd__middle">
+        <ul class="white-bullet-list">
+          <li>Интеллектуальные права защищаются способами, предусмотренными настоящим Кодексом, с учетом существа нарушенного права и последствий нарушения этого права.</li>
+          <li>Предусмотренные настоящим Кодексом способы защиты интеллектуальных прав могут применяться по требованию правообладателей, организаций по управлению правами на коллективной основе, а также иных лиц в случаях, установленных законом.</li>
+          <li>Отсутствие вины нарушителя не освобождает его от обязанности прекратить нарушение интеллектуальных прав, а также не исключает применение в отношении нарушителя мер, направленных на защиту таких прав. В частности, публикация решения суда о допущенном нарушении (подпункт 5 пункта 1 статьи 1252) и пресечение действий, нарушающих исключительное право на результат интеллектуальной деятельности или на средство индивидуализации либо создающих угрозу нарушения такого права, осуществляются независимо от вины нарушителя и за его счет.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-rd" hidden id="patents-search-results-order">
+      <div class="modal-rd__top">
+        <div class="modal-rd__title">Заполните заявку!</div>
+        <div class="modal-rd__text">Наши специалисты перезвонят вам в течение 30 минут в рабочее время.</div>
+      </div>
+      <div class="modal-rd__middle">
+        <div class="free-patent-exam">
+          <form class="form-rd" action="/">
+            <div class="form-rd__row-lg">
+              <div class="form-rd__col-1-3-lg">
+                <div class="form-rd__group form-rd__group--md">
+                  <label class="form-rd__label" for="name">Ваше имя</label>
+                  <input class="form-rd__input-text field-rd field-rd--text" id="name" type="text" name="name" required>
+                </div>
+              </div>
+              <div class="form-rd__col-1-3-lg">
+                <div class="form-rd__group form-rd__group--md">
+                  <label class="form-rd__label" for="phone">Телефон</label>
+                  <input class="form-rd__input-text field-rd field-rd--text" id="phone" type="tel" name="phone" placeholder="+7 (___) ___ __ __ " required>
+                </div>
+              </div>
+              <div class="form-rd__col-1-3-lg">
+                <div class="form-rd__group form-rd__group--md">
+                  <label class="form-rd__label" for="email">E-mail</label>
+                  <input class="form-rd__input-text field-rd field-rd--text" id="email" type="email" name="email" placeholder="mail@mail.ru" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-rd__row-lg form-rd__row-lg--controls">
+              <div class="form-rd__col-2-3-lg">
+                <p>Кликая на кнопку Отправить вы соглашаетесь на <a href="javascript:void(0);">обработку персональных данных</a></p>
+              </div>
+              <div class="form-rd__col-1-3-lg">
+                <button class="btn-lp btn-full" type="submit">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer-rd">
+      <div class="container-rd">
+        <div class="page-footer-rd__top">
+          <div class="page-footer-rd__top-section js-show-content"><a class="page-footer-rd__lists-title js-show-content__btn" href="#">Патентное бюро</a>
+            <ul class="page-footer-rd__list js-show-content__content">
+              <li><a class="page-footer-rd__list-link" href="#">О нас</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Услуги и цены</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Клиенты</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Инфо</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Вакансии</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="page-footer-rd__top-section js-show-content"><a class="page-footer-rd__lists-title js-show-content__btn" href="#">Товарные знаки</a>
+            <ul class="page-footer-rd__list js-show-content__content">
+              <li><a class="page-footer-rd__list-link" href="#">Регистрация товарного знака</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Регистрация торговой марки</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Регистрация логотипа</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Международная регистрация</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Реестр товарных знаков</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Проверка товарного знака</a></li>
+            </ul>
+          </div>
+          <div class="page-footer-rd__top-section js-show-content"><a class="page-footer-rd__lists-title js-show-content__btn" href="#">Патентование</a>
+            <ul class="page-footer-rd__list js-show-content__content">
+              <li><a class="page-footer-rd__list-link" href="#">Патент на изобретение</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Патент на полезную модель</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Патент на промышленный образец</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Патентный поиск</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Патентные исследования</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Патентные поверенные</a></li>
+            </ul>
+          </div>
+          <div class="page-footer-rd__top-section js-show-content"><a class="page-footer-rd__lists-title js-show-content__btn" href="#">Договоры</a>
+            <ul class="page-footer-rd__list js-show-content__content">
+              <li><a class="page-footer-rd__list-link" href="#">Лицензионный договор</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Договор отчуждения</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Договор коммерческой концессии</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Договор авторского заказа</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Залог исключительных прав</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Сопровождение сделок</a></li>
+            </ul>
+          </div>
+          <div class="page-footer-rd__top-section js-show-content"><a class="page-footer-rd__lists-title js-show-content__btn" href="#">Споры</a>
+            <ul class="page-footer-rd__list js-show-content__content">
+              <li><a class="page-footer-rd__list-link" href="#">Арбитражный суд</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Суд по интеллектуальным правам (СИП)</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Палата по патентным спорам (ППС)</a></li>
+              <li><a class="page-footer-rd__list-link" href="#">Федеральная антимонопольная службу (ФАС)</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="page-footer-rd__middle">
+          <div class="page-footer-rd__middle-section hide-up-to-md"><a class="page-footer-rd__logo" href="#"><img src="../../assets/images/logos/logo-footer.png" alt="Гардиум - патентные поверенные и судебные адвокаты" width="155" height="56"></a></div>
+          <div class="page-footer-rd__middle-section page-footer-rd__middle-section--change-order">
+            <address>Москва, Рязанский проспект,&nbsp;75к4 <br><span class="page-footer-rd__phone-text">+7 (495) 665-82-58</span><a class="js-fancy-modal-rd page-footer-rd__map-link dashed-gray" href="#road-map-rd">Схема проезда</a>
+              <div class="hide-md">Часы работы: пн-пт, 09:00—19:00</div>
+            </address>
+          </div>
+          <div class="page-footer-rd__middle-section hide-up-to-xl">
+            <address>Офис в Санкт-Петербурге <br> Синопская набережная,&nbsp;22<a class="js-fancy-modal-rd page-footer-rd__map-link dashed-gray" href="#road-map-rd">Схема проезда</a></address>
+          </div>
+          <div class="page-footer-rd__middle-section">
+            <address><a class="page-footer-rd__phone-link" href="tel:+74956658258">+7 (495) 665-82-58</a>
+              <div class="hide-up-to-md">Часы работы: пн-пт, 09:00—19:00</div>
+            </address>
+          </div>
+          <div class="page-footer-rd__middle-section"><a class="page-footer-rd__link-email" href="mailto:info+dav003@gardium.ru">info+dav003@gardium.ru</a></div>
+        </div>
+        <div class="page-footer-rd__bottom">
+          <div class="page-footer-rd__bottom-section page-footer-rd__bottom-section--change-order">
+            <ul class="hide-up-to-md logos-features">
+              <li class="logos-features__item"><img src="../../assets/images/logos/img-iso-2.png" width="128" height="53" alt="Сертификат ISO"></li>
+              <li class="logos-features__item"><img src="../../assets/images/logos/img-300-2.png" width="128" height="53" alt="Право 300"></li>
+              <li class="logos-features__item"><img src="../../assets/images/logos/img-raex-2.png" width="128" height="53" alt="Раекс"></li>
+            </ul>
+            <div class="page-footer-rd__copyright">© 2004–2018, ООО «Гардиум». Все права защищены. <br> В составе <a class="link-unstyled-blue" href="https://wiseadvice.ru/" target="_blank">группы компаний WiseAdvice</a></div>
+          </div>
+          <div class="page-footer-rd__bottom-section">
+            <div class="hide-up-to-md partners-logos"><a class="partners-logos__logo" href="https://www.exportcenter.ru/partners/list/ooo_fpb_gardium/" target="_blank">
+                <div class="partners-logos__img"><img src="../../assets/images/logos/logo-rec.png" width="60" height="48" alt="Логотип РЭЦ"></div><span class="partners-logos__logo-text">Аккредитованный партнер Российского экспортного центра</span></a><a class="partners-logos__logo" href="https://www.exportcenter.ru/partners/list/ooo_fpb_gardium/" target="_blank">
+                <div class="partners-logos__img"><img src="../../assets/images/logos/logo-inta--sm.png" width="45" height="45" alt="Логотип Инта"></div><span class="partners-logos__logo-text">Член международной ассоциации по товарным знакам INTA</span></a></div>
+            <ul class="social-links social-links--rd">
+              <li class="social-links__item"><a class="social-links__link social-links__link--vk" href="https://vk.com/gardium" target="_blank" rel="noopener noreferrer"><span>
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-vk-gray"></use>
+                              </svg></span></a></li>
+              <li class="social-links__item"><a class="social-links__link social-links__link--fb" href="https://www.facebook.com/gardiumrussia" target="_blank" rel="noopener noreferrer"><span>
+                              <svg width="16" height="16">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/sprites/sprites-svg.svg#icon-fb-gray"></use>
+                              </svg></span></a></li>
+            </ul>
+            <button class="page-footer-rd__link page-footer-rd__link--go-to-top js-back-to-top-lp" type="button">Наверх</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-rd modal-rd--road-modal" id="road-map-rd">
+      <div class="modal-rd__top">
+        <div class="modal-rd__title">Офис патентно-адвокатского бюро <br> «Гардиум» в городе Саратов</div>
+      </div>
+      <div class="modal-rd__middle">
+        <table class="modal-table-rd">
+          <thead>
+            <tr>
+              <th>Адрес</th>
+              <th>Время работы</th>
+              <th>Телефон</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Саратов,<br> ул.Московская, 55</td>
+              <td>Пн-Пт: 9:00 — 19:00</td>
+              <td> 8-800-550-82-58</td>
+              <td><a class="link-unstyled-blue" href="mailto:info+dav003@gardium.ru">info+dav003@gardium.ru</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="modal-rd__map" style="width:800px; height:500px;" id="main-office-saratov"></div>
+      </div>
+    </div>
+    <div class="modal-lp modal-lp--success" id="callback-success">
+      <div class="modal-lp__title">Спасибо! Ваша заявка отправлена.</div>
+    </div>
+    <div class="modal-lp modal-lp--success" id="expert-question-success">
+      <div class="modal-lp__title">Спасибо! Ваш вопрос отправлен.</div>
+    </div>
+    <div class="modal-lp" id="form-callback-order">
+      <div class="form-card-lp form-card-lp--modal">
+        <div class="js-form-lp">
+          <h3 class="form-card-lp__title">Заказ обратного звонка</h3>
+          <div class="form-card-lp__section">
+            <div class="form-card-lp__block form-card-lp__block--inline form-lp-input--text">
+              <input class="form-card-lp__input" id="form-card-lp-modal-376-1" type="text" name="name376" placeholder="Ваше имя">
+              <label class="form-card-lp__label" for="form-card-lp-modal-376-1">Ваше имя</label>
+            </div>
+            <div class="form-card-lp__block form-card-lp__block--inline form-lp-input--text">
+              <input class="form-card-lp__input" id="form-card-lp-modal-376-2" type="tel" name="phone376" placeholder="Ваш телефон *" required>
+              <label class="form-card-lp__label" for="form-card-lp-modal-376-2">Ваш телефон <span class="asterisk">*</span></label>
+            </div>
+          </div>
+          <div class="form-card-lp__section">
+            <div class="form-card-lp__block form-card-lp__block--inline form-card-lp__block--top-position">
+              <button class="btn-lp btn-lp--full btn-full js-fancy-modal-lp" type="submit" data-fancybox-type="inline" data-fancybox-href="#callback-success">Заказать звонок</button>
+            </div>
+            <div class="form-card-lp__block form-card-lp__block--inline form-card-lp__block--bottom-position form-lp-input--checkbox">
+              <input class="form-card-lp__checkbox" id="form-card-lp-modal-376-3" type="checkbox" name="personal376" data-mustvalidate data-mustchecked required checked>
+              <label class="form-card-lp__label-checkbox" for="form-card-lp-modal-376-3">Соглашаюсь на обработку персональных данных</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tooltipster-overlay"></div>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script type="text/javascript" src="../../js/vendor.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+  </body>
+</html>
