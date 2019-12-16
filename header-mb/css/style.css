@@ -4282,6 +4282,9 @@ input[type="tel"] {
 .container-mb + .form-rd__guarantee-block {
   margin-top: 18px;
 }
+.show-main-nav {
+  overflow: hidden;
+}
 @-moz-keyframes fixed {
   0% {
     bottom: -57px;
@@ -17913,7 +17916,7 @@ textarea.field-text__input {
     bottom: 0;
     top: 0px;
     background-color: #274766;
-    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 .main-nav--rd .main-nav__list-wrapper--open {
@@ -18110,6 +18113,18 @@ textarea.field-text__input {
     right: 0px;
     top: 0;
   }
+  .main-nav--mb .main-nav__list {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .main-nav--mb .main-nav__list-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .main-nav--mb .main-nav__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .main-nav--mb .main-nav__conctacts-wrapper {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -18131,6 +18146,7 @@ textarea.field-text__input {
     color: #152438;
     padding: 0;
     line-height: 1.3125;
+    padding-left: 4px;
   }
 }
 .main-nav--mb a[href^="tel:"].main-nav__phone-link {
@@ -29657,7 +29673,7 @@ h2.section-lp__title--white {
     background-color: #ebedf3;
     z-index: 8009;
     padding-top: 17px;
-    padding-bottom: 15px;
+    padding-bottom: 11px;
   }
 }
 .page-header-rd--mb .page-header-rd__top {
