@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="rd" lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gardium-bx-site-redesign</title>
+    <link rel="stylesheet" href="../../css/style.css" media="screen"><!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="../../js/core.js"></script>
+  </head>
+  <body>
+    <header class="page-header-rd page-header-rd--transformed">
+      <div class="page-header-rd__top">
+        <div class="container-rd">
+          <div class="page-header-rd__row">
+            <!-- для всех регионов-->
+            <div class="page-header-rd__left-col"><a class="page-header-rd__logo" href="/">
+                <picture>
+                  <source media="(min-width:768px)" srcset="../../assets/images/logos/logo.png, ../../assets/images/logos/logo@2x.png"><img src="../../assets/images/logos/logo--sm.png" srcset="../../assets/images/logos/logo--sm@2x.png" alt="Гардиум - патентные поверенные и судебные адвокаты">
+                </picture></a></div>
+          </div>
+        </div>
+      </div>
+        <nav class="main-nav main-nav--lp main-nav--rd js-main-nav main-nav--light-blue js-main-nav--no-fixed">
+          <div class="main-nav__inner">
+            <div class="main-nav__conctacts-wrapper"><a class="main-nav__phone-link" href="tel:74956658258">+7 (495) 665 82 58</a>
+              <button class="main-nav__menu-btn js-main-nav__btn" type="button"></button>
+            </div>
+            <div class="main-nav__list-wrapper js-main-nav__list-wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Услуги и цены</a>
+                  <div class="main-nav__mobile-subsection">
+                    <ul class="main-nav__mobile-list">
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="../price-page/index.html#rere">знаки</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">патенты</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">программы</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">договоры</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">споры</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">консалтинг</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Клиенты</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Инфо</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Мероприятия</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+              </ul><a class="main-nav__phone" href="tel:+74956658258">+7 (495) 665-82-58</a><a class="main-nav__lk-link" href="#"><span>Вход в</span> личный кабинет</a>
+              <div class="main-nav__lang-links"><a class="active" href="#">ru</a><a href="#">en</a></div><a class="btn-lp btn-full btn-lp-circled main-nav__mobile-btn" href="#">Отправить заявку</a>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <div class="intro-banner intro-banner--deep-blue">
+      <div class="container-mb">
+        <h1 class="intro-banner__title">Бесплатно проверим товарный знак <span>за 30 минут</span></h1>
+        <p class="intro-banner__slogan intro-banner__slogan--sm">Оставьте заявку сейчас, чтобы получить отчет с заключением и рекомендациями эксперта в <span>15:35</span></p>
+        <form class="form-rd" id="order-form">
+          <div class="form-rd__group form-rd__group--lg">
+            <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="sign" type="text" name="sign" required>
+            <div class="form-rd__placeholder-like">Название вашего знака <span>*</span></div>
+          </div>
+          <div class="form-rd__group form-rd__group--lg">
+            <input class="form-rd__input-text form-rd__input-text--change-placeholder field-rd field-rd--lg field-rd--circled" id="name" type="text" name="name" placeholder="Ваше имя">
+          </div>
+          <div class="form-rd__group form-rd__group--lg">
+            <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="phone" type="tel" name="phone" required>
+            <div class="form-rd__placeholder-like">Ваш телефон <span>*</span></div>
+          </div>
+          <div class="form-rd__group form-rd__group--lg js-form-card-block-file">
+            <div class="form-rd__input-wrapper">
+              <input class="form-rd__input-text field-rd field-rd--lg field-rd--circled" id="email" type="email" name="email" required>
+              <div class="form-rd__placeholder-like">Email <span>*</span></div>
+            </div>
+            <div class="form-rd__block-inner form-rd__block-inner--transformed">
+              <label class="form-rd__label-wrapper">
+                <div class="form-rd__name js-form-card-block-file__download-field">Прикрепить файл с логотипом</div>
+                <input class="form-rd__input-file" id="form-card-lp-2-4" type="file" name="file">
+              </label>
+            </div>
+          </div>
+          <div class="form-rd__footer text-center">
+            <div class="form-rd__btn">
+              <button class="btn-lp btn-full btn-lp-circled" type="button">Проверит знак</button>
+            </div><a class="link-unstyled-blue form-rd__agreement-text" href="/local/files/legal-support_ru_politika-v-otnoshenii-obrabotki-personalnyh-dannyh.pdf">Нажимая на кнопку “Проверить знак”, вы соглашаетесь на&nbsp;обработку персональных данных</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main>
+      <section class="section-rd section-rd--deep-blue-bg">
+        <div class="container-mb">
+          <div class="our-features">
+            <div class="our-feature our-feature--company-logo">
+              <div class="our-feature__text">
+                <h3 class="our-feature__title">Проверку проводит эксперт по интеллектуальной собственности</h3>
+              </div>
+            </div>
+            <div class="our-feature our-feature--full-time">
+              <div class="our-feature__text">
+                <h3 class="our-feature__title">Всегда на связи! Принимаем онлайн заявки 24/7</h3>
+              </div>
+            </div>
+            <div class="our-feature our-feature--guarantee">
+              <div class="our-feature__text">
+                <h3 class="our-feature__title"> Гарантия конфиденциальности</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-rd">
+        <div class="container-mb">
+          <h2 class="section-rd__h2 section-rd__h2--no-center section-rd__h2--blue section-rd__h2--lg">Как проходит проверка?</h2>
+          <div class="process-blocks-rd process-blocks-rd--four-columns">
+            <div class="process-block-rd">
+              <div class="process-block-rd__stat">
+                <div class="process-block-rd__number process-block-rd__number--lg process-block-rd__number--blue">1</div>
+                <div class="process-block-rd__title process-block-rd__title--lg">Вы заполняете <br> заявку</div>
+              </div>
+            </div>
+            <div class="process-block-rd">
+              <div class="process-block-rd__stat">
+                <div class="process-block-rd__number process-block-rd__number--lg process-block-rd__number--violet">2</div>
+                <div class="process-block-rd__title process-block-rd__title--lg">Вместе определяем вид&nbsp;деятельности</div>
+              </div>
+            </div>
+            <div class="process-block-rd">
+              <div class="process-block-rd__stat">
+                <div class="process-block-rd__number process-block-rd__number--lg process-block-rd__number--red">3</div>
+                <div class="process-block-rd__title process-block-rd__title--lg">Эксперт проводит проверку и отправляет заключение на e-mail</div>
+              </div>
+            </div>
+            <div class="process-block-rd">
+              <div class="process-block-rd__stat">
+                <div class="process-block-rd__number process-block-rd__number--lg process-block-rd__number--red">4</div>
+                <div class="process-block-rd__title process-block-rd__title--lg">Обсуждаем результаты и объясняем, как защитить ваш знак</div>
+              </div>
+            </div>
+          </div>
+          <div class="section-banner-rd section-banner-rd--lg">
+            <p class="section-banner-rd__large-text">Убедитесь, что <br class="hide-md"> ваш знак уникален! Оставьте заявку на бесплатную проверку</p><a class="js-scroll-to btn-lp btn-lp-circled btn-full" href="#order-form">проверить знак</a>
+          </div>
+        </div>
+      </section>
+      <section class="section-rd section-rd--has-padding-bottom">
+        <div class="container-mb">
+          <h2 class="section-rd__h2 section-rd__h2--no-center section-rd__h2--blue section-rd__h2--lg">Почему проверяя товарный знак, вы поступаете верно?</h2>
+          <div class="stats-block">
+            <div class="stats-block__element">
+              <div class="stats-block__number stats-block__number--blue">450 <span>тысяч</span></div>
+              <div class="stats-block__text">
+                <p>товарных знаков в&nbsp;России уже зарегистрировано</p>
+              </div>
+            </div>
+            <div class="stats-block__element">
+              <div class="stats-block__number stats-block__number--violet">300 <span>заявок</span></div>
+              <div class="stats-block__text">
+                <p>на регистрацию подается&nbsp;в Роспатент ежедневно</p>
+              </div>
+            </div>
+            <div class="stats-block__element">
+              <div class="stats-block__number stats-block__number--red">5% <span>знаков</span></div>
+              <div class="stats-block__text">
+                <p>являются&nbsp;действительно уникальными и могут быть зарегистрированы</p>
+              </div>
+            </div>
+          </div><a class="section-rd__last-block js-scroll-to btn-lp btn-lp-circled btn-full" href="#order-form">проверить знак</a>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer-rd">
+      <div class="container-rd">
+        <div class="page-footer-rd__middle">
+          <div class="page-footer-rd__bottom-col page-footer-rd__bottom-col--change-order">
+            <address>Центральный офис: Москва, Рязанский проспект, 75к4<a class="js-fancy-modal-rd page-footer-rd__map-link dashed-gray" href="#road-map-rd">Схема проезда</a>
+              <div class="hide-md">Часы работы: пн-пт, 09:00—19:00</div>
+            </address>
+          </div>
+          <div class="page-footer-rd__bottom-col"><a class="page-footer-rd__phone-link" href="tel:+74956658258">+7 (495) 665-82-58</a>
+            <div class="page-footer-rd__hours hide-up-to-md">Часы работы: пн-пт, 09:00—19:00</div>
+          </div>
+          <div class="page-footer-rd__bottom-col"><a class="page-footer-rd__link-email" href="mailto:info+dav003@gardium.ru">info+dav003@gardium.ru</a></div>
+        </div>
+        <div class="page-footer-rd__bottom">
+          <div class="page-footer-rd__bottom-section page-footer-rd__bottom-section--change-order">
+            <ul class="logos-features">
+              <li class="logos-features__item"><img src="../../assets/images/logos/img-iso-2.png" width="128" height="53" alt="Сертификат ISO"></li>
+              <li class="logos-features__item"><img src="../../assets/images/logos/img-300-2.png" width="128" height="53" alt="Право 300"></li>
+              <li class="logos-features__item"><img src="../../assets/images/logos/img-raex-2.png" width="128" height="53" alt="Раекс"></li>
+            </ul>
+            <div class="page-footer-rd__copyright">© 2004–2019, ООО «Гардиум». Все права защищены.</div>
+          </div>
+          <div class="page-footer-rd__bottom-section">
+            <button class="page-footer-rd__link page-footer-rd__link--go-to-top js-back-to-top-lp" type="button">Наверх</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-rd modal-rd--road-modal" id="road-map-rd">
+      <div class="modal-rd__top">
+        <div class="modal-rd__title">Офис патентно-адвокатского бюро <br> «Гардиум» в городе Саратов</div>
+      </div>
+      <div class="modal-rd__middle">
+        <table class="modal-table-rd">
+          <thead>
+            <tr>
+              <th>Адрес</th>
+              <th>Время работы</th>
+              <th>Телефон</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Саратов,<br> ул.Московская, 55</td>
+              <td>Пн-Пт: 9:00 — 19:00</td>
+              <td> 8-800-550-82-58</td>
+              <td><a class="link-unstyled-blue" href="mailto:info+dav003@gardium.ru">info+dav003@gardium.ru</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="modal-rd__map" style="width:800px; height:500px;" id="main-office-saratov"></div>
+      </div>
+    </div>
+    <div class="modal-lp modal-lp--success" id="callback-success">
+      <div class="modal-lp__title">Спасибо! Ваша заявка отправлена.</div>
+    </div>
+    <div class="modal-lp modal-lp--success" id="expert-question-success">
+      <div class="modal-lp__title">Спасибо! Ваш вопрос отправлен.</div>
+    </div>
+    <div class="modal-lp" id="form-callback-order">
+      <div class="form-card-lp form-card-lp--modal">
+        <div class="js-form-lp">
+          <h3 class="form-card-lp__title">Заказ обратного звонка</h3>
+          <div class="form-card-lp__section">
+            <div class="form-card-lp__block form-card-lp__block--inline form-lp-input--text">
+              <input class="form-card-lp__input" id="form-card-lp-modal-376-1" type="text" name="name376" placeholder="Ваше имя">
+              <label class="form-card-lp__label" for="form-card-lp-modal-376-1">Ваше имя</label>
+            </div>
+            <div class="form-card-lp__block form-card-lp__block--inline form-lp-input--text">
+              <input class="form-card-lp__input" id="form-card-lp-modal-376-2" type="tel" name="phone376" placeholder="Ваш телефон *" required>
+              <label class="form-card-lp__label" for="form-card-lp-modal-376-2">Ваш телефон <span class="asterisk">*</span></label>
+            </div>
+          </div>
+          <div class="form-card-lp__section">
+            <div class="form-card-lp__block form-card-lp__block--inline form-card-lp__block--top-position">
+              <button class="btn-lp btn-lp--full btn-full js-fancy-modal-lp" type="submit" data-fancybox-type="inline" data-fancybox-href="#callback-success">Заказать звонок</button>
+            </div>
+            <div class="form-card-lp__block form-card-lp__block--inline form-card-lp__block--bottom-position form-lp-input--checkbox">
+              <input class="form-card-lp__checkbox" id="form-card-lp-modal-376-3" type="checkbox" name="personal376" data-mustvalidate data-mustchecked required checked>
+              <label class="form-card-lp__label-checkbox" for="form-card-lp-modal-376-3">Соглашаюсь на обработку персональных данных</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tooltipster-overlay"></div>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script type="text/javascript" src="../../js/vendor.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+  </body>
+</html>
