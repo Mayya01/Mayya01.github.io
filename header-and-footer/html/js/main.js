@@ -3132,6 +3132,19 @@ var ExpertsSlider = {
 
 App.Control.install(ExpertsSlider);
 
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
 
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
@@ -3150,19 +3163,6 @@ var InfoSliderLp = {
 
 App.Control.install(InfoSliderLp);
 
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
 
 var MainNavView = {
 	el: '.js-main-nav',
