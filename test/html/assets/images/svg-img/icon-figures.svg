@@ -1,0 +1,12 @@
+<svg width="101" height="132" viewBox="0 0 101 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="12" y="14" width="80" height="94" fill="#00AFEC"/>
+<rect x="8" y="8" width="80" height="96" fill="white"/>
+<rect x="2" y="2" width="12" height="12" fill="#FF1037"/>
+<rect x="82" y="2" width="12" height="12" fill="#FF1037"/>
+<rect x="3" y="98" width="12" height="12" fill="#FF1037"/>
+<rect x="82" y="98" width="12" height="12" fill="#FF1037"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M50 81.08C62.1944 81.08 72.08 71.1944 72.08 59C72.08 46.8056 62.1944 36.92 50 36.92C37.8056 36.92 27.92 46.8056 27.92 59C27.92 71.1944 37.8056 81.08 50 81.08ZM50 83C63.2548 83 74 72.2548 74 59C74 45.7452 63.2548 35 50 35C36.7452 35 26 45.7452 26 59C26 72.2548 36.7452 83 50 83Z" fill="#CCDBDE"/>
+<path d="M38 50C38 56.0751 33.299 61 27.5 61C21.701 61 17 56.0751 17 50C17 43.9249 21.701 39 27.5 39C33.299 39 38 43.9249 38 50Z" fill="#CCDBDE"/>
+<path d="M58.9307 23L76.131 32.9306L66.2004 50.1309L49.0001 40.2003L58.9307 23Z" fill="#00AFEC"/>
+<path d="M48.945 70L59.89 89.1537H38L48.945 70Z" fill="#FF1037"/>
+</svg>
