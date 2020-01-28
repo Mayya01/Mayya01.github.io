@@ -1314,6 +1314,7 @@ var Header = {
 		initialize: function () {
 		this.blockHeight = this.$el.outerHeight();
 		this.$el.css('height','auto');
+		$('body').addClass('fixed-menu');
 
 		this.blockOffset = this.$el.offset().top + this.blockHeight;
 
@@ -2118,15 +2119,24 @@ var PracticeSliderRd = {
 	initialize: function () {
 		this.$el.slick({
 			slide: '.info-slider-rd__slide',
-			adaptiveHeight: true,
+			adaptiveHeight: false,
 			dots: true,
 			arrows: false,
-			dotsClass:'info-slider-rd__pagination',
+			dotsClass: 'info-slider-rd__pagination',
+
 			customPaging: function (slider, i) {
 				var targetImage = slider.$slides.eq(i).find('img').attr('src');
 				var dataStyle = slider.$slides.eq(i).find('img').attr('data-style')
-				return dataStyle ? '<img class="info-slider-rd__pagination-img" style=" ' +dataStyle+ ' " src=" ' + targetImage + ' "/>' : '<img class="info-slider-rd__pagination-img" src=" ' + targetImage + ' "/>';
-			}
+				return dataStyle ? '<img class="info-slider-rd__pagination-img" style=" ' + dataStyle + ' " src=" ' + targetImage + ' "/>' : '<img class="info-slider-rd__pagination-img" src=" ' + targetImage + ' "/>';
+			},
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						adaptiveHeight: true
+					}
+                }
+            ]
 
 		});
 	}
@@ -3367,7 +3377,6 @@ var InfoSlider = {
 };
 App.Control.install(InfoSlider);
 
-
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
 	name: 'InfoSliderLp',
@@ -3399,6 +3408,7 @@ var MainNavView = {
 
 		$(window).bind('resize', function () {
 			self.mainNavOffsetTop = self.$el.offset().top;
+			self.fixedNav();
 		});
 
 		$(window).bind('scroll', function () {
@@ -3496,6 +3506,50 @@ var MainSlider = {
 };
 
 App.Control.install(MainSlider);
+
+var VisitedPages = {
+	el: '.js-visited-pages',
+	name: 'VisitedPages',
+
+	initialize: function() {
+		this.mainSlider = $('.main-slider');
+		this.mainSliderOffsetTop = this.mainSlider.offset().top;
+		this.mainSliderHeight = this.mainSlider.outerHeight();
+
+		this.container = this.$el.parent('.container');
+		this.containerWidth = this.container.outerWidth();
+		this.elWidth = ($(window).width() - this.containerWidth) / 2;
+
+		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
+
+		var self = this;
+
+		this.setStickyBlockWidth();
+
+		$(window).bind('resize', function() {
+			self.elWidth = ($(window).width() - self.containerWidth) / 2;
+			self.setStickyBlockWidth();
+		});
+
+		$(window).bind('scroll', function() {
+			self.stickyOnScroll();
+		});
+	},
+
+	setStickyBlockWidth: function() {
+		this.$el.css({'width': this.elWidth});
+	},
+
+	stickyOnScroll: function() {
+		if($(window).scrollTop() >= this.pushPoint) {
+			this.$el.addClass('visited-pages--fixed');
+		} else {
+			this.$el.removeClass('visited-pages--fixed');
+		}
+	}
+};
+
+App.Control.install(VisitedPages);
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',
@@ -3551,49 +3605,6 @@ var MainSliderRd = {
 
 App.Control.install(MainSliderRd);
 
-var VisitedPages = {
-	el: '.js-visited-pages',
-	name: 'VisitedPages',
-
-	initialize: function() {
-		this.mainSlider = $('.main-slider');
-		this.mainSliderOffsetTop = this.mainSlider.offset().top;
-		this.mainSliderHeight = this.mainSlider.outerHeight();
-
-		this.container = this.$el.parent('.container');
-		this.containerWidth = this.container.outerWidth();
-		this.elWidth = ($(window).width() - this.containerWidth) / 2;
-
-		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
-
-		var self = this;
-
-		this.setStickyBlockWidth();
-
-		$(window).bind('resize', function() {
-			self.elWidth = ($(window).width() - self.containerWidth) / 2;
-			self.setStickyBlockWidth();
-		});
-
-		$(window).bind('scroll', function() {
-			self.stickyOnScroll();
-		});
-	},
-
-	setStickyBlockWidth: function() {
-		this.$el.css({'width': this.elWidth});
-	},
-
-	stickyOnScroll: function() {
-		if($(window).scrollTop() >= this.pushPoint) {
-			this.$el.addClass('visited-pages--fixed');
-		} else {
-			this.$el.removeClass('visited-pages--fixed');
-		}
-	}
-};
-
-App.Control.install(VisitedPages);
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
