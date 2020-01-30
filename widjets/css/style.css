@@ -3630,14 +3630,14 @@ input[type="tel"] {
 .font-size-16-md {
   font-size: 1.066666666666667em;
 }
-.font-from-20-to-16 {
-  font-size: 1.333333333333333em;
+.font-from-20-to-15 {
+  font-size: 1.333333333333333em !important;
   line-height: 1.1 !important;
   width: 100%;
 }
 @media (min-width: 768px) {
-  .font-from-20-to-16 {
-    font-size: 1.066666666666667em;
+  .font-from-20-to-15 {
+    font-size: 1em !important;
     line-height: 1.466 !important;
   }
 }
@@ -4820,9 +4820,11 @@ input[type="tel"] {
 .section-rd__h2--lg {
   font-size: 2.666666666666667em;
   line-height: 1.15;
+  margin-top: -2px;
 }
 @media (min-width: 992px) {
   .section-rd__h2--lg {
+    margin-top: 0;
     line-height: 110%;
     font-size: 2.8em;
   }
@@ -4830,12 +4832,14 @@ input[type="tel"] {
     margin-top: 6px;
   }
 }
-.section-rd__h2--lg + .achievements-block-rd--no-border {
-  margin-top: -15px;
-}
 @media (min-width: 768px) {
   .section-rd__h2--lg + .achievements-block-rd--no-border {
     margin-top: -11px;
+  }
+}
+@media (max-width: 991px) {
+  .section-rd__h2--lg + .our-features {
+    margin-top: 25px;
   }
 }
 .section-rd__h3 {
@@ -15352,6 +15356,15 @@ textarea.field-text__input {
     font-size: 2em;
   }
 }
+.iconic-text-block__title--lg {
+  font-size: 2em;
+  line-height: 1.166;
+}
+@media (min-width: 768px) {
+  .iconic-text-block__title--lg {
+    line-height: 110%;
+  }
+}
 .iconic-text-block__title--bold {
   font-weight: 700;
   color: #19476a;
@@ -15406,7 +15419,24 @@ textarea.field-text__input {
 }
 .iconic-text-block--lg::before {
   height: 125px;
-  margin-bottom: 12px;
+  margin-bottom: 3px;
+}
+@media (min-width: 768px) {
+  .iconic-text-block--lg::before {
+    margin-bottom: 12px;
+  }
+}
+.iconic-text-block--lg p {
+  font-size: 1.333333333333333em;
+  line-height: 1.5;
+  margin-bottom: 19px;
+}
+@media (min-width: 768px) {
+  .iconic-text-block--lg p {
+    margin-bottom: 22px;
+    line-height: 1.625;
+    font-size: 1.066666666666667em;
+  }
 }
 @media (min-width: 768px) {
   .iconic-text-blocks {
@@ -15421,7 +15451,7 @@ textarea.field-text__input {
     margin-left: -10px;
   }
 }
-.iconic-text-blocks .iconic-text-block {
+.iconic-text-blocks .iconic-text-block:not(:last-child) {
   margin-bottom: 30px;
 }
 @media (min-width: 768px) {
@@ -15435,6 +15465,20 @@ textarea.field-text__input {
     -ms-flex: 0 0 33.33333333333333%;
     flex: 0 0 33.33333333333333%;
     max-width: 33.33333333333333%;
+  }
+  .iconic-text-blocks .iconic-text-block:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+.iconic-text-blocks .iconic-text-block--lg:not(:last-child) {
+  margin-bottom: 19px;
+}
+@media (min-width: 768px) {
+  .iconic-text-blocks .iconic-text-block--lg {
+    margin-bottom: 0;
+  }
+  .iconic-text-blocks .iconic-text-block--lg:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 768px) {
@@ -16780,6 +16824,14 @@ textarea.field-text__input {
     margin-top: 90px;
   }
 }
+.intro-banner__slogan + .btn-lp {
+  margin-top: 8px;
+}
+@media (min-width: 992px) {
+  .intro-banner__slogan + .btn-lp {
+    margin-top: 18px;
+  }
+}
 @media (max-width: 767px) {
   .intro-banner__slogan--sm {
     font-size: 1.333333333333333em;
@@ -16839,11 +16891,11 @@ textarea.field-text__input {
   }
 }
 .intro-banner__title + .intro-banner__slogan {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   .intro-banner__title + .intro-banner__slogan {
-    margin-top: 35px;
+    margin-top: 23px;
   }
 }
 .intro-banner .intro-banner__subtitle {
@@ -16876,6 +16928,21 @@ textarea.field-text__input {
   display: block;
   color: #bfc0c1;
   text-align: center;
+}
+.intro-banner .btn-lp {
+  font-size: 1.333333333333333em;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  line-height: 1.1;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .intro-banner .btn-lp {
+    font-size: 1em;
+    line-height: 1.466;
+    padding-bottom: 14px;
+    padding-top: 15px;
+  }
 }
 .intro-banner .btn-lp + .intro-banner__remark {
   margin-top: 16px;
@@ -20427,6 +20494,9 @@ textarea.field-text__input {
   display: block;
   padding-bottom: 25px;
   padding-top: 36px;
+/*&:first-child
+			+breakpoint-up-to-lg()
+				padding-top 0*/
 }
 @media (min-width: 992px) {
   .our-feature--transformed {
@@ -20434,6 +20504,11 @@ textarea.field-text__input {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media (max-width: 991px) {
+  .our-feature--transformed:last-child {
+    padding-bottom: 0;
   }
 }
 .our-feature--transformed::before {
