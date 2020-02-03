@@ -3477,6 +3477,19 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
+var MainSlider = {
+    el: '.js-main-slider',
+    name: 'MainSlider',
+    initialize: function() {
+        this.$el.bxSlider({
+            mode: 'fade',
+            pager: false,
+            auto: true,
+        });
+    }
+};
+
+App.Control.install(MainSlider);
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
 	name: 'InfoSliderLp',
@@ -3494,19 +3507,6 @@ var InfoSliderLp = {
 
 App.Control.install(InfoSliderLp);
 
-var MainSlider = {
-    el: '.js-main-slider',
-    name: 'MainSlider',
-    initialize: function() {
-        this.$el.bxSlider({
-            mode: 'fade',
-            pager: false,
-            auto: true,
-        });
-    }
-};
-
-App.Control.install(MainSlider);
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',
@@ -3518,8 +3518,7 @@ var MainSliderRd = {
 	initialize: function () {
 		var self = this;
 		this.slide = this.$('.js-main-slider-rd__slide');
-		this.removedElement = this.slide.not(":eq(0)");
-
+		this.removedSlides = this.slide.not(":eq(0)");
 		this.renderMode();
 
 		$(window).bind('resize', function () {
@@ -3531,10 +3530,10 @@ var MainSliderRd = {
 		var self = this;
 
 		if ($(window).outerWidth() < self.breakpoint) {
-			this.removedElement.detach();
+			this.removedSlides.detach();
 			self.destroySlider();
 		} else {
-			this.$el.append(this.removedElement);
+			this.$el.append(this.removedSlides);
 			self.initSlider();
 		}
 	},
