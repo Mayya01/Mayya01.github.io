@@ -16829,13 +16829,14 @@ textarea.field-text__input {
   vertical-align: middle;
   padding: 0px 7px;
   background-color: #ff1037;
-}
-.intro-banner__slogan span::before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-  width: 1px;
+  line-height: 1.44;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 .intro-banner__slogan + .btn-light {
   margin-top: 5px;
