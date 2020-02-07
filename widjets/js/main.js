@@ -3364,19 +3364,22 @@ var ExpertsSlider = {
 App.Control.install(ExpertsSlider);
 
 
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
+var InfoSliderLp = {
+	el: '.js-info-slider-lp',
+	name: 'InfoSliderLp',
+	slider: null,
 	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
+		this.slider = this.$el.bxSlider({
+			slideMargin: 20,
+			adaptiveHeight: false,
+			infiniteLoop: true
 		});
 	}
+
+
 };
-App.Control.install(InfoSlider);
+
+App.Control.install(InfoSliderLp);
 
 var MainNavView = {
 	el: '.js-main-nav',
@@ -3477,6 +3480,20 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
@@ -3490,23 +3507,6 @@ var MainSlider = {
 };
 
 App.Control.install(MainSlider);
-var InfoSliderLp = {
-	el: '.js-info-slider-lp',
-	name: 'InfoSliderLp',
-	slider: null,
-	initialize: function () {
-		this.slider = this.$el.bxSlider({
-			slideMargin: 20,
-			adaptiveHeight: false,
-			infiniteLoop: true
-		});
-	}
-
-
-};
-
-App.Control.install(InfoSliderLp);
-
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',
@@ -3545,7 +3545,7 @@ var MainSliderRd = {
 				pager: false,
 				auto: true,
 				controls:false,
-				pause: 3000,
+				pause: 6000,
 				speed:2000
 			});
 		}
