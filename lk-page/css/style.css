@@ -6103,7 +6103,7 @@ input[type="tel"] {
   border-bottom: 2px solid transparent;
   padding-bottom: 4px;
   position: relative;
-  top: auto;
+  top: auto !important;
 }
 @media (min-width: 992px) {
   .arrowed-tabs__link {
@@ -6124,7 +6124,6 @@ input[type="tel"] {
 @media (min-width: 992px) {
   .arrowed-tabs__link.is-active {
     border-bottom: none;
-    min-width: 273px;
     background-color: #fff;
     box-shadow: 0px 15px 30px rgba(21,36,56,0.2);
     border-radius: 5px;
@@ -35039,6 +35038,7 @@ html [type="button"],
 }
 .btn-white:hover {
   border-bottom-color: #e2e2e2;
+  color: #19476a;
 }
 .btn-white::before,
 .btn-white::after {
