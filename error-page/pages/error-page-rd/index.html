@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="rd" lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gardium-bx-site-redesign</title>
+    <link rel="stylesheet" href="../../css/style.css" media="screen"><!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="../../js/core.js"></script>
+  </head>
+  <body>
+    <header class="page-header-rd page-header-rd--white js-header">
+      <div class="page-header-rd__top">
+        <div class="container-rd">
+          <div class="page-header-rd__row">
+            <!-- для всех регионов-->
+            <div class="page-header-rd__left-col"><a class="page-header-rd__logo" href="/"><img src="../../assets/images/svg-img/main-logo.svg" alt="Гардиум - патентные поверенные и судебные адвокаты"></a>
+              <div class="page-header-rd__title">Надёжность и ответственность в Федеральном Масштабе</div>
+            </div>
+            <div class="page-header-rd__right-col">
+              <div class="page-header-rd__contacts"><a class="page-header-rd__phone-link" href="tel:88005508258">8 800 550-82-58</a><a class="page-header-rd__callback-btn js-fancy-modal-rd--sm" href="#form-rd-callback-order-rd">Заказать звонок</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <nav class="main-nav main-nav--lp main-nav--rd js-main-nav">
+          <div class="main-nav__inner">
+            <div class="main-nav__conctacts-wrapper"><a class="main-nav__phone-link" href="tel:88005508258">8 800 550-82-58</a>
+              <button class="main-nav__menu-btn js-main-nav__btn" type="button"></button>
+            </div>
+            <div class="main-nav__list-wrapper js-main-nav__list-wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Услуги и цены</a>
+                  <div class="main-nav__mobile-subsection">
+                    <ul class="main-nav__mobile-list">
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="../price-page/index.html#rere">знаки</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">патенты</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">программы</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">договоры</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">споры</a></li>
+                      <li class="main-nav__mobile-item"><a class="main-nav__mobile-link" href="#">консалтинг</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Клиенты</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Инфо</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Мероприятия</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+              </ul><a class="main-nav__phone" href="tel:88005508258">8 800 550-82-58</a>
+              <div class="main-nav__lk"><a class="main-nav__lk-link" href="#"><span>Вход в</span> личный кабинет</a></div>
+              <div class="main-nav__lang-links"><a class="active" href="#">ru</a><a href="#">en</a></div><a class="btn-lp btn-full btn-lp-circled main-nav__mobile-btn" href="#">Отправить заявку</a>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main class="error-page error-page--rd">
+      <section class="error-page__content">
+        <div class="container-rd">
+          <h1 class="error-page__title">404</h1>
+          <p>Данной страницы не существует. Попробуйте <a href="/">начать с главной</a></p><a class="btn-lp btn-block error-page__btn" href="/">На главную</a>
+        </div>
+      </section>
+    </main>
+    <div class="modal-rd modal-rd--road-modal" id="road-map-rd">
+      <div class="modal-rd__top">
+        <div class="modal-rd__title">Офис патентно-адвокатского бюро <br> «Гардиум» в городе Саратов</div>
+      </div>
+      <div class="modal-rd__middle">
+        <table class="modal-table-rd">
+          <thead>
+            <tr>
+              <th>Адрес</th>
+              <th>Время работы</th>
+              <th>Телефон</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Саратов,<br> ул.Московская, 55</td>
+              <td>Пн-Пт: 9:00 — 19:00</td>
+              <td> 8-800-550-82-58</td>
+              <td><a class="link-unstyled-blue" href="mailto:info+dav003@gardium.ru">info+dav003@gardium.ru</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="modal-rd__map" style="width:800px; height:500px;" id="main-office-saratov"></div>
+      </div>
+    </div>
+    <div class="modal-lp modal-lp--success" id="callback-success">
+      <div class="modal-lp__title">Спасибо! Ваша заявка отправлена.</div>
+    </div>
+    <div class="modal-lp modal-lp--success" id="expert-question-success">
+      <div class="modal-lp__title">Спасибо! Ваш вопрос отправлен.</div>
+    </div>
+    <div class="modal-lp" id="form-callback-order">
+      <div class="form-card-lp form-card-lp--modal">
+        <div class="js-form-lp">
+          <h3 class="form-card-lp__title">Заказ обратного звонка</h3>
+          <div class="form-card-lp__section">
+            <div class="form-card-lp__block form-card-lp__block--inline form-lp-input--text">
+              <input class="form-card-lp__input" id="form-card-lp-modal-376-1" type="text" name="name376" placeholder="Ваше имя">
+              <label class="form-card-lp__label" for="form-card-lp-modal-376-1">Ваше имя</label>
+            </div>
+            <div class="form-card-lp__block form-card-lp__block--inline form-lp-input--text">
+              <input class="form-card-lp__input" id="form-card-lp-modal-376-2" type="tel" name="phone376" placeholder="Ваш телефон *" required>
+              <label class="form-card-lp__label" for="form-card-lp-modal-376-2">Ваш телефон <span class="asterisk">*</span></label>
+            </div>
+          </div>
+          <div class="form-card-lp__section">
+            <div class="form-card-lp__block form-card-lp__block--inline form-card-lp__block--top-position">
+              <button class="btn-lp btn-lp--full btn-full js-fancy-modal-lp" type="submit" data-fancybox-type="inline" data-fancybox-href="#callback-success">Заказать звонок</button>
+            </div>
+            <div class="form-card-lp__block form-card-lp__block--inline form-card-lp__block--bottom-position form-lp-input--checkbox">
+              <input class="form-card-lp__checkbox" id="form-card-lp-modal-376-3" type="checkbox" name="personal376" data-mustvalidate data-mustchecked required checked>
+              <label class="form-card-lp__label-checkbox" for="form-card-lp-modal-376-3">Соглашаюсь на обработку персональных данных</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tooltipster-overlay"></div>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script type="text/javascript" src="../../js/vendor.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+  </body>
+</html>
