@@ -28974,12 +28974,15 @@ h2.section-lp__title--white {
 }
 .trademark-check-rd--transformed {
   padding: 25px 20px 35px 20px;
-  background: #274766 url("../assets/backgrounds/bg-trademark-check-2.png") 0 0 no-repeat;
+  background: #274766 url("../assets/backgrounds/bg-trademark-check-2.png");
+  background-repeat: no-repeat;
+  background-position: right;
   background-size: cover;
   box-shadow: 0px 15px 30px rgba(39,71,102,0.15);
 }
 @media (min-width: 768px) {
   .trademark-check-rd--transformed {
+    background-position: center;
     padding: 30px 40px 35px 45px;
   }
 }
@@ -29059,6 +29062,14 @@ h2.section-lp__title--white {
     box-sizing: border-box;
     border-radius: 3px;
     padding: 12px 37px 12px 13px;
+  }
+}
+@media (min-width: 768px) {
+  .trademark-check-rd--transformed .input-multifile__file-item {
+    display: inline-block;
+  }
+  .trademark-check-rd--transformed .input-multifile__file-item:not(:last-child) {
+    margin-right: 5px;
   }
 }
 .trademark-check-rd__title {
