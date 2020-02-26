@@ -7,7 +7,8 @@
     <title>gardium-bx-site-redesign</title>
     <link rel="stylesheet" href="../../css/style.css" media="screen"><!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script src="../../js/core.js"></script>
+    <script src="../../js/core.min.before.js"></script>
+    <script src="../../js/core.min.after.js"></script>
   </head>
   <body>
     <header class="page-header-rd page-header-rd--white js-header">
@@ -118,16 +119,24 @@
             <p>Для того, чтобы объект ноу-хау можно было признать активом, он должен соответствовать критериям признания.  Идентифицируемость и способность приносить экономические выгоды являются одними из ключевых. <span class="highlight">Поэтому для минимизации рисков рекомендуется привлекать технических писателей и юристов</span> для корректной идентификации ноу-хау без нарушения конфиденциальности.</p>
             <p>Введение и поддержание режима коммерческой тайны также является основополагающим, поскольку существование ноу-хау возможно только в случае неизвестности третьим лицам.</p>
           </div>
-          <div class="book-present-rd">
-            <div class="book-present-rd__wrapper">
-              <div class="book-present-rd__img-holder"><img src="../../assets/images/logos/logo-book-present-4.png" width="275" height="399" alt="Книга в подарок"></div>
-              <div class="book-present-rd__description">
-                <div class="book-present-rd__remark">Книга в подарок</div>
-                <h2 class="book-present-rd__title book-present-rd__title--lg">Как поставить НМА на баланс без налога на прибыль</h2>
-                <p class="book-present-rd__text">Ответы на этот и другие вопросы вы найдете в книге «Капитализация НМА». Подпишитесь на рассылку и получите ссылку на скачивание:</p>
+          <div class="trademark-check-rd trademark-check-rd--transformed">
+            <form class="form-rd trademark-check-rd__form js-form" action="" method="">
+              <div class="trademark-check-rd__title">Проверим товарный знак бесплатно за 30 минут</div>
+              <p class="trademark-check-rd__subtitle">Поможем определить к чему относится ваша разработка: изобретения, полезная модель, другое</p>
+              <div class="trademark-check-rd__wrapper">
+                <div class="trademark-check-rd__left-col">
+                  <input class="form-rd__input-text field-rd field-rd--xs field-rd--h54" type="text" name="form-trademark-check-sign" required placeholder="Введите название знака или загрузите изображение">
+                  <div class="form-input form-input--multifile">
+                    <div class="input-multifile" data-icon="true" data-name="form-input-3-10[]">
+                      <input id="form-input-3-10" type="file" name="form-input-3-10[]">
+                    </div>
+                  </div>
+                </div>
+                <div class="trademark-check-rd__right-col">
+                  <button class="btn-lp btn-full js-fancy-modal-rd" type="button" data-fancybox-type="inline" data-fancybox-href="#patents-search-results-order">проверить бесплатно</button>
+                </div>
               </div>
-              <div class="book-present-rd__btn-wrapper"><a class="btn-lp btn-mobile-full" href="http://ebooks.legal-support.ru/ukis">Скачать бесплатно</a></div>
-            </div>
+            </form>
           </div>
         </div>
         <div class="container-rd">
