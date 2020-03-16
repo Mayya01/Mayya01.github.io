@@ -1,0 +1,17 @@
+.c-about__trust {padding:50px 0 80px;}
+	.trust__title {margin-bottom:37px;}
+	.trust__text {margin-bottom:35px;}
+	.trust__list {}
+	.trust__list .trust-item {float:left; background-color:#f2f2f2; padding:40px;
+		box-sizing:border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;}
+	.trust__list .trust-item:nth-of-type(2n) {margin-right:0%}
+	.trust__list .trust-item__logo {height:22px; margin-bottom:15px;}
+	.trust__list .trust-item__text {}
+
+.c-about__trust._w-630 {}
+.c-about__trust._w-630 .trust__list .trust-item {width:100%; float:none; margin-bottom:30px;}
+.c-about__trust._w-630 .trust__list .trust-item:last-of-type {margin-bottom:0;}
+
+.c-about__trust .trust__list .slick-slide .trust-item {float: none;}

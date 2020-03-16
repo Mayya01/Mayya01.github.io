@@ -1,0 +1,16 @@
+.experience-section__cols .items-carousel__slide {
+	border-bottom: none;
+}
+
+.experience-section__cols .items-carousel__prev {
+	left: -40px;
+}
+
+.experience-section__cols .items-carousel__next {
+	right: -40px;
+}
+
+/*.experience-section__cols a {
+	border: none;
+	color: #febb2c;
+}*/

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../fonts/OpenSans_SemiboldItalic/OpenSans_SemiboldItalic.eot");
+  src: url("../fonts/OpenSans_SemiboldItalic/OpenSans_SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans_SemiboldItalic/OpenSans_SemiboldItalic.woff") format("woff"), url("../fonts/OpenSans_SemiboldItalic/OpenSans_SemiboldItalic.ttf") format("truetype"), url("../fonts/OpenSans_SemiboldItalic/OpenSans_SemiboldItalic.svg#OpenSans-SemiboldItalic") format("svg");
+  font-weight: 600;
+  font-style: italic; }
+
+/*# sourceMappingURL=!OpenSans_SemiboldItalic.css.map */

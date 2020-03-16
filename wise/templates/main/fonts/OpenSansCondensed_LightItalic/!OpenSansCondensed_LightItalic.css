@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'OpenSansCondensed';
+  src: url("../fonts/OpenSansCondensed_LightItalic/OpenSansCondensed_LightItalic.eot");
+  src: url("../fonts/OpenSansCondensed_LightItalic/OpenSansCondensed_LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansCondensed_LightItalic/OpenSansCondensed_LightItalic.woff") format("woff"), url("../fonts/OpenSansCondensed_LightItalic/OpenSansCondensed_LightItalic.ttf") format("truetype"), url("../fonts/OpenSansCondensed_LightItalic/OpenSansCondensed_LightItalic.svg#OpenSans-CondensedLightItalic") format("svg");
+  font-weight: 200;
+  font-style: italic; }
+
+/*# sourceMappingURL=!OpenSansCondensed_LightItalic.css.map */

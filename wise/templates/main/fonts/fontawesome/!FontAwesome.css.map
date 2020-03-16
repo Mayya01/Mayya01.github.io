@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "!FontAwesome.css",
+  "sources": [
+    "!FontAwesome.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,aAAc;EAC3B,GAAG,EAAE,mDAAG;EACR,GAAG,EAAE,0DAAG,CAAwD,2BAAM,EACpE,qDAAG,CAAmD,eAAM,EAC5D,oDAAG,CAAkD,cAAM,EAC3D,mDAAG,CAAiD,kBAAM,EAC1D,sEAAG,CAAoE,aAAM;EAC/E,WAAW,EAAE,MAAO;EACpB,UAAU,EAAE,MAAO",
+  "names": []
+}

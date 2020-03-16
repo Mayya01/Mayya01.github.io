@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "!OpenSans_ExtraboldItalic.css",
+  "sources": [
+    "!OpenSans_ExtraboldItalic.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,UAAU;EACT,WAAW,EAAC,UAAW;EACvB,GAAG,EAAE,qEAAG;EACR,GAAG,EAAE,4EAAG,CAA0E,2BAAM,EACvF,sEAAG,CAAoE,cAAM,EAC7E,qEAAG,CAAmE,kBAAM,EAC5E,8FAAG,CAA4F,aAAM;EACtG,WAAW,EAAE,GAAI;EACjB,UAAU,EAAE,MAAO",
+  "names": []
+}

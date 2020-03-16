@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "!OpenSansCondensed_LightItalic.css",
+  "sources": [
+    "!OpenSansCondensed_LightItalic.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,UAAU;EACT,WAAW,EAAC,mBAAoB;EAChC,GAAG,EAAE,+EAAG;EACR,GAAG,EAAE,sFAAG,CAAoF,2BAAM,EACjG,gFAAG,CAA8E,cAAM,EACvF,+EAAG,CAA6E,kBAAM,EACtF,6GAAG,CAA2G,aAAM;EACrH,WAAW,EAAE,GAAI;EACjB,UAAU,EAAE,MAAO",
+  "names": []
+}

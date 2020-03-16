@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "!OpenSans_Italic.css",
+  "sources": [
+    "!OpenSans_Italic.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,UAAU;EACT,WAAW,EAAC,UAAW;EACvB,GAAG,EAAE,mDAAG;EACR,GAAG,EAAE,0DAAG,CAAwD,2BAAM,EACrE,oDAAG,CAAkD,cAAM,EAC3D,mDAAG,CAAiD,kBAAM,EAC1D,mEAAG,CAAiE,aAAM;EAC3E,WAAW,EAAE,GAAI;EACjB,UAAU,EAAE,MAAO",
+  "names": []
+}

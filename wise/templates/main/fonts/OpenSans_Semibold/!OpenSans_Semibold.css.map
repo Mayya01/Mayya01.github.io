@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "!OpenSans_Semibold.css",
+  "sources": [
+    "!OpenSans_Semibold.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,UAAU;EACT,WAAW,EAAC,UAAW;EACvB,GAAG,EAAE,uDAAG;EACR,GAAG,EAAE,8DAAG,CAA4D,2BAAM,EACzE,wDAAG,CAAsD,cAAM,EAC/D,uDAAG,CAAqD,kBAAM,EAC9D,yEAAG,CAAuE,aAAM;EACjF,WAAW,EAAE,GAAI;EACjB,UAAU,EAAE,MAAO",
+  "names": []
+}

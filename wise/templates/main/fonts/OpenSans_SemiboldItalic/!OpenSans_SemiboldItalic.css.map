@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "!OpenSans_SemiboldItalic.css",
+  "sources": [
+    "!OpenSans_SemiboldItalic.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,UAAU;EACT,WAAW,EAAC,UAAW;EACvB,GAAG,EAAE,mEAAG;EACR,GAAG,EAAE,0EAAG,CAAwE,2BAAM,EACrF,oEAAG,CAAkE,cAAM,EAC3E,mEAAG,CAAiE,kBAAM,EAC1E,2FAAG,CAAyF,aAAM;EACnG,WAAW,EAAE,GAAI;EACjB,UAAU,EAAE,MAAO",
+  "names": []
+}

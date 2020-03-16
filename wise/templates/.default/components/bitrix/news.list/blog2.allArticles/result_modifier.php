@@ -1,0 +1,125 @@
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+// echo "<pre>"; print_r($arResult['ITEMS']); echo "</pre>";
+
+$arBlogElements = new BlogList($arResult['ITEMS']);
+$arResult['FIRST_ITEM'] = $arResult['ITEMS'][0];
+
+
+$arResult['ITEMS'] = $arBlogElements->formatTags()->formatDate()->resizePhotoCustom(296,166)->getYouTubeVideoId()->getElements();
+
+$arResult['CURRENT_YEAR'] = BlogHelper::getYear($arResult['ITEMS'][0]['displayYear']);
+$arResult['CURRENT_MONTH'] = BlogHelper::getMonth($arResult['ITEMS'][0]['monthNum']);
+
+$arResult['TIMESTAMPS'] = BlogHelper::getArTimeStamps(array(
+	'IBLOCK_ID'          => $arParams['IBLOCK_ID'],
+	'ACTIVE'             => 'Y',
+	'<=DATE_ACTIVE_FROM' => array(false, ConvertTimeStamp(false, "FULL"))
+),
+	$arResult['CURRENT_YEAR'],
+	$arResult['CURRENT_MONTH']
+);
+
+$arResult['TIMESTAMPS'] = BlogHelper::formatArTimeStamps($arResult['TIMESTAMPS']);
+
+$arBlogElements->distributeElementsByTimeStamps($arResult['TIMESTAMPS']);
+
+
+
+
+
+//Верхние теги для статьи
+$obCache = new CPHPCache();
+if( $obCache->InitCache(3600,$arParams['SECTION']."CloudTags"/*задать ttl, cacheID и cachePath*/) )// Если кэш валиден
+{
+	$vars = $obCache->GetVars();// Извлечение переменных из кэша
+	$allTags = $vars['allTags'];
+}
+elseif( $obCache->StartDataCache()  )// Если кэш невалиден
+{
+	
+		$iblockId = EnvironmentHelper::getParam("articlesIblockID");
+	
+	$allTags = array();
+	$arSelect = Array("ID","TAGS");
+	$arFilter = Array("IBLOCK_ID"=>$iblockId, "ACTIVE"=>"Y");
+	$res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+	while($ob = $res->GetNextElement())
+	{
+		$arFields = $ob->GetFields();
+		$arTags = explode( ', ', $arFields['TAGS']);
+		$allTags = array_merge($allTags, $arTags);
+	}
+	$arTags = array(); //Ключ - название элемента, значение - количество повторов
+	foreach ($allTags as $tag){
+		$arTags[$tag]++;
+	}
+	arsort($arTags); //Сортируем по количеству повторов
+	$allTags = array();
+	foreach ($arTags as $tagName => $value){
+		$allTags[] = array("NAME" => $tagName);
+	}
+	/*Тяжелые вычисления*/
+	$obCache->EndDataCache(array('allTags' => $allTags));// Сохраняем переменные в кэш.
+}
+
+$arResult['TAGS'] = $allTags;
+
+
+$arResult['AJAX_PAGEN_DATA'] = BlogHelper::getAjaxPaginationData($arResult, $arParams['SECTION']);
+
+
+
+//Функционал тегов для ajax
+$arResult['SELECTED_TAGS'] = array();
+if($_REQUEST['tags']){
+	if(is_array($_REQUEST['tags']) AND !empty($_REQUEST['tags'])){
+		$arResult['SELECTED_TAGS'] = $_REQUEST['tags'];
+	}
+	elseif ((string)$_REQUEST['tags']!==''){
+		$arResult['SELECTED_TAGS'] = array($_REQUEST['tags']);
+	}
+}
+
+reset($arResult['SELECTED_TAGS']);
+$arResult['LAST_KEY'] = (int)key($arResult['SELECTED_TAGS']);
+
+//Показ только при наличии выбранных тегов
+if($arParams['SHOW_ONLY_SELECTED_TAGS'] == "Y"){
+	if(!$arResult['SELECTED_TAGS']){
+		unset($arResult['ITEMS']);
+		unset($arResult['NAV_RESULT']);
+	}
+}
+
+
+$isAjaxRequest = (isset($_REQUEST['is_ajax'])) ? true : false;
+if(!$isAjaxRequest && $arParams['SHOW_BANNER'] == 'Y') {
+	if ($arResult['ITEMS']) {
+		foreach ($arResult['ITEMS'] as $key => $arItem) {
+			if ($key < 6) {
+				$arResult['ITEMS_PART_1'][] = $arItem;
+			} else {
+				$arResult['ITEMS_PART_2'][] = $arItem;
+			}
+		}
+	}
+}else{
+	$arResult['ITEMS_PART_1'] = $arResult['ITEMS'];
+}
+
+
+
+
+
+?>

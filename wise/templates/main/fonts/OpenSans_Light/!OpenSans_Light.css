@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../fonts/OpenSans_Light/OpenSans_Light.eot");
+  src: url("../fonts/OpenSans_Light/OpenSans_Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans_Light/OpenSans_Light.woff") format("woff"), url("../fonts/OpenSans_Light/OpenSans_Light.ttf") format("truetype"), url("../fonts/OpenSans_Light/OpenSans_Light.svg#OpenSans-Light") format("svg");
+  font-weight: 200;
+  font-style: normal; }
+
+/*# sourceMappingURL=!OpenSans_Light.css.map */
