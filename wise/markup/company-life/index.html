@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="../../templates/main/css/normalize.css" type="text/css" rel="stylesheet" />
+	<link href="../../templates/main/css/vendor.css" type="text/css" rel="stylesheet" />
+	<link href="../../templates/main/css/main.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<script type="text/javascript" src="../../templates/main/js/core.js"></script>
+	<script type="text/javascript" src="../../templates/main/js/vendor.js"></script>
+	<script type="text/javascript" src="../../templates/main/js/main.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Жизнь компании | WiseAdvice</title>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+</head>
+
+<!-- start HEADER -->
+
+<div class="page-wrapper">
+	<main class="main clearfix">
+		<header class="header">
+			<div class="layout-center-wrapper">
+				<div class="header__content">
+					<div class="header-top header__top clearfix">
+						<a href="/" class="header-logo">
+							<strong>WiseAdvise
+								<small>Consulting group</small>
+							</strong>
+						</a>
+						<div class="header-top-slogan header__top-slogan">
+							<div class="header-top-slogan__text">
+								<strong>Интеллектуальные услуги для
+									бизнеса</strong>
+							</div>
+							<div class="header-top-slogan__before-intelis">
+								<a class="before-intelis js-before-intelis">
+									<div class="before-intelis__text-layer" href="javascript:void(0);">До 2010 года &mdash; <span class="before-intelis__text-layer-span">ИНТЕЛИС</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="header-top-right header__top-right">
+							<div class="header-top-right__phone"><span>+7 495 995-82-58</span>
+							</div>
+							<div class="header-top-right__companies-list">
+								<div class="companies-list-dd js-companies-list-dd">
+									<div class="companies-list-dd__btn-wrap">
+										<a class="companies-list-dd__btn" href="javascript:void(0);">Все
+											компании WiseAdvice CG</a>
+									</div>
+									<div class="companies-list-dd__list-wrap">
+										<div class="companies-list-dd__list">
+											<div class="companies-list-dd__row clearfix">
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--1cwiceadvice"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.1c-wiseadvice.ru">1С-WiseAdvice:
+															бухгалтерский
+															аутсорсинг</a>
+													</div>
+												</div>
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--finansist"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.1cashflow.ru">«Финансист»:
+															программа для
+															финансистов</a>
+													</div>
+												</div>
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--gardium"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.legal-support.ru">«Гардиум»:
+															патентно-адвокатское
+															бюро</a>
+													</div>
+												</div>
+											</div>
+											<div class="companies-list-dd__row clearfix">
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--urait"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.you-right.ru">«Юрайт»:
+															программа для
+															юристов</a>
+													</div>
+												</div>
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--wiseadvicefinans"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.fna-audit.ru">«Финансовый
+															и налоговый
+															аудит»</a>
+													</div>
+												</div>
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--pravovest"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.pravovest-audit.ru">«Правовест
+															Аудит»: аудиторские
+															услуги</a>
+													</div>
+												</div>
+											</div>
+											<div class="companies-list-dd__row clearfix">
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--pravpunkt"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.pravpunkt.ru">«ПравПункт»:
+															защита прав
+															потребителей</a>
+													</div>
+												</div>
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--wiseadviceocenka"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.intelis-ocenka.ru">WiseAdvice:
+															независимая
+															оценка</a>
+													</div>
+												</div>
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--1cfranchazi"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.wiseadvice-it.ru">WiseAdvice:
+															1С-Франчайзи</a>
+													</div>
+												</div>
+											</div>
+											<div class="companies-list-dd__row clearfix">
+												<div class="companies-list-dd__company companies-list-dd-company">
+													<div class="companies-list-dd-company__icon-wrap">
+														<div class="companies-list-dd-company__icon companies-list-dd-company__icon--honest"></div>
+													</div>
+													<div class="companies-list-dd-company__link-wrap">
+														<a class="companies-list-dd-company__link" target="_blank" href="http://www.damages.ru">«Хонест»:
+															экспертно-правовое
+															бюро</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="main-menu-wrapper js-main-menu">
+					<a href="javascript:void(0);" class="main-menu-sm-show js-main-ham">
+						<div class="c-hamburger c-hamburger--htx main-menu-sm-show__ham">
+							<span></span>
+						</div>
+						<span class="main-menu-sm-show__text">Меню</span>
+					</a>
+					<nav class="main-menu-holder">
+						<ul class="main-menu">
+							<li class="main-menu__item main-menu__item--selected">
+								<a class="main-menu__link" href="/o-kompanii/">
+									О компании </a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/uslugi/">
+									Услуги </a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/klienty/">
+									Клиенты </a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/karera/">
+									Карьера </a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/infocentr/">
+									Инфоцентр </a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/kontakty/">
+									Контакты </a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="page-content clearfix">
+
+			<!-- end HEADER -->
+
+			<div class="layout-center-wrapper">
+				<div class="content-col">
+					<ul class="breadcrumb">
+						<li class="breadcrumb__item" id="breadcrumb_0" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+							<a class="breadcrumb__link" href="/o-kompanii/" title="Карьера" itemprop="url">
+								<span class="breadcrumb__title breadcrumb__title--link" itemprop="title">Карьера</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<section class="section-nav js-section-nav">
+				<div class="layout-center-wrapper">
+					<div class="content-col">
+						<h1 class="section-nav__h2 module-h2">Жизнь компании</h1>
+
+						<div class="section-nav__inner clearfix">
+
+							<ul class="section-nav__list">
+
+								<li><a class="underlined-link js-section-nav__link " href="/karera/vakansii/">Вакансии</a>
+								</li>
+
+								<li><a class="underlined-link js-section-nav__link  active" href="/karera/uslovia-raboti/">Условия работы</a></li>
+
+								<li><a class="underlined-link js-section-nav__link " href="/">Жизнь компании</a></li>
+
+								<li><a class="underlined-link js-section-nav__link " href="/o-kompanii/history/">Истории успеха</a></li>
+
+								<li><a class="underlined-link js-section-nav__link " href="/karera/organizaciya-truda/"> Организация труда</a></li>
+							</ul>
+							<div class="section-nav__text">
+								Интересная и разнообразная работа всегда дает возможность профессионального развития. Это характерно только для консалтинговых компаний.
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="wa-company-life">
+				<div class="layout-center-wrapper">
+					<div class="content-col">
+						<h2 class="wa-company-life__h2 module-2">Незабываемые корпоративы</h2>
+						<p class="lead">У нас ежегодно проходят корпоративы – зимний и летний. На новогоднем мероприятии в Москве собирается большинство сотрудников, включая региональные филиалы. Праздники у нас всегда тематичекие – каждый департамент готовит свое яркое выступление. Мы не приглашаем «звезд», мы сами Звезды и делаем праздник для себя. Летние корпоративы проходят на природе, это team building по департаментам: сотрудники знакомятся, участвуют в конкурсах и строят грандиозные планы на будущее.</p>
+						<div class="photos-slider js-show-more">
+							<div class="js-photos-slider">
+								<div class="photos-slider__slide js-show-more__item">
+									<div class="photos-slider__col">
+										<a  href="../../../local/templates/main/images/photos-slider/photos-slider-1@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-1.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-2@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-2.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-3@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-3.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-4@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-4.png" alt="корпоратив">
+										</a>
+									</div>
+								</div>
+								<div class="photos-slider__slide js-show-more__item is-hidden">
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-5@1.5x.png"  class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-5.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-6@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-6.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-7@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-7.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-1@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-1.png" alt="корпоратив">
+										</a>
+									</div>
+								</div>
+							</div>
+							<a href="javascript:void(0);" class="show-more js-show-more__btn">Показать ещё</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="full-width-slider js-full-width-slider">
+				<div class="js-full-width-slider__slides full-width-slider__slides">
+					<div class="full-width-slider__slide full-width-slider__slide--run">
+						<div class="full-width-slider__slide-inner">
+							<span class="full-width-slider__slide-remark">Спортивные мероприятия</span>
+							<p class="full-width-slider__slide-text">Мы ежегодно принимаем участие в благотворительных забегах. Благодаря этому мы можем сделать два дела одновременно – помочь нуждающимся и укрепить своё здоровье.</p>
+						</div>
+					</div>
+					<div class="full-width-slider__slide full-width-slider__slide--tennis">
+						<div class="full-width-slider__slide-inner">
+							<span class="full-width-slider__slide-remark">Спортивные мероприятия</span>
+							<p class="full-width-slider__slide-text">Соревнования по настольному теннису стали доброй традицией. Осенью 2020 года пройдет шестой по счету чемпионат. Победителям вручают кубки и подарки.</p>
+						</div>
+					</div>
+					<div class="full-width-slider__slide full-width-slider__slide--football">
+						<div class="full-width-slider__slide-inner">
+							<span class="full-width-slider__slide-remark">Спортивные мероприятия</span>
+							<p class="full-width-slider__slide-text">В теплые дни после работы мы регулярно собираемся на футбольном поле около офиса, делимся на команды и устраиваем между собой мини-турниры. </p>
+						</div>
+					</div>
+					<div class="full-width-slider__slide full-width-slider__slide--volleyball">
+						<div class="full-width-slider__slide-inner">
+							<span class="full-width-slider__slide-remark">Спортивные мероприятия</span>
+							<p class="full-width-slider__slide-text">Играем активно и довольно успешно. Все желающие после работы присоединиться и потренироваться в зале недалеко от офиса. </p>
+						</div>
+					</div>
+					<div class="full-width-slider__slide full-width-slider__slide--pitates">
+						<div class="full-width-slider__slide-inner">
+							<span class="full-width-slider__slide-remark">Спортивные мероприятия</span>
+							<p class="full-width-slider__slide-text">После рабочего дня можно посетить занятия с тренером по пилатесу. Далеко идти не надо – тренировки проходят в офисе 2 раза в неделю по вечерам.</p>
+						</div>
+					</div>
+				</div>
+				<div class="full-width-slider__pager js-full-width-slider__pager">
+					<div class="full-width-slider__pager-wrapper">
+						<a href="#" data-slide-index="0" class="full-width-slider__pager-link active">Бег</a>
+						<a href="#" data-slide-index="1" class="full-width-slider__pager-link">Теннис</a>
+						<a href="#" data-slide-index="2" class="full-width-slider__pager-link">Футбол</a>
+						<a href="#" data-slide-index="3" class="full-width-slider__pager-link">Волейбол</a>
+						<a href="#" data-slide-index="4" class="full-width-slider__pager-link">Пилатес</a>
+					</div>
+				</div>
+			</section>
+			<section class="wa-company-life">
+				<div class="layout-center-wrapper">
+					<div class="content-col">
+						<h2 class="wa-company-life__h2 module-2">Приятные моменты</h2>
+						<p class="lead">Так у ж вышло, что у нас праздник каждый день – поздравляем коллег с Днем рождения или очередной годовщиной работы в компании. Всегда с шарами и подарками. У нас насыщенная жизнь в соцсетях – публикуем новости, корпоративные видео, поздравления и интервью с сотрудниками. Каждый может стать лицом компании и стать узнаваемым среди коллег. Кстати, у нас есть свой талисман – осьминог WAся, который является неотъемлемой частью коллектива и коллеги с удовольствием берут его с собой в путешествия и делают незабываемые фото.</p>
+						<div class="photos-slider js-show-more">
+							<div class="js-photos-slider">
+								<div class="photos-slider__slide js-show-more__item">
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-8@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-8.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a class="photo js-fancybox-media" href="../../../local/templates/main/images/photos-slider/photos-slider-9@1.5x.png">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-9.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a class="photo js-fancybox-media" href="../../../local/templates/main/images/photos-slider/photos-slider-10@1.5x.png">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-10.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a class="photo js-fancybox-media" href="../../../local/templates/main/images/photos-slider/photos-slider-12@1.5x.png">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-12.png" alt="корпоратив">
+										</a>
+									</div>
+								</div>
+								<div class="photos-slider__slide js-show-more__item is-hidden">
+									<div class="photos-slider__col">
+										<a href="../../../local/templates/main/images/photos-slider/photos-slider-8@1.5x.png" class="photo js-fancybox-media">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-8.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a class="photo js-fancybox-media" href="../../../local/templates/main/images/photos-slider/photos-slider-9@1.5x.png">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-9.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a class="photo js-fancybox-media" href="../../../local/templates/main/images/photos-slider/photos-slider-10@1.5x.png">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-10.png" alt="корпоратив">
+										</a>
+									</div>
+									<div class="photos-slider__col">
+										<a class="photo js-fancybox-media" href="../../../local/templates/main/images/photos-slider/photos-slider-12@1.5x.png">
+											<img src="../../../local/templates/main/images/photos-slider/photos-slider-12.png" alt="корпоратив">
+										</a>
+									</div>
+								</div>
+							</div>
+							<a href="javascript:void(0);" class="show-more js-show-more__btn">Показать ещё</a>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<section class="wa-company-life wa-company-life--white wa-company-life--no-padding-bottom">
+				<div class="layout-center-wrapper">
+					<div class="content-col">
+						<h2 class="wa-company-life__h2 module-2">Видео с нами</h2>
+						<p class="lead">Мы стараемся запечатлеть все моменты не только на фото, но и в формате видеороликов, при просмотре которых можно полностью погрузиться в события, отображенные в них.</p>
+					</div>
+				</div>
+				<div class="video-slider video-slider--after-text">
+					<div class="js-video-slider video-slider__slides">
+						<a data-slide-index="0" href="https://www.youtube.com/embed/gINwEhM6r1U" class="video-slider__slide js-fancybox-media" data-fancybox-type="iframe">
+							<img src="../../../local/templates/main/images/video-slider.jpg" alt="">
+						</a>
+						<a href="https://www.youtube.com/embed/gINwEhM6r1U" data-slide-index="1" data-fancybox-type="iframe" class="video-slider__slide js-fancybox-media">
+							<img src="../../../local/templates/main/images/video-slider.jpg" alt="">
+						</a>
+						<a href="https://www.youtube.com/embed/gINwEhM6r1U" data-slide-index="2" data-fancybox-type="iframe" class="video-slider__slide js-fancybox-media">
+							<img src="../../../local/templates/main/images/video-slider.jpg" alt="">
+						</a>
+						<a href="https://www.youtube.com/embed/gINwEhM6r1U" data-slide-index="3" data-fancybox-type="iframe" class="video-slider__slide js-fancybox-media">
+							<img src="../../../local/templates/main/images/video-slider.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</section>
+			<div class="wa-company-life wa-company-life--white">
+				<div class="layout-center-wrapper">
+					<div class="content-col">
+						<h2 class="wa-company-life__h2 module-2 text-center">Хочешь у нас работать?</h2>
+						<div class="text-center">
+							<a href="#" class="btn--red btn ">Присоединиться!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="leader-appeal leader-appeal--maria parallax-container js-parallax">
+				<div class="layout-center-wrapper">
+					<div class="content-col  clearfix">
+						<div class="leader-appeal__text">
+							<h2 class="leader-appeal__h2 module-h2">Работа в WiseAdvice</h2>
+
+							<blockquote>
+								<p>
+									Сильная команда — ключевой фактор успеха консалтинговой компании. Мы ищем лучших специалистов, чтобы оказывать услуги на высоком уровне, делая бизнес клиентов безопаснее и прибыльнее.
+								</p>
+								<p>
+									В 2003 году, на момент основания, вся команда состояла из 4 человек, к 2019 году нас больше 700. Хотите у нас работать? Посмотрите <a href="/karera/vakansii/" class="text-highlight deal-home__text-highlight"><b>наши вакансии</b></a>
+								</p>
+								<cite class="leader-appeal__leader-name">Мария Тягунова<br>
+									Директор по персоналу</cite>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="js-parallax-window parallax-window parallax-window--maria"></div>
+			</section>
+
+			<!-- start FOOTER -->
+
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="layout-center-wrapper clearfix">
+			<div class="footer__top clearfix">
+				<div class="footer__menu-container clearfix">
+					<div class="footer__menu-lg">
+
+						<div class="footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item footer-menu__item--selected">
+									<a class="footer-menu__link" href="/o-kompanii/">
+										О группе компаний </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/karera/">
+										Карьера в Wiseadvice </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/karera/vakansii/">
+										Актуальные вакансии </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/karera/istorii-uspekha/">
+										Истории успеха </a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/auditorskie-uslugi/">
+										Аудиторские услуги </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/autsorsing-uchetnykh-funktsiy/">
+										Бухгалтерские услуги </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/uslugi-patentnogo-byuro/">
+										Патентно-адвокатские услуги </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/uslugi-nalogovykh-yuristov/">
+										Налоговые юристы </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/yurayt-programmy-dlya-yuristov/">
+										ПО для юристов </a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/avtomatizatsiya-biznesa-na-baze-1s/">
+										Автоматизация бизнеса </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/uslugi-po-nezavisimoy-otsenke/">
+										Услуги оценщиков </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/dosudebnye-i-sudebnye-ekspertizy/">
+										Услуги по экспертизе </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/finansist-programmy-dlya-finansistov/">
+										ПО для финансистов </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__menu-sm">
+
+						<div class="footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item footer-menu__item--selected">
+									<a class="footer-menu__link" href="/o-kompanii/">
+										О компании </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/uslugi/">
+										Услуги </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/klienty/">
+										Клиенты </a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer-menu">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/karera/">
+										Карьера </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/infocentr/">
+										Инфоцентр </a>
+								</li>
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="/kontakty/">
+										Контакты </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-menu footer-menu--contacts">
+						<div class="footer-menu__phones-container">
+							<div class="footer-menu__phone-wrap">
+								<a href="tel:+74959958258" class="footer-menu__phone">
+									+7 495 995-82-58
+								</a>
+							</div>
+							<div class="footer-menu__address-wrap">
+								<div class="footer-menu__address">
+									<span>
+										Пн-пт: 10:00&mdash;19:00<br>
+										Москва, Рязанский пр-т, 75к4
+									</span>
+								</div>
+							</div>
+							<div class="footer-menu__social-links-container">
+								<a href="https://www.facebook.com/WiseAdvice.Group" class="footer-menu__social-link">
+									<span class="footer__social-link footer__social-link--fb"> </span>
+								</a>
+								<a href="https://www.linkedin.com/company/wiseadvice-consulting-group" class="footer-menu__social-link">
+									<span class="footer__social-link footer__social-link--li"> </span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__mid clearfix">
+				<div class="footer__copyrights-container">
+					<div class="footer__copyrights">
+						© 2003&mdash;2019 WiseAdvice Consulting Group
+					</div>
+				</div>
+				<p class="pinfo-footer-notice"><a class="footer-menu__link" href="../../../local/privacy/wiseadvice_ru_politika-v-otnoshenii-obrabotki-personalnyh-dannyh.pdf" target="_blank">Корпоративная
+						политика <br> в отношении персональных данных</a></p>
+				<div class="footer__before-intelis">
+					<a class="before-intelis js-before-intelis">
+						<div class="before-intelis__text-layer" href="javascript:void(0);">До 2010 года &mdash;
+							<span class="before-intelis__text-layer-span">ИНТЕЛИС</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="footer__sub-mid clearfix">
+				<hr>
+			</div>
+			<div class="footer__bottom footer-spec">
+				<div class="footer-spec__container clearfix">
+					<a href="../../../local/templates/main/images/srt/iso.png" rel="footer_spec" class="footer-spec-item clearfix js-fancybox-docs" title="Сертификация по международному стандарту качества ISO 9001:2008">
+						<div class="footer-spec-item__img-wrapper">
+							<div class="footer-spec-item__img footer-spec-item__img--1"></div>
+						</div>
+						<div class="footer-spec-item__text-block">
+							<div class="footer-spec-item__text">
+								Сертификация по международному стандарту качества ISO 9001:2008
+							</div>
+						</div>
+					</a>
+					<a href="../../../local/templates/main/images/srt/raex.jpg" rel="footer_spec" class="footer-spec-item clearfix js-fancybox-docs" title="Одна из крупнейших консалтинговых групп России по данным РА «Эксперт»">
+						<div class="footer-spec-item__img-wrapper">
+							<div class="footer-spec-item__img footer-spec-item__img--3"></div>
+						</div>
+						<div class="footer-spec-item__text-block">
+							<div class="footer-spec-item__text">
+								Одна из крупнейших консалтинговых групп России по данным РА «Эксперт»
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+</body></html>
