@@ -1,6 +1,5 @@
-<?
-if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
-	die();
+<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
+    die();
 }
 
 /**
@@ -11,322 +10,183 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 global $USER;
 \Bitrix\Main\Loader::includeModule('iblock');
 \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__);
+$asset = Bitrix\Main\Page\Asset::getInstance();
 
-if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
-	die();
+$mainMenuShow = (!defined('MAIN_MENU') || MAIN_MENU == true) ? true : false;
+
+$request = \Bitrix\Main\Application::getInstance()->getContext()->getRequest();
+$requestedPageDirectory = $request->getRequestedPageDirectory();
+$asset->addString('<link rel="canonical" href="'.($request->isHttps() ? 'https' : 'http').'://'.$request->getHttpHost().$requestedPageDirectory.'/" />', true, 'BEFORE_CSS');
+if(startsWith($requestedPageDirectory, '/uslugi') || startsWith($requestedPageDirectory, '/infocentr')) {
+    $asset->addString('<meta name="robots" content="noindex,nofollow">', true, 'BEFORE_CSS');
 }
-
-$isLanding = (!defined('LANDING_PAGE') || LANDING_PAGE !== true) ? false : true;
-
-require_once $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/redirect_4_head.php';
 ?><!DOCTYPE html>
-<html lang="ru" class="<?= ($_REQUEST['fullversion'] != 'y') ? 'is-adaptive' : '' ?><? $APPLICATION->AddBufferContent('additionalHtmlClass'); ?>">
+<html lang="ru">
 <head>
-	<? $APPLICATION->ShowHead() ?>
-	<!-- Meta-->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-	<meta name="imagetoolbar" content="no">
-	<meta name="msthemecompatible" content="no">
-	<meta name="cleartype" content="on">
-	<meta name="HandheldFriendly" content="True">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="format-detection" content="address=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <? $APPLICATION->ShowHead() ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="yandex-verification" content="bb3b44c3d0f1c529" />
+    <title><? $APPLICATION->ShowTitle() ?></title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PWN4QNR');</script>
+    <!-- End Google Tag Manager -->
+    
     <?
-        // Отложенная функция для закрытия от индексации страниц через мета-тег
-        $APPLICATION->AddBufferContent('customMetaRobots');
+
+    $asset->addCss(SITE_TEMPLATE_PATH . '/css/normalize.css');
+    $asset->addCss(SITE_TEMPLATE_PATH . '/css/vendor.css');
+    $asset->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
+
+    $asset->addJs(SITE_TEMPLATE_PATH . '/js/core.js');
+    //$asset->addJs(SITE_TEMPLATE_PATH . '/js/modernizr.js');
+    $asset->addJs(SITE_TEMPLATE_PATH . '/js/vendor.js');
+    //$asset->addJs(SITE_TEMPLATE_PATH . '/js/select2/ru.js');
+    $asset->addJs('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
+    $asset->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
+
+    $page_url = $APPLICATION->GetCurPage();
+
+	$asset->addJs(SITE_TEMPLATE_PATH . '/track.js');
+
+    //CUtil::InitJSCore(array('ajax'));
     ?>
-	<title><? $APPLICATION->ShowTitle() ?></title>
-
-	<script>
-		function setCookie(name, value, expires) {
-			var date = new Date(new Date().getTime() + expires * 1000);
-			document.cookie = name + "=" + value + '; expires=' + date + '; path=/';
-		}
-
-		function getCookie(name) {
-			var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-			return matches ? decodeURIComponent(matches[1]) : undefined;
-		}
-	</script>
-	<?
-	$arFonts = [
-		SITE_TEMPLATE_PATH . '/fonts/OpenSans_Light/OpenSans_Light.woff',
-		SITE_TEMPLATE_PATH . '/fonts/OpenSans_Semibold/OpenSans_Semibold.woff',
-		SITE_TEMPLATE_PATH . '/fonts/Fontello/fontello.woff',
-		SITE_TEMPLATE_PATH . '/fonts/OpenSans_Bold/OpenSans_Bold.woff',
-		SITE_TEMPLATE_PATH . '/fonts/OpenSans_Italic/OpenSans_Italic.woff',
-		SITE_TEMPLATE_PATH . '/fonts/OpenSans_Regular/OpenSans_Regular.woff'
-	];
-	?>
-	<? foreach ($arFonts as $font): ?>
-		<link rel="preload" as="font" href="<?= $font; ?>" type="font/woff" crossorigin="anonymous">
-	<? endforeach; ?>
-	<?
-		$asset = Bitrix\Main\Page\Asset::getInstance();
-
-		$asset->addCss(SITE_TEMPLATE_PATH . '/css/vendor.min.css');
-		$asset->addCss(SITE_TEMPLATE_PATH . '/css/main.min.css');
-
-		$asset->addJs(SITE_TEMPLATE_PATH . '/js/core.min.js');
-		$asset->addJs(SITE_TEMPLATE_PATH . '/js/vendor.min.js');
-		$asset->addJs(SITE_TEMPLATE_PATH . '/js/main.min.js');
-
-
-		$page_url = $APPLICATION->GetCurPage(false);
-	    list($hostName,)=explode(':',$_SERVER['HTTP_HOST']); // вычленяем адрес хоста без указания порта
-        $asset->addString('<link rel="canonical" href="https://'.$hostName.$page_url.'" />', true);
-        // $asset->addString('<meta name="robots" content="index, follow"/>');
-
-		//CUtil::InitJSCore(array('ajax'));
-	?>
 </head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWN4QNR"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter6334411 = new Ya.Metrika({
+                    id:6334411,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
 
-<body class="<?/*=$APPLICATION->ShowProperty('BODY_CLASS')*/?>js-body" data-title="<?$APPLICATION->ShowTitle()?>">
+        var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
 
-<? if (defined('ENVIRONMENT') && ENVIRONMENT == 'production') : ?>
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript" >
-		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-			m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-		
-		ym(186118, "init", {
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true,
-			webvisor:true
-		});
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/186118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
-
-    <script>
-        <? $rngstCallbackOffState = $page_url !== '/rngst.php'?'true':'false'; ?>
-		function disableRngstCallback(){
-			if (typeof(ringostatAPI) !== 'undefined') {
-				ringostatAPI.setCallbackSettings({CallbackOff: <?= $rngstCallbackOffState ?>});
-			} else {
-				setTimeout(disableRngstCallback,800);
-			}
-		}
-		disableRngstCallback();
-    </script>
-
-	<!-- WA Custom Scripts -->
-	<script>
-		function plid() {
-			/*$('[name="submitted[promo]"]').val(uid);*/
-			yasend();
-		}
-	</script>
-    <script type="text/javascript" src="https://services.wiseadvice.ru/tracker/js/v1/wa.min.js"></script>
-	<!-- End WA Custom Scripts -->
-
-	<!-- Google Tag Manager -->
-	<noscript>
-		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-TMLNRS"
-				height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript>
-	<script>(function (w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(), event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src =
-				'//www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-TMLNRS');</script>
-	<!-- End Google Tag Manager -->
-<? endif ?>
-<div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
-<!-- Начало блока: Мобильное меню-->
-<div class="mobile-menu">
-	<? $APPLICATION->IncludeComponent(
-		"bitrix:menu",
-		"top-menu_mobile",
-		Array(
-			"ROOT_MENU_TYPE" => "top",
-			"MAX_LEVEL"      => "1",
-			"USE_EXT"        => "Y"
-		)
-	); ?>
-	<?
-		$APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
-			"AREA_FILE_SHOW" => "file",
-			"PATH"           => SITE_DIR . '/local/include/menu/inner_mobile.php'
-		));
-	?>
-</div>
-<!-- Конец блока: Мобильное меню-->
-
-
-<?
-
-	// Здесь были формы
-
-?>
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/6334411" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<? $APPLICATION->ShowPanel() ?>
 <div class="page-wrapper">
-	<div class="wrap-for-footer">
-		<header class="page-header">
-			<div class="page-header__top-section js-main-nav-scroll">
-				<div class="content-center">
-					<div class="page-header__btn-holder">
-						<!-- Начало блока: Кнопка мобильного меню--><a href="#" class="burger-btn page-header__btn <?if($APPLICATION->GetCurPage()!=SITE_DIR):?>_orange<?endif?>"><span
-								class="burger-btn__line"></span></a>
-						<!-- Конец блока: Кнопка мобильного меню-->
-					</div>
-					<div class="page-header__menu js-show-search-form">
-						<div class="page-header__menu-wrapper clear js-show-search-form__hidden">
-							<? $APPLICATION->IncludeComponent(
-								"bitrix:menu",
-								"top-menu",
-								Array(
-									"ROOT_MENU_TYPE" => "top",
-									"MAX_LEVEL"      => "1",
-									"USE_EXT"        => "Y"
-								)
-							); ?>
-
-							<!--<button class="page-header__show-search js-show-search-form__btn" type="submit" type="button">Показать форму поиска</button>-->
-						</div>
-
-						<form class="page-header__search-form _none js-show-search-form__form" action="/search/" method="GET">
-							<input class="page-header__search-input" name="q" type="search" placeholder="Поиск по сайту">
-							<input type="hidden" name="how" value="r">
-							<input class="page-header__search-btn" type="submit" value="Найти">
-						</form>
-					</div>
-
-					<!--noindex-->
-					<!--<div class="page-header__enter">
-						<div class="enter-link"><a href="#auth" data-action="pupop" class="enter-link__item">Вход для
-								клиентов</a></div>
-					</div>-->
-					<!--<div class="page-header__full"><a href="?fullversion=y" class="page-header__full-link">Полная версия
-							сайта</a></div>-->
-					<!-- Начало блока: контакты https://rm.9958258.ru/issues/126867 -->
-					<div class="page-header__mobile-logo">
-						<a href="/" title="На главную"><img src="<?=SITE_TEMPLATE_PATH?>/img/logos/logo-wiseadvice-mobile.png" alt="Логотип" width="96" height="33"></a>
-					</div>
-					<div class="page-header__mobile-contacts">
-							<span class="phone"><?
-								$APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
-									"AREA_FILE_SHOW" => "file",
-									"PATH"           => SITE_DIR . '/local/include/phone_link.php'
-								));
-								?></span>
-
-						<!--<a class="pupop contacts-block__callback-link" href="#callback-new">Заказать обратный звонок</a>-->
-
-					</div>
-					<!--/noindex-->
-				</div>
-			</div>
-			<div class="page-header__bottom-section <?if($APPLICATION->GetCurPage()==SITE_DIR):?>page-header__bottom-section--gray _no-border<?endif;?> <? if ($APPLICATION->GetCurPage() == SITE_DIR."landing/1c/" ): ?>_bordered<? endif;?>">
-				<div class="content-center">
-					<div class="page-header__logo">
-							<a href="/" title="На главную"><img src="<?=SITE_TEMPLATE_PATH?>/img/logo_franchisee.png" alt="Логотип" width="218" height="72"></a>
-							<span class="page-header__logo-text">Настоящие эксперты<br />в автоматизации финансов</span>
-					</div>
-					<div class="page-header__holder">
-						<div class="page-header__status">
-							<!-- Начало блока: Статус 1с-->
-							<?
-								$APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
-									"AREA_FILE_SHOW" => "file",
-									"PATH"           => SITE_DIR . '/local/include/statuses.php'
-								));
-							?>
-							<!-- Конец блока: Статус 1с-->
-						</div>
-						<div class="page-header__addresses">
-							<ul class="nostyle">
-								<li>
-									<a href="mailto:<? include($_SERVER['DOCUMENT_ROOT'] . '/local/include/email.php') ?>"
-									   class="email-link"><?
-											$APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
-												"AREA_FILE_SHOW" => "file",
-												"PATH"           => SITE_DIR . '/local/include/email.php'
-											));
-										?></a>
-								</li>
-								<li>
-									<a href="/kontakty/" class="metro-link">
-										<?
-											$APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
-												"AREA_FILE_SHOW" => "file",
-												"PATH"           => SITE_DIR . '/local/include/address.php'
-											));
-										?>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="page-header__contacts">
-							<!-- Начало блока: Контакты-->
-							<div class="top-contacts">
-								<div class="top-contacts__phone">
-										<?
-											$APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
-												"AREA_FILE_SHOW" => "file",
-												"PATH"           => SITE_DIR . '/local/include/phone_link.php'
-											));
-										?>
-								</div>
-								<a href="#callback-new" onclick="setCallbackFormSource('Шапка сайта')"
-								   class="top-contacts__link pupop">Заказать обратный звонок</a>
-							</div>
-							<!-- Конец блока: Контакты-->
-						</div>
-					</div>
-					<div class="page-header__email  page-header__email--desktop-hidden">
-						<a href="mailto:<? include($_SERVER['DOCUMENT_ROOT'] . '/local/include/email.php') ?>" class="email-link">
-							<?
-							$APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
-								"AREA_FILE_SHOW" => "file",
-								"PATH"           => SITE_DIR . '/local/include/email.php'
-							));
-							?>
+    <main class="main clearfix">
+        <header class="header">
+            <div class="layout-center-wrapper">
+                <div class="header__content">
+                    <div class="header-top header__top clearfix">
+                        <a href="/" class="header-logo">
+                            <strong>WiseAdvise
+                                <small>Consulting group</small>
+                            </strong>
                         </a>
-					</div>
-				</div>
-			</div>
-
-			<?if(!LandingHelper::checkPartial('c-fix-header')){
-			    LazyLoad::includeFile(SITE_DIR.'local/include/menu/fix_menu.php');
-			}?>
-
-			<? if ($APPLICATION->GetCurPage() != SITE_DIR && !defined('HIDE_SUBMENU')): ?>
-				<div class="page-header__sub-menu">
-					<div class="content-center">
-						<!-- Начало блока: Внутреннее меню-->
-						<div class="inner-menu _pp">
-							<?
-								$APPLICATION->IncludeComponent("bitrix:main.include", "", Array(
-									"AREA_FILE_SHOW" => "file",
-									"PATH"           => SITE_DIR . '/local/include/menu/inner.php'
-								));
-							?>
-						</div>
-						<!-- Конец блока: Внутреннее меню-->
-					</div>
-				</div>
-				<? if ($APPLICATION->GetCurPage() != '/spasibo-za-pokupku/' && !defined('HIDE_BREADCRUMBS')): ?>
-					<? $APPLICATION->IncludeComponent("bitrix:breadcrumb", ".default", array(
-						"START_FROM" => "0",
-						"PATH"       => "",
-						"SITE_ID"    => SITE_ID
-					),
-						false
-					); ?>
-				<? endif; ?>
-			<? endif; ?>
-		</header>
-		<main>
+                        <div class="header-top-slogan header__top-slogan">
+                            <div class="header-top-slogan__text">
+                                <strong>Интеллектуальные услуги для бизнеса</strong>
+                            </div>
+                            <div class="header-top-slogan__before-intelis">
+                                <? $APPLICATION->IncludeFile(INCLUDE_DIR . '/layout/before_intelis.php') ?>
+                            </div>
+                        </div>
+                        <div class="header-top-right header__top-right">
+                            <div class="header-top-right__phone"><span>+7 495 995-82-58</span></div>
+                            <div class="header-top-right__companies-list">
+                                <? $APPLICATION->IncludeComponent(
+                                    'bitrix:news.list',
+                                    'companies.dd',
+                                    Array(
+                                        'ADD_SECTIONS_CHAIN' => 'N',
+                                        'AJAX_MODE' => 'N',
+                                        'CACHE_GROUPS' => 'Y',
+                                        'CACHE_TIME' => '36000000',
+                                        'CACHE_TYPE' => 'A',
+                                        'CHECK_DATES' => 'Y',
+                                        'DISPLAY_BOTTOM_PAGER' => 'N',
+                                        'DISPLAY_DATE' => 'N',
+                                        'DISPLAY_NAME' => 'Y',
+                                        'DISPLAY_PICTURE' => 'Y',
+                                        'DISPLAY_PREVIEW_TEXT' => 'N',
+                                        'DISPLAY_TOP_PAGER' => 'N',
+                                        'FIELD_CODE' => array('NAME', 'PREVIEW_PICTURE', ''),
+                                        'IBLOCK_ID' => '2',
+                                        'IBLOCK_TYPE' => 'company',
+                                        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                                        'INCLUDE_SUBSECTIONS' => 'Y',
+                                        'NEWS_COUNT' => '9999',
+                                        'PROPERTY_CODE' => array('SITE_URL', 'MENU_CLASS', ''),
+                                        'SET_BROWSER_TITLE' => 'N',
+                                        'SET_LAST_MODIFIED' => 'N',
+                                        'SET_META_DESCRIPTION' => 'N',
+                                        'SET_META_KEYWORDS' => 'N',
+                                        'SET_STATUS_404' => 'N',
+                                        'SET_TITLE' => 'N',
+                                        'SHOW_404' => 'N',
+                                        'SORT_BY1' => 'SORT',
+                                        'SORT_BY2' => 'ID',
+                                        'SORT_ORDER1' => 'ASC',
+                                        'SORT_ORDER2' => 'ASC'
+                                    )
+                                ); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <? if ($mainMenuShow) : ?>
+            <div class="header__bottom">
+                <? $APPLICATION->IncludeComponent(
+                    'bitrix:menu',
+                    'main',
+                    Array(
+                        'ALLOW_MULTI_SELECT' => 'N',
+                        'DELAY' => 'N',
+                        'MAX_LEVEL' => '1',
+                        'MENU_CACHE_TIME' => '3600',
+                        'MENU_CACHE_TYPE' => 'A',
+                        'MENU_CACHE_USE_GROUPS' => 'Y',
+                        'ROOT_MENU_TYPE' => 'top',
+                        'USE_EXT' => 'N'
+                    )
+                ); ?>
+            </div>
+            <? endif; ?>
+        </header>
+        <div class="page-content clearfix">
+            <? /* TODO - убрать, если не надо.
+               if ($APPLICATION->GetCurPage(true) != SITE_DIR . 'index.php'): ?>
+                <?$APPLICATION->IncludeComponent(
+                  'bitrix:breadcrumb',
+                  '',
+                  Array(
+                    'START_FROM' => '1',
+                    'PATH' => '',
+                    'SITE_ID' => 's1'
+                  )
+                );?>
+            <? endif  */ ?>

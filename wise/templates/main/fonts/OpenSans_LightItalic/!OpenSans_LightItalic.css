@@ -1,8 +1,0 @@
-@font-face {
-  font-family: 'OpenSans';
-  src: url("../fonts/OpenSans_LightItalic/OpenSans_LightItalic.eot");
-  src: url("../fonts/OpenSans_LightItalic/OpenSans_LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans_LightItalic/OpenSans_LightItalic.woff") format("woff"), url("../fonts/OpenSans_LightItalic/OpenSans_LightItalic.ttf") format("truetype"), url("../fonts/OpenSans_LightItalic/OpenSans_LightItalic.svg#OpenSansLight-Italic") format("svg");
-  font-weight: 300;
-  font-style: italic; }
-
-/*# sourceMappingURL=!OpenSans_LightItalic.css.map */

@@ -1,8 +1,0 @@
-@font-face {
-  font-family: 'OpenSans';
-  src: url("../fonts/OpenSans_ExtraboldItalic/OpenSans_ExtraboldItalic.eot");
-  src: url("../fonts/OpenSans_ExtraboldItalic/OpenSans_ExtraboldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans_ExtraboldItalic/OpenSans_ExtraboldItalic.woff") format("woff"), url("../fonts/OpenSans_ExtraboldItalic/OpenSans_ExtraboldItalic.ttf") format("truetype"), url("../fonts/OpenSans_ExtraboldItalic/OpenSans_ExtraboldItalic.svg#OpenSans-ExtraboldItalic") format("svg");
-  font-weight: 800;
-  font-style: italic; }
-
-/*# sourceMappingURL=!OpenSans_ExtraboldItalic.css.map */

@@ -1,8 +1,0 @@
-@font-face {
-  font-family: 'OpenSans';
-  src: url("../fonts/OpenSans_BoldItalic/OpenSans_BoldItalic.eot");
-  src: url("../fonts/OpenSans_BoldItalic/OpenSans_BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans_BoldItalic/OpenSans_BoldItalic.woff") format("woff"), url("../fonts/OpenSans_BoldItalic/OpenSans_BoldItalic.ttf") format("truetype"), url("../fonts/OpenSans_BoldItalic/OpenSans_BoldItalic.svg#OpenSans-BoldItalic") format("svg");
-  font-weight: 700;
-  font-style: italic; }
-
-/*# sourceMappingURL=!OpenSans_BoldItalic.css.map */
