@@ -4062,23 +4062,19 @@ ul.no-list-style li:before {
   padding-top: 35px;
 }
 .full-width-slider__slide--run {
-  background-image: linear-gradient(to top, #000 -14.77%, rgba(0,0,0,0) 91.17%), url("../images/background/slider-running@4x.jpg");
+  background-image: linear-gradient(to top, #000 -14.77%, rgba(0,0,0,0) 91.17%), url("../images/background/slider-running.jpg");
 }
 .full-width-slider__slide--tennis {
   background-image: linear-gradient(to top, #000 -14.77%, rgba(0,0,0,0) 91.17%), url("../images/background/slider-tennis-2.jpg");
-  background-position: 0;
 }
 .full-width-slider__slide--football {
   background-image: linear-gradient(to top, #000 -14.77%, rgba(0,0,0,0) 91.17%), url("../images/background/slider-football.jpg");
-  background-position: 0;
 }
 .full-width-slider__slide--volleyball {
   background-image: linear-gradient(to top, #000 -14.77%, rgba(0,0,0,0) 91.17%), url("../images/background/slider-volleyball-2.jpg");
-  background-position: 0;
 }
 .full-width-slider__slide--pitates {
   background-image: linear-gradient(to top, #000 -14.77%, rgba(0,0,0,0) 91.17%), url("../images/background/slider-pitates.jpg");
-  background-position: 0;
 }
 .full-width-slider__slide-inner {
   max-width: 980px;
