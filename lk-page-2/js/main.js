@@ -125,17 +125,19 @@ var ArrowedSlider = {
 	name: 'ArrowedSlider',
 
 	initialize: function () {
-		this.$el.find('.js-arrowed-slider__slides').slick({
+		var slider;
+		var self = this;
+		slider = this.$el.find('.js-arrowed-slider__slides').slick({
 			slide: '.js-arrowed-slider__slide',
 			adaptiveHeight: false,
 			dots: true,
 			arrows: false,
 			fade: true,
-			swipe:false,
+			swipe: false,
 			dotsClass: 'arrowed-slider__list',
 			customPaging: function (slider, i) {
 				var dataText = slider.$slides.eq(i).attr('data-pagination-text');
-				return '<a class="arrowed-slider__link">' + dataText + '</a>';
+				return '<span class="arrowed-slider__link">' + dataText + '</span>';
 			},
 			responsive: [
 				{
@@ -143,16 +145,21 @@ var ArrowedSlider = {
 					settings: {
 						adaptiveHeight: true,
 						fade: false,
-						swipe:true
+						swipe: true,
+						customPaging: function (slider, i) {
+							var dataText = slider.$slides.eq(i).attr('data-pagination-text-mobile');
+							return '<span class="arrowed-slider__link">' + dataText + '</span>';
+						}
 					}
                 }
             ]
 
 		});
-		
-		this.$el.find('.js-arrowed-slider__slides').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-			var linkPosition = $('.arrowed-slider__link').eq(nextSlide).position().left;
-			$('.arrowed-slider__list').css('transform', 'translate3d(' + -linkPosition + 'px,0px,0px)'  )
+
+		slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+			console.log(slick);
+			var linkPosition = self.$el.find('.arrowed-slider__link').eq(nextSlide).position().left - 10;
+			$('.arrowed-slider__list').css('transform', 'translate3d(' + -linkPosition + 'px,0px,0px)')
 		});
 	}
 
@@ -3404,19 +3411,6 @@ var ExpertsSlider = {
 
 App.Control.install(ExpertsSlider);
 
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
 
 var InfoSliderLp = {
 	el: '.js-info-slider-lp',
@@ -3434,7 +3428,6 @@ var InfoSliderLp = {
 };
 
 App.Control.install(InfoSliderLp);
-
 
 var MainNavView = {
 	el: '.js-main-nav',
@@ -3535,6 +3528,20 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
