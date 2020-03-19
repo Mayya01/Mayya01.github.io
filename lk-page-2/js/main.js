@@ -157,11 +157,19 @@ var ArrowedSlider = {
 		});
 
 		slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-			console.log(slick);
+
+			if (nextSlide + 1 == self.$el.find('.arrowed-slider__link').length) {
+				var lastSlideWidth = self.$el.find('.arrowed-slider__link').eq(nextSlide).outerWidth() + 10;
+				$('.arrowed-slider__delimeter').css('width',lastSlideWidth );
+			} else {
+				$('.arrowed-slider__delimeter').css('width','100%');
+			}
 			var linkPosition = self.$el.find('.arrowed-slider__link').eq(nextSlide).position().left - 10;
-			$('.arrowed-slider__list').css('transform', 'translate3d(' + -linkPosition + 'px,0px,0px)')
+			$('.arrowed-slider__list').css({
+				'transform':'translate3d(' + -linkPosition + 'px,0px,0px)',
+			});
 		});
-	}
+	},
 
 };
 
@@ -3429,6 +3437,20 @@ var InfoSliderLp = {
 
 App.Control.install(InfoSliderLp);
 
+var InfoSlider = {
+	el: '.js-info-slider',
+	name: 'InfoSlider',
+	initialize: function () {
+		this.$el.bxSlider({
+			mode: 'fade',
+			pager: false,
+			auto: false,
+			adaptiveHeight: true,
+		});
+	}
+};
+App.Control.install(InfoSlider);
+
 var MainNavView = {
 	el: '.js-main-nav',
 	name: 'MainNavView',
@@ -3528,20 +3550,6 @@ var PageHeaderView = {
 };
 
 App.Control.install(PageHeaderView);
-var InfoSlider = {
-	el: '.js-info-slider',
-	name: 'InfoSlider',
-	initialize: function () {
-		this.$el.bxSlider({
-			mode: 'fade',
-			pager: false,
-			auto: false,
-			adaptiveHeight: true,
-		});
-	}
-};
-App.Control.install(InfoSlider);
-
 var MainSlider = {
     el: '.js-main-slider',
     name: 'MainSlider',
