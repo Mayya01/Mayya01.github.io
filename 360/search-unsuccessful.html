@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner"><a class="header__logo" href="#"><img src="images/logo.png"></a>
+          <nav class="header__nav main-nav js-main-nav">
+            <button class="main-nav__toggle js-main-nav__toggle"></button>
+            <div class="main-nav__wrapper js-main-nav__menu">
+              <ol class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#"> Проверить бесплатно</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#"> Оформить заявку</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--no-active" href="#"> Вести делопроизводство<span class="main-nav__num">0<span class="main-nav__tooltip">Нет поданных заявок</span></span></a></li>
+              </ol><a class="main-nav__user" href="#"><span class="main-nav__user-name">Петров Алексей</span><span>(выход)</span></a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="search-page search-page--unsuccessful">
+      <div class="search">
+        <div class="container">
+          <div class="search__inner">
+            <form class="search__form">
+              <input class="search__input" type="text" placeholder="Укажите наименование для проверки">
+              <button class="btn search__btn" type="submit">Проверить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="search-page__content">
+        <div class="container">
+          <h1>Здесь будут показаны товарные знаки по вашему запросу</h1>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner"><a class="header__logo" href="#"><img src="images/logo.png"></a>
+          <nav class="header__nav main-nav js-main-nav">
+            <button class="main-nav__toggle js-main-nav__toggle"></button>
+            <div class="main-nav__wrapper js-main-nav__menu">
+              <ol class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#"> Проверить бесплатно</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#"> Оформить заявку</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--no-active" href="#"> Вести делопроизводство<span class="main-nav__num">0<span class="main-nav__tooltip">Нет поданных заявок</span></span></a></li>
+              </ol><a class="main-nav__user" href="#"><span class="main-nav__user-name">Петров Алексей</span><span>(выход)</span></a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="row-lg">
+            <div class="col col--1-3-lg">
+              <div class="steps">
+                <div class="steps__element steps__element--finished"><span class="steps__num">1</span><span class="steps__text">Обозначение</span></div>
+                <div class="steps__element steps__element--finished"><span class="steps__num">2</span><span class="steps__text">Выбор тарифа</span></div>
+                <div class="steps__element steps__element--active"><span class="steps__num">3</span><span class="steps__text">Оплата</span></div>
+                <div class="steps__element"><span class="steps__num">4</span><span class="steps__text">Проверка</span></div>
+              </div>
+            </div>
+            <div class="col col--2-3-lg">
+              <h1>Оплата</h1>
+              <div class="tabs js-tabs">
+                <div class="tabs__head"><a class="tabs__link js-tabs__link is-active" href="#" data-id="yandex">электронная оплата через яндекс.кассу</a><a class="tabs__link js-tabs__link" href="#" data-id="cash">выставить счет для безналичной оплаты</a></div>
+                <div class="tabs__body">
+                  <div class="tabs__content js-tabs__content is-active" id="yandex">
+                    <div class="img-wrapper"><img src="images/yandex-cash.png"></div>
+                  </div>
+                  <div class="tabs__content js-tabs__content" id="cash">
+                    <form class="form">
+                      <div class="form__cards">
+                        <div class="form__label-card">
+                          <label class="form__label" for="inn">ИНН</label>
+                        </div>
+                        <div class="form__input-card">
+                          <input class="form__input" type="number" placeholder="ИНН" id="inn" required>
+                        </div>
+                      </div>
+                      <div class="form__cards">
+                        <div class="form__label-card">
+                          <label class="form__label" for="ogrn">ОГРН</label>
+                        </div>
+                        <div class="form__input-card">
+                          <input class="form__input" type="number" id="ogrn" placeholder="ОГРН" required>
+                        </div>
+                      </div>
+                      <div class="form__cards">
+                        <div class="form__label-card">
+                          <label class="form__label" for="name">Название организации / ИП</label>
+                        </div>
+                        <div class="form__input-card">
+                          <input class="form__input" type="text" id="name" placeholder="Введите название организации" required>
+                        </div>
+                      </div>
+                      <div class="form__cards">
+                        <div class="form__label-card">
+                          <label class="form__label" for="address">Юридический адрес</label>
+                        </div>
+                        <div class="form__input-card">
+                          <input class="form__input" type="text" id="address" placeholder="Введите адрес" required>
+                        </div>
+                      </div>
+                      <div class="form__cards form__cards--grey">
+                        <div class="form__label-card">
+                          <label class="form__label">Сумма</label>
+                        </div><span class="form__price">48 900 ₽</span>
+                      </div>
+                      <button class="btn" type="submit">Выставить счёт</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
