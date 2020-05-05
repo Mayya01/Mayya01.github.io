@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header js-header">
+      <header class="header">
         <div class="container">
           <div class="header__top">
             <div class="header__row"><a class="header__logo-wrapper" href="#"><img src="img/logo.svg" width="157" height="120"></a>
@@ -23,39 +23,36 @@
                   <time class="header__time">с 8:00 до 23:00</time><span>без выходных</span>
                 </div><a class="header__email" href="mailto:info@zelenaya-strekoza.ru">info@zelenaya-strekoza.ru</a>
               </div>
-              <div class="header__contacts"><a class="header__phone" href="tel:+79169857142">+7 (916) 985-71-42</a><a class="btn-light" href="#">Заказать звонок</a></div>
+              <div class="header__contacts"><a class="header__phone" href="tel:+79169857142">+7 (916) 985-71-42</a><a class="btn-light" href="#" data-toggle="modal" data-target="#callbackModal">Заказать звонок</a></div>
             </div>
           </div>
-          <div class="header__bottom">
-            <nav class="main-nav">
-              <button class="main-nav__toggle-btn js-header__toggle-btn" type="button"></button>
-              <div class="main-nav__wrapper js-header__nav">
-                <div class="header__list">
-                        <ul class="main-nav__list">
-                          <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="#">Наши работы</a></li>
-                          <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="#">Услуги</a></li>
-                          <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="#">О нас</a></li>
-                          <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="#">Наши преимущества</a></li>
-                        </ul>
-                </div>
-                <div class="header__list">
-                        <ul class="main-nav__list">
-                          <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="#">Команда</a></li>
-                          <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="#">Как мы работаем</a></li>
-                          <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="#">Отзывы</a></li>
-                          <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="#">Контакты</a></li>
-                        </ul>
-                </div>
-                <div class="main-nav__bottom">
-                  <div class="main-nav__schedule">
-                    <time class="main-nav__time">с 8:00 до 23:00</time><span>без выходных</span>
-                  </div><a class="main-nav__email" href="mailto:info@zelenaya-strekoza.ru">info@zelenaya-strekoza.ru</a><a class="main-nav__btn btn-light" href="#">Заказать звонок</a>
-                </div>
+          <nav class="main-nav js-main-nav"><a class="main-nav__logo" href="#"><img src="img/logo_no-text.svg" width="70" height="62"></a>
+            <button class="main-nav__toggle-btn js-main-nav__toggle-btn" type="button"></button>
+            <div class="main-nav__wrapper js-main-nav__wrapper">
+              <div class="header__list">
+                      <ul class="main-nav__list">
+                        <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="our-work">Наши работы</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="services">Услуги</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="about-us">О нас</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="features">Наши преимущества</a></li>
+                      </ul>
               </div>
-            </nav>
-          </div>
+              <div class="header__list">
+                      <ul class="main-nav__list">
+                        <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="team">Команда</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="how-we-work">Как мы работаем</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="reviews">Отзывы</a></li>
+                        <li class="main-nav__item"><a class="main-nav__link js-scroll-to" href="contacts">Контакты</a></li>
+                      </ul>
+              </div>
+              <div class="main-nav__bottom">
+                <div class="main-nav__schedule">
+                  <time class="main-nav__time">с 8:00 до 23:00</time><span>без выходных</span>
+                </div><a class="main-nav__email" href="mailto:info@zelenaya-strekoza.ru">info@zelenaya-strekoza.ru</a><a class="main-nav__btn btn-light" href="#" data-toggle="modal" data-target="#callbackModal">Заказать звонок</a>
+              </div>
+            </div>
+          </nav>
         </div>
-        <!--include ../blocks/navbar-->
       </header>
       <main role="main">
         <section class="screen-first">
@@ -95,7 +92,7 @@
             </div>
           </div>
         </section>
-        <section class="screen-works">
+        <section class="screen-works" id="our-work">
           <div class="screen-works__decoration-1"><img src="img/objects/our-work/tools.png"></div>
           <div class="screen-works__obj1">
             <div class="screen-num"><span>01</span></div>
@@ -155,7 +152,7 @@
                   </div>
           </div>
         </section>
-        <section class="screen-services">
+        <section class="screen-services" id="services">
           <div class="container">
             <div class="screen-services__decoration"><img src="/img/objects/services/bg-leaves.png"></div>
             <div class="section-heading">
@@ -286,7 +283,7 @@
           </div>
         </section>
         <!--include screens/04-promo-->
-        <section class="screen-about">
+        <section class="screen-about" id="about-us">
           <div class="container">
             <div class="section-heading">
               <h2 class="section-heading__name">О нас</h2>
@@ -334,7 +331,7 @@
             </div>
           </div>
         </section>
-        <section class="screen-team">
+        <section class="screen-team" id="team">
           <div class="container">
             <div class="screen-team__decoration"><img src="img/objects/team/bg-tree.png"></div>
             <div class="section-heading">
@@ -366,7 +363,7 @@
                   </div>
           </div>
         </section>
-        <section class="screen-features">
+        <section class="screen-features" id="features">
           <div class="container">
             <div class="screen-features__decoration"><img src="img/objects/features/bg-leaves.png"></div>
             <div class="section-heading">
@@ -412,7 +409,7 @@
                   </div>
           </div>
         </section>
-        <section class="screen-steps">
+        <section class="screen-steps" id="how-we-work">
           <div class="container">
             <div class="screen-steps__decoration"><img src="img/objects/steps/tree-left.png"></div>
             <div class="section-heading">
@@ -486,7 +483,7 @@
                   </div>
           </div>
         </section>
-        <section class="screen-reviews">
+        <section class="screen-reviews" id="reviews">
           <div class="container">
             <div class="section-heading">
               <h2 class="section-heading__name">Отзывы</h2>
@@ -579,7 +576,7 @@
           </div>
         </section>
         <!--include screens/11-phone-->
-        <section class="screen-contacts">
+        <section class="screen-contacts" id="contacts">
           <div class="container">
             <div class="screen-contacts__row">
               <div class="screen-contacts__decoration"><img src="img/objects/contacts/leaves.png"></div>
@@ -621,7 +618,7 @@
                     </div>
                     <button class="btn-styled" type="submit">Заказать обратный звонок</button>
                   </form>
-                  <p class="contacts-card__licence-info">Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных и соглашаетесь с <a href="#">Пользовательским соглашением</a></p>
+                  <p class="licence-info">Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных и соглашаетесь с <a href="#">Пользовательским соглашением</a></p>
                 </div>
               </div>
             </div>
@@ -643,10 +640,21 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-body">
-              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <div class="modal-decoration modal-decoration--1"><img src="img/objects/modal/tree.png"></div>
+              <div class="modal-decoration modal-decoration--2"><img src="img/objects/modal/leaves.png"></div>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
               <h5 class="modal-title">Связаться с нами</h5>
               <p>Оставьте заявку, и наш специалист свяжется с вами в ближайшее время</p>
-              <button class="btn-styled" type="button" data-dismiss="modal">Заказать обратный звонок</button>
+              <form class="form">
+                <div class="form__group">
+                  <input class="field" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="form__group">
+                  <input class="field" type="tel" placeholder="Ваш номер телефона">
+                </div>
+                <button class="btn-styled" type="button" data-dismiss="modal">Заказать обратный звонок</button>
+              </form>
+              <p class="licence-info">Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных и соглашаетесь с <a href="#">Пользовательским соглашением</a></p>
             </div>
           </div>
         </div>
