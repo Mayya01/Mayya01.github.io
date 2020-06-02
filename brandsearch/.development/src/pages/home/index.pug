@@ -1,0 +1,15 @@
+extends ../../templates/main.pug
+
+block variables
+	- var isPage = 'homePage'
+	- var trademarks =    [{class:'it', text:'IT, Разработка'},{class:'flower', text:'Агрокомпании'},{class:'bank', text:'Банк, финансовые организации'},{class:'money', text:'Благотворительные организации'},{class:'hostel', text:'Гостиницы, хостелы'},{class:'cup', text:' Кафе'},{class:'it',hiddenClass:'_hide', text:'IT, Разработка'},{class:'flower',hiddenClass:'_hide', text:'Агрокомпании'},{class:'hostel',hiddenClass:'_hide',text:'Гостиницы, хостелы'},{class:'cup',hiddenClass:'_hide', text:' Кафе'}];
+	- var trademarkTabs = [{text:'По категориям', active:'_active', id:'category'},{text:'По МКТУ',id:'mktu'}, {text:'По образам',id:'view'}];
+	- var servicesTabs =  [{text:'Предпринимателям', active:'_active', id:'businessman'},{text:'Маркетологам',id:'marketers'}, {text:'Юристам',id:'lawyers'}, {text:'Креативным агентствам',id:'agencies'}];
+
+block main-content
+	include ../../blocks/sections/home/result
+	include ../../blocks/sections/home/databases-and-registries
+	include ../../blocks/sections/home/search-section
+	include ../../blocks/sections/home/services-for-all
+	include ../../blocks/sections/home/why
+	include ../../blocks/sections/home/trademark-sign

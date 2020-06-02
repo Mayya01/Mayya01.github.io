@@ -1,0 +1,20 @@
+section.result-section.section
+	div.container
+		- var slides = [{heading: 'Полнота, актуальность, достоверность', text: 'Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.', linkText:'Какие данные используете?'},{heading: 'Полнота, актуальность, достоверность', text: 'Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.', linkText:'Какие данные используете?'},{heading: 'Полнота, актуальность, достоверность', text: 'Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.', linkText:'Какие данные используете?'}]
+		div.row-md
+			div.col-md.col-md--1-2
+				div.features-plates
+					div.features-plates__top
+						div.features-plates__slider
+							div.js-features-plates
+								each slide in slides
+									div.features-plates__slide
+										h2.features-plates__slide-heading= slide.heading
+										p= slide.text
+										a(href="javascript:void(0)").bordered.features-plates__slide-link= slide.linkText
+					div.features-plates__bottom
+						a(href="javascript:void(0)").features-plates__bottom-link
+							img(alt='Предпринимателям' src='../../templates/main/assets/images/img-tv.png')
+						div.features-plates__bottom-text Посмотреть видео о том как это работает
+
+			div.col-md.col-md--1-2

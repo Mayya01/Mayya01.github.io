@@ -1,0 +1,32 @@
+.header
+	background url('../../../templates/main/assets/images/backgrounds/header-bg.jpg') no-repeat $main-bg
+	background-size cover
+
+	&__logo
+		display inline-block
+		width 100%
+		max-width 120px
+
+		+breakpoint-md()
+			max-width 224px
+
+		+breakpoint-lg()
+			margin-right 3.5%
+
+		+breakpoint-xl()
+			margin-right percent(82px, 1290px)
+
+		img
+			vertical-align middle
+
+	&__top
+		padding 10px 0
+		border-bottom 1px solid rgba($white, 0.1)
+		position relative
+		flex-block()
+		align-items center
+		justify-content space-between
+
+		+breakpoint-lg()
+			justify-content normal
+			padding 42px 0 31px 0

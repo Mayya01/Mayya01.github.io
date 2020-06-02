@@ -1,0 +1,34 @@
+.heading
+	&-h2
+		h1-title()
+
+		&._left
+			@extend .text-left
+
+		&_wrap
+			position relative
+			display inline-block
+
+			+breakpoint-lg()
+				padding-right 256px
+
+		&__remark
+			font-rem(15)
+			line(20,15)
+			radius(3px)
+			@extend .text-center
+			font-family $primary-font-family
+			padding 4px 12px
+			color $white
+			text-transform uppercase
+			background-color $color-highlighted--secondary
+			min-width 239px
+			display block
+
+			+breakpoint-lg()
+				position absolute
+				top 9px
+				right 0
+
+	&-h3
+		h3-title()

@@ -1,0 +1,140 @@
+.footer
+	padding-top 20px
+	padding-bottom 25px
+	background-color $main-bg
+
+	+breakpoint-md()
+		padding-top 41px
+		padding-bottom 55px
+
+	&__row
+		make-row()
+		flex-direction column
+
+		+breakpoint-up-to-md()
+			margin-right -10px
+			margin-left -10px
+
+		+breakpoint-md()
+			flex-direction row
+
+	&__left
+		make-col-ready()
+
+		+breakpoint-up-to-md()
+			order 2
+			padding-left 10px
+			padding-right 10px
+
+		+breakpoint-md()
+			make-col(4)
+
+	&__right
+		make-col-ready()
+
+		+breakpoint-up-to-md()
+			padding-left 10px
+			padding-right 10px
+			margin-bottom 40px
+
+		+breakpoint-md()
+			make-col(8)
+
+	&__lists
+		make-col-ready()
+		make-col(6)
+
+		+breakpoint-up-to-md()
+			padding-left 10px
+			padding-right 10px
+
+		+breakpoint-lg()
+			padding-top 18px
+
+		&-wrapper
+			make-row()
+
+			+breakpoint-up-to-md()
+				margin-right -10px
+				margin-left -10px
+
+		&-title
+			color $white
+			font-rem(13)
+			line(20,15)
+			font-weight 700
+			margin-bottom 15px
+			display block
+
+			+breakpoint(360px)
+				font-rem(15)
+
+		&-section
+			&:not(:last-child)
+				margin-bottom 25px
+
+			+breakpoint-md()
+				&:not(:last-child)
+					margin-bottom 35px
+
+	&__list
+		font-rem(13)
+		line(20,15)
+
+		+breakpoint(360px)
+			font-rem(15)
+
+
+		> li
+			&:not(:last-child)
+				margin-bottom 6px
+
+
+		&-link
+			color $text-color--secondary
+
+	&__logo
+		display inline-block
+		margin-bottom 30px
+
+		+breakpoint-lg()
+			margin-bottom 61px
+
+		img
+			vertical-align middle
+
+	&__contacts
+		margin-bottom 26px
+
+		+breakpoint-lg()
+			margin-bottom 54px
+		
+		&-link
+			display block
+			color $white
+			font-rem(15)
+			line(18,15)
+
+			&:not(:last-child)
+				margin-bottom 9px
+
+			&:hover
+				color $white
+
+	&__btn
+		margin-bottom 30px
+
+		+breakpoint-lg()
+			margin-bottom 27px
+
+		&:hover
+			background-color $color-highlighted !important
+		
+	&__license-info
+		color $text-color--secondary
+		font-rem(13)
+		line(20,13)
+		margin-bottom 0
+
+		span
+			display block

@@ -1,0 +1,60 @@
+.uneasy-search-section
+	&__title
+		margin-bottom 18px
+		position relative
+		padding-left 40px
+
+		+breakpoint-md()
+			padding-left 55px
+
+		+breakpoint-lg()
+			padding-left 0
+
+		&-underlined
+			left 0
+			color rgba($text-color, 0.5)
+			position absolute
+			line-height 1
+
+			+breakpoint-lg()
+				left -63px
+
+			&::before
+				pseudo(absolute,3px,100%)
+				background-color $color-highlighted
+				transform rotate(-225deg)
+				top 3px
+				right 25px
+
+				+breakpoint-lg()
+					top 3px
+
+	&__img
+		+breakpoint-lg()
+			margin-right -15px
+
+	&__wrap
+
+		+breakpoint-lg()
+			padding-top 119px
+			padding-left 108px
+
+		p
+			max-width 520px
+
+	&__btn
+		margin-top 22px
+		width 100%
+
+		+breakpoint-lg()
+			width auto
+
+
+	&__features
+		padding-top 21px
+		margin-top 29px
+		border-top  1px solid #C9CBD2
+
+		+breakpoint-lg()
+			margin-top 43px
+			padding-top 40px

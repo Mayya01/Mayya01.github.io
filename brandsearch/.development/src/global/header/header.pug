@@ -1,0 +1,86 @@
+include ../_mixins
+
+header.header
+	div.container
+		div.header__top
+			a.header__logo(href="javascript:void(0)")
+				img(alt='Лого' src='../../templates/main/assets/images/logos/logo.svg')
+			nav.main-nav.js-main-nav
+				div.inner-menu.js-main-nav__inner-menu
+					div.container
+						div.inner-menu__row
+							div.inner-menu__col._order-4-on-desctop
+								div.inner-menu__list-section
+									div.inner-menu__title Что делать?
+									div.actions-plate
+										div.actions-plate__element._star Проверить #[br] товарный знак
+										div.actions-plate__element._burger Найти #[br] нарушения
+										div.actions-plate__element._loop Проанализировать #[br] конкурента
+
+							div.inner-menu__col._hidden-on-mobile
+								a.inner-menu__logo(href="javascript:void(0)")
+									img(alt='Лого' src='../../templates/main/assets/images/logos/logo.svg')
+
+								p.inner-menu__license-info
+									a(href="javascript:void(0)") Политика в отношении обработки персональных данных
+									span © 2005-2020 #[br] Brandsearch
+							div.inner-menu__col
+								div.inner-menu__list-section
+									div.inner-menu__title Товарный знаки
+									-var innerMenu = ['Поиск товарного знака', 'Поиск нарушений', 'Поиск по изображениям']
+									+dropdown-menu(innerMenu)(class='inner-menu__list')
+
+								div.inner-menu__list-section
+									div.inner-menu__title Название юрлиц
+									- var innerMenu = ['База юридических лиц', 'Поиск нарушений']
+									+dropdown-menu(innerMenu)(class='inner-menu__list')
+
+								div.inner-menu__list-section
+									div.inner-menu__title Доменные имена
+									- var innerMenu = ['Проверка занятости', 'Если домен уже занят?']
+									+dropdown-menu(innerMenu)(class='inner-menu__list')
+
+								div.inner-menu__list-section
+									div.inner-menu__title Контакты
+									- var innerMenu = ['support@ip-id.ru', '+7 (495) 134-3412?']
+									+dropdown-menu(innerMenu)(class='inner-menu__list')
+
+							div.inner-menu__col
+								div.inner-menu__list-section
+									div.inner-menu__title О сервисе
+									- var innerMenu = ['Алогоритм поиска', 'Источники данных', 'Конфиденциальность', 'Партнерам', 'Новости', 'Контакты', 'Зарегистрироваться' ]
+									+dropdown-menu(innerMenu)(class='inner-menu__list')
+
+								a(href="javascript:void(0)").btn.inner-menu__btn._sm-font Войти в личный кабинет
+
+								div.inner-menu__list-section
+									div.inner-menu__title Мы в соц.сетях
+									ul.social-links
+										li.social-links__item
+											a(href="javascript:void(0)").social-links__link._fb
+										li.social-links__item
+											a(href="javascript:void(0)").social-links__link._vk
+				ul.main-nav__list
+					li.main-nav__item
+						a.main-nav__link(href='javascript:void(0)') Товарные знаки
+						- var dropdownMenuItem = ['Поиск товарного знака', 'Поиск нарушений', 'Поиск по изображениям']
+						+dropdown-menu(dropdownMenuItem)(class='main-nav__dropdown')
+
+					li.main-nav__item
+						a.main-nav__link(href='javascript:void(0)') Название юрлиц
+						- var dropdownMenuItem = ['База юридических лиц', 'Поиск нарушений']
+						+dropdown-menu(dropdownMenuItem)(class='main-nav__dropdown')
+
+					li.main-nav__item
+						a.main-nav__link(href='javascript:void(0)') Доменные имена
+						- var dropdownMenuItem = ['Проверка занятости', 'Если домен уже занят?']
+						+dropdown-menu(dropdownMenuItem)(class='main-nav__dropdown')
+
+					li.main-nav__item._hidden-on-open
+						a.main-nav__link(href='javascript:void(0)') О проекте
+
+				button(type='button').main-nav__toggle.js-main-nav__toggle
+					span
+
+		div.header__bottom
+			include ../../blocks/intro-search-banner/intro-search-banner

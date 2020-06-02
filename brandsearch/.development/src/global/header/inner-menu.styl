@@ -1,0 +1,100 @@
+.inner-menu
+	display none
+	position fixed
+	z-index 999
+	left 0
+	right 0
+	top 0
+	background-color $main-bg
+	height 100vh
+	padding 30px 0 50px 0
+	font-family $primary-font-family
+	overflow-y scroll
+
+	+breakpoint-lg()
+		padding 42px 0 123px 0
+
+	&._is-open
+		display block
+
+
+	&__row
+		flex-block()
+		flex-direction column
+
+		+breakpoint-md()
+			make-row()
+			flex-direction row
+
+
+	&__col
+		+breakpoint-up-to-md()
+			&:not(:last-child)
+				margin-bottom 30px
+
+		+breakpoint-md()
+			make-col(3)
+			make-col-ready()
+
+		&._hidden-on-mobile
+			+breakpoint-up-to-md()
+				display none
+
+		&._order-4-on-desctop
+			+breakpoint-md()
+				order 4
+
+	&__list
+		margin-bottom 0
+
+		&-section
+			&:first-child
+				+breakpoint-md()
+					padding-top 16px
+
+			&:not(:last-child)
+				margin-bottom 30px
+
+		&-link
+			color rgba($white, 0.5)
+			display inline-block
+			line(25, 18)
+			font-rem(18)
+
+		&-item
+			&:not(:last-child)
+				margin-bottom 18px
+
+	&__logo
+		margin-bottom 50px
+		display inline-block
+
+		img
+			vertical-align middle
+
+	&__license-info
+		@extend .footer__license-info
+
+		a
+			display block
+			margin-bottom 24px
+			color $text-color--secondary
+
+	&__title
+		color $white
+		font-weight 700
+		font-rem(25)
+		line(33, 25)
+		margin-bottom 29px
+		font-family $secondary-font-family
+
+	&__btn
+		margin-top 10px
+
+		&:hover
+			background-color $color-highlighted
+
+		&
+			+
+				.inner-menu__list-section
+					margin-top 40px

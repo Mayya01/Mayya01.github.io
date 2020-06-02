@@ -1,0 +1,108 @@
+.stats-section
+	.heading-h2
+		margin-bottom 18px
+
+	.container
+		position relative
+
+	&
+		+
+			.uneasy-search-section
+				padding-top 0
+
+	&__stat
+		padding-top 32px
+
+		+breakpoint-lg()
+			padding-top 0
+			padding-left 20px
+		
+	&__img
+		position relative
+		top 10px
+
+		+breakpoint-lg()
+			max-width 85%
+
+		+breakpoint-xl()
+			max-width 100%
+			left -7px
+			top 5px
+
+	&__wrap
+		position relative
+		flex-block()
+		align-items center
+		justify-content center
+		min-height 410px
+
+		+breakpoint-lg()
+			min-height 365px
+
+	&__list
+		margin 0
+
+		&-item
+			position absolute
+			width 100%
+			max-width 48%
+			text-align left
+
+			+breakpoint-lg()
+				max-width 190px
+
+			&:nth-child(1)
+				right 0
+				top 0
+
+				+breakpoint-lg()
+					top -52px
+
+			&:nth-child(2)
+				right -10px
+				bottom 0px
+				max-width 158px
+
+				+breakpoint-lg()
+					max-width 208px
+					bottom 0
+
+
+			&:nth-child(3)
+				left 0
+				top 0
+
+				+breakpoint-lg()
+					top -3px
+
+
+		&-link
+			font-weight 700
+			font-rem(18)
+			line(28,24)
+			font-family $secondary-font-family
+
+			+breakpoint-lg()
+				font-rem(20)
+
+			+breakpoint-xl()
+				font-rem(24)
+
+		&-text
+			display block
+			margin-top 5px
+			font-rem(14)
+
+			+breakpoint-lg()
+				font-rem(16)
+
+			+breakpoint-xl()
+				font-rem(18)
+
+
+	&__btn
+		margin-top 22px
+		width 100%
+
+		+breakpoint-lg()
+			width auto

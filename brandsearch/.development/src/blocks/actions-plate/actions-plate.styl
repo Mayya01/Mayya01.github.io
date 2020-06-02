@@ -1,0 +1,37 @@
+.actions-plate
+	&__element
+		font-rem(18)
+		line(25,18)
+		radius(10px)
+		color $white
+		font-weight 700
+		border 1px solid rgba($white,0.2)
+		position relative
+		padding 15px 52px 15px 85px
+
+		&::before
+			pseudo(absolute, 46px, 46px)
+			left 20px
+			top 50%
+			margin-top -23px
+			background-position center
+			background-repeat no-repeat
+
+		&._star
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-star-2.svg");
+
+		&._burger
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-burger.svg");
+
+		&._loop
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-loop.svg");
+
+		&:not(:last-child)
+			margin-bottom 10px
+
+		+breakpoint-md()
+			&:not(:last-child)
+				margin-bottom 20px

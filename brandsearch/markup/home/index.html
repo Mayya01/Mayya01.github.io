@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brandsearch</title>
+    <link rel="stylesheet" href="../../templates/main/css/main.min.css" media="screen"><!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__top"><a class="header__logo" href="javascript:void(0)"><img alt="Лого" src="../../templates/main/assets/images/logos/logo.svg"></a>
+          <nav class="main-nav js-main-nav">
+            <div class="inner-menu js-main-nav__inner-menu">
+              <div class="container">
+                <div class="inner-menu__row">
+                  <div class="inner-menu__col _order-4-on-desctop">
+                    <div class="inner-menu__list-section">
+                      <div class="inner-menu__title">Что делать?</div>
+                      <div class="actions-plate">
+                        <div class="actions-plate__element _star">Проверить <br> товарный знак</div>
+                        <div class="actions-plate__element _burger">Найти <br> нарушения</div>
+                        <div class="actions-plate__element _loop">Проанализировать <br> конкурента</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inner-menu__col _hidden-on-mobile"><a class="inner-menu__logo" href="javascript:void(0)"><img alt="Лого" src="../../templates/main/assets/images/logos/logo.svg"></a>
+                    <p class="inner-menu__license-info"><a href="javascript:void(0)">Политика в отношении обработки персональных данных</a><span>© 2005-2020 <br> Brandsearch</span></p>
+                  </div>
+                  <div class="inner-menu__col">
+                    <div class="inner-menu__list-section">
+                      <div class="inner-menu__title">Товарный знаки</div>
+                          <ul class="inner-menu__list">
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Поиск товарного знака</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Поиск нарушений</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Поиск по изображениям</a></li>
+                          </ul>
+                    </div>
+                    <div class="inner-menu__list-section">
+                      <div class="inner-menu__title">Название юрлиц</div>
+                          <ul class="inner-menu__list">
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">База юридических лиц</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Поиск нарушений</a></li>
+                          </ul>
+                    </div>
+                    <div class="inner-menu__list-section">
+                      <div class="inner-menu__title">Доменные имена</div>
+                          <ul class="inner-menu__list">
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Проверка занятости</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Если домен уже занят?</a></li>
+                          </ul>
+                    </div>
+                    <div class="inner-menu__list-section">
+                      <div class="inner-menu__title">Контакты</div>
+                          <ul class="inner-menu__list">
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">support@ip-id.ru</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">+7 (495) 134-3412?</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                  <div class="inner-menu__col">
+                    <div class="inner-menu__list-section">
+                      <div class="inner-menu__title">О сервисе</div>
+                          <ul class="inner-menu__list">
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Алогоритм поиска</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Источники данных</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Конфиденциальность</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Партнерам</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Новости</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Контакты</a></li>
+                            <li class="inner-menu__list-item"><a class="inner-menu__list-link" href="javascript:void(0)">Зарегистрироваться</a></li>
+                          </ul>
+                    </div><a class="btn inner-menu__btn _sm-font" href="javascript:void(0)">Войти в личный кабинет</a>
+                    <div class="inner-menu__list-section">
+                      <div class="inner-menu__title">Мы в соц.сетях</div>
+                      <ul class="social-links">
+                        <li class="social-links__item"><a class="social-links__link _fb" href="javascript:void(0)"></a></li>
+                        <li class="social-links__item"><a class="social-links__link _vk" href="javascript:void(0)"></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="javascript:void(0)">Товарные знаки</a>
+                    <ul class="main-nav__dropdown">
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="javascript:void(0)">Поиск товарного знака</a></li>
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="javascript:void(0)">Поиск нарушений</a></li>
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="javascript:void(0)">Поиск по изображениям</a></li>
+                    </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="javascript:void(0)">Название юрлиц</a>
+                    <ul class="main-nav__dropdown">
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="javascript:void(0)">База юридических лиц</a></li>
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="javascript:void(0)">Поиск нарушений</a></li>
+                    </ul>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="javascript:void(0)">Доменные имена</a>
+                    <ul class="main-nav__dropdown">
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="javascript:void(0)">Проверка занятости</a></li>
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="javascript:void(0)">Если домен уже занят?</a></li>
+                    </ul>
+              </li>
+              <li class="main-nav__item _hidden-on-open"><a class="main-nav__link" href="javascript:void(0)">О проекте</a></li>
+            </ul>
+            <button class="main-nav__toggle js-main-nav__toggle" type="button"><span></span></button>
+          </nav>
+        </div>
+        <div class="header__bottom">
+          <div class="intro-search-banner">
+            <h1 class="intro-search-banner__title">Тотальная проверка вашего бренда</h1>
+            <p class="intro-search-banner__subtitle">Уникальный сервис простого поиска по базам товарных знаков, ЕГРЮЛ и доменов.</p>
+            <form class="intro-search-banner__form">
+              <input class="field intro-search-banner__input" type="text" placeholder="Компания"><a class="btn intro-search-banner__btn" href="javascript:void(0)">Проверить</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="result-section section">
+      <div class="container">
+        <div class="row-md">
+          <div class="col-md col-md--1-2">
+            <div class="features-plates">
+              <div class="features-plates__top">
+                <div class="features-plates__slider">
+                  <div class="js-features-plates">
+                    <div class="features-plates__slide">
+                      <h2 class="features-plates__slide-heading">Полнота, актуальность, достоверность</h2>
+                      <p>Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.</p><a class="bordered features-plates__slide-link" href="javascript:void(0)">Какие данные используете?</a>
+                    </div>
+                    <div class="features-plates__slide">
+                      <h2 class="features-plates__slide-heading">Полнота, актуальность, достоверность</h2>
+                      <p>Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.</p><a class="bordered features-plates__slide-link" href="javascript:void(0)">Какие данные используете?</a>
+                    </div>
+                    <div class="features-plates__slide">
+                      <h2 class="features-plates__slide-heading">Полнота, актуальность, достоверность</h2>
+                      <p>Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.</p><a class="bordered features-plates__slide-link" href="javascript:void(0)">Какие данные используете?</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="features-plates__bottom"><a class="features-plates__bottom-link" href="javascript:void(0)"><img alt="Предпринимателям" src="../../templates/main/assets/images/img-tv.png"></a>
+                <div class="features-plates__bottom-text">Посмотреть видео о том как это работает</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md col-md--1-2"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--lightest-gray stats-section">
+      <div class="container">
+        <h2 class="heading-h2 _left"><span class="heading-h2_wrap"><span class="heading-h2__remark">Обновлено 8 часов назад</span> Все базы и реестры</span></h2>
+        <div class="row-lg">
+          <div class="col-lg col-lg--2-5">
+            <p>Ваш бренд будет проверен по российской и международной базе товарных знаков, ЕГРЮЛ и реестрам доменов. Данные обновляются каждые 24 часа.</p>
+            <p>Мы используем официальные, платные источники данных. При этом сервис IP-ID абсолютно бесплатный.</p><a class="btn stats-section__btn" href="#">Время искать</a>
+          </div>
+          <div class="col-lg col-lg--3-5">
+            <div class="stats-section__stat">
+              <div class="stats-section__wrap">
+                <ul class="stats-section__list">
+                  <li class="stats-section__list-item"><a class="stats-section__list-link dotted" href="javascript:void(0)">База товарных знаков и заявок</a><span class="stats-section__list-text">421 235 товарных знака действующих в России</span></li>
+                  <li class="stats-section__list-item"><a class="stats-section__list-link dotted" href="javascript:void(0)">База юрлиц</a><span class="stats-section__list-text">6 134 458 действующих юридических лиц</span></li>
+                  <li class="stats-section__list-item"><a class="stats-section__list-link dotted" href="javascript:void(0)">Реестры доменных имен</a><span class="stats-section__list-text"> 1 434 802 доменных имен в доменных зонах RU и РФ</span></li>
+                </ul><img class="hide-md stats-section__img" alt="Статистика" src="../../templates/main/assets/images/img-stat-mobile.svg"><img class="hide-up-to-md stats-section__img" alt="Статистика" src="../../templates/main/assets/images/img-stat.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section uneasy-search-section section--lightest-gray">
+      <div class="container">
+        <div class="row-lg">
+          <div class="col-lg col-lg--2-5 hide-up-to-lg">
+            <div class="uneasy-search-section__img"><img alt="Проверка бренда" src="../../templates/main/assets/images/services-img/service-img-8.svg"></div>
+          </div>
+          <div class="col-lg col-lg--3-5">
+            <div class="uneasy-search-section__wrap">
+              <h2 class="heading-h2 _left uneasy-search-section__title"><span class="uneasy-search-section__title-underlined">не</span> Простой поиск</h2>
+              <p>Используйте самый технологичный и продвинутый поиск по объектам интеллектуальной собственности и получайте результаты, которым можно доверять</p><a class="btn uneasy-search-section__btn" href="#">Попробовать</a>
+            </div>
+          </div>
+        </div>
+        <div class="uneasy-search-section__features">
+          <div class="numbered-features">
+            <div class="numbered-features__element">
+                  <div class="numbered-feature">
+                    <h3 class="numbered-feature__title">Мощный поиск</h3>
+                    <p class="numbered-feature__text">Интеллектуальное расширение поискового запроса для поиска на сходство до степени смешения.</p>
+                  </div>
+            </div>
+            <div class="numbered-features__element">
+                  <div class="numbered-feature">
+                    <h3 class="numbered-feature__title">Умное ранжирование</h3>
+                    <p class="numbered-feature__text">Собственный алгоритм ранжирования результатов поиска — наиболее высокие риски всегда будут в начале списка.</p>
+                  </div>
+            </div>
+            <div class="numbered-features__element">
+                  <div class="numbered-feature">
+                    <h3 class="numbered-feature__title">Простой выбор классов </h3>
+                    <p class="numbered-feature__text">Сопоставленные классы МКТУ, коды ОКВЭД и корреспондирующие классы МКТУ для качественного поиска.</p>
+                  </div>
+            </div>
+            <div class="numbered-features__element">
+                  <div class="numbered-feature">
+                    <h3 class="numbered-feature__title">Все базы и реестры</h3>
+                    <p class="numbered-feature__text">Российская и международная база товарных знаков,<b> включая заявки</b>, реестр юрлиц и доменов — проверка по 8 млн записей.</p>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section services-section">
+      <div class="container">
+        <h2 class="heading-h2">Сервис один, польза для всех</h2>
+        <div class="js-tabs">
+          <ul class="tabs__list js-tabs__list">
+            <li class="_active tabs__tab js-tabs__tab" data-id="businessman">Предпринимателям</li>
+            <li class="tabs__tab js-tabs__tab" data-id="marketers">Маркетологам</li>
+            <li class="tabs__tab js-tabs__tab" data-id="lawyers">Юристам</li>
+            <li class="tabs__tab js-tabs__tab" data-id="agencies">Креативным агентствам</li>
+          </ul>
+          <div class="tabs__body">
+            <div class="tabs__content js-tabs__content _active" id="businessman">
+              <p class="services-section__subtitle">Получите точную, полную и актуальную информацию для принятия правильных решений</p>
+              <div class="row-md">
+                <div class="col-md col-md--2-5">
+                      <ul class="iconic-list">
+                        <li class="iconic-list__item _search">
+                          <div class="iconic-list__title">Удобный поиск</div>
+                          <p>Проверьте товарный знак перед регистрацией и оцените вероятность успеха, специальные знания не требуются.</p>
+                        </li>
+                        <li class="iconic-list__item _time">
+                          <div class="iconic-list__title">Экономьте время</div>
+                          <p>Проверка по всем видам используемых обозначений: товарным знакам, доменам и фирменным наименованиям.</p>
+                        </li>
+                        <li class="iconic-list__item _diagram">
+                          <div class="iconic-list__title">Снизьте риски</div>
+                          <p>Снизьте риски Полная картина и оценка большинства возможных рисков при регистрации товарных знаков.</p>
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-md col-md--3-5">
+                  <div class="services-section__img"><img alt="Предпринимателям" src="../../templates/main/assets/images/services-img/service-img-1.svg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content js-tabs__content" id="marketers">
+              <p class="services-section__subtitle">Создавайте яркие и запоминающие продукты, которые будут выделяться на фоне конкурентов</p>
+              <div class="row-md">
+                <div class="col-md col-md--2-5">
+                      <ul class="iconic-list">
+                        <li class="iconic-list__item _star">
+                          <div class="iconic-list__title">Ваш продукт узнаваем </div>
+                          <p>Выберите название, которое будет узнаваемым и запоминаемым на фоне конкурентов.</p>
+                        </li>
+                        <li class="iconic-list__item _only-one">
+                          <div class="iconic-list__title">Он один такой</div>
+                          <p>Покупатели выбирают ваш продукт, потому что она заметен на полке магазина.</p>
+                        </li>
+                        <li class="iconic-list__item _fast">
+                          <div class="iconic-list__title">Быстро и без накладок</div>
+                          <p> Все идет по плану, потому Ваши решения основаны на достоверных данных.</p>
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-md col-md--3-5">
+                  <div class="services-section__img"><img alt="Маркетологам" src="../../templates/main/assets/images/services-img/service-img-2.svg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content js-tabs__content" id="lawyers">
+              <p class="services-section__subtitle">Быстро находите нужную информацию в полном объеме и прогнозируйте результат</p>
+              <div class="row-md">
+                <div class="col-md col-md--2-5">
+                      <ul class="iconic-list">
+                        <li class="iconic-list__item _search-color">
+                          <div class="iconic-list__title">Удобный поиск</div>
+                          <p> Быстро находите нужную информацию в полном объем, специальные знания не требуются.</p>
+                        </li>
+                        <li class="iconic-list__item _diagram-color">
+                          <div class="iconic-list__title">Уверенность в результате</div>
+                          <p> Ваше спокойствие и уверенность основаны на объективных данных, а не ощущениях.</p>
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-md col-md--3-5">
+                  <div class="services-section__img"><img alt="Маркетологам" src="../../templates/main/assets/images/services-img/service-img-3.svg"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content js-tabs__content" id="agencies">
+              <p class="services-section__subtitle">Выделитесь среди конкурентов делая больше и лучше, без лишних усилий</p>
+              <div class="row-md">
+                <div class="col-md col-md--2-5">
+                      <ul class="iconic-list">
+                        <li class="iconic-list__item _checked">
+                          <div class="iconic-list__title">Быстрые согласования</div>
+                          <p>Легко обосновывайте выбранные решения перед заказчиком</p>
+                        </li>
+                        <li class="iconic-list__item _briefcase">
+                          <div class="iconic-list__title">С вами хотят работать </div>
+                          <p>Вы делаете больше чем другие дизайнеры и неймеры, вас рекомендуют друзьям.</p>
+                        </li>
+                        <li class="iconic-list__item _award">
+                          <div class="iconic-list__title">Работайте уверенно</div>
+                          <p>Быстро и легко проверяйте все ваши креативы на охранопригодность</p>
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-md col-md--3-5">
+                  <div class="services-section__img"><img alt="Маркетологам" src="../../templates/main/assets/images/services-img/service-img-4.svg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section pictures-content-section section--light-gray">
+      <div class="container-sm">
+        <h2 class="heading-h2">Что здесь можно делать и зачем?</h2>
+        <div class="row-md pictures-content-section__row">
+          <div class="col-md col-md--1-2">
+            <div class="pictures-content-section__img-holder"><img alt="Проверка бренда" src="../../templates/main/assets/images/services-img/service-img-5.svg"></div>
+          </div>
+          <div class="col-md col-md--1-2">
+            <h3 class="heading-h3">Проверить бренд на возможность регистрации</h3>
+            <p>При проверке используем все источники данных: товарные знаки, включая находящиеся на этапе регистрации, названия компаний и домены — информация обновляется каждые 24 часа.</p>
+            <p>Уникальный алгоритм поиска обеспечивает качество и полноту проверки сходства и тождественности. Результаты, которым можно доверять.</p><a class="btn pictures-content-section__btn" href="javascript:void(0)">Проверить</a>
+          </div>
+        </div>
+        <div class="pictures-content-section__row row-md">
+          <div class="col-md col-md--1-2">
+            <h3 class="heading-h3"> Найти нарушения и риски по вашему бренду</h3>
+            <p>Если кто-то нарушает права на ваши товарные знаки или фирменные наименования — вы теряете деньги и рискуете своей репутацией. Важно быстро выявлять и пресекать такие нарушения.</p>
+            <p>Наша технология позволяет выявить такие нарушения среди товарных знаков, названий юрлиц и даже доменных имен.</p><a class="btn pictures-content-section__btn" href="javascript:void(0)">Найти нарушения</a>
+          </div>
+          <div class="col-md col-md--1-2">
+            <div class="pictures-content-section__img-holder"><img alt="Проверка бренда" src="../../templates/main/assets/images/services-img/service-img-6.svg"></div>
+          </div>
+        </div>
+        <div class="row-md pictures-conten-section__row">
+          <div class="col-md col-md--1-2">
+            <div class="pictures-content-section__img-holder"><img alt="Проверка бренда" src="../../templates/main/assets/images/services-img/service-img-7.svg"></div>
+          </div>
+          <div class="col-md col-md--1-2">
+            <h3 class="heading-h3"> Анализировать конкурентов и искать вдохновение</h3>
+            <p>Хорошее название должно быть не только уникальным, охранопригодным, но и запоминающимся.</p>
+            <p>Найдите всех ваших действующих конкурентов и создайте своё уникальное, яркое средство индивидуализации.</p><a class="btn pictures-content-section__btn" href="javascript:void(0)">Проанализировать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section trademark-sign section--lightest-gray">
+      <div class="container">
+        <h2 class="heading-h2">Подборки товарных знаков</h2>
+        <div class="tabs js-tabs">
+          <ul class="tabs__list js-tabs__list">
+            <li class="_active tabs__tab js-tabs__tab" data-id="category">По категориям</li>
+            <li class="tabs__tab js-tabs__tab" data-id="mktu">По МКТУ</li>
+            <li class="tabs__tab js-tabs__tab" data-id="view">По образам</li>
+          </ul>
+          <div class="tabs__body">
+            <div class="_active tabs__content js-tabs__content js-show-content" id="category">
+              <div class="trademark-cards">
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--it">
+                        <h3 class="trademark-card__title">IT, Разработка</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--flower">
+                        <h3 class="trademark-card__title">Агрокомпании</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--bank">
+                        <h3 class="trademark-card__title">Банк, финансовые организации</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--money">
+                        <h3 class="trademark-card__title">Благотворительные организации</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--hostel">
+                        <h3 class="trademark-card__title">Гостиницы, хостелы</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--cup">
+                        <h3 class="trademark-card__title"> Кафе</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--it">
+                        <h3 class="trademark-card__title">IT, Разработка</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--flower">
+                        <h3 class="trademark-card__title">Агрокомпании</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--hostel">
+                        <h3 class="trademark-card__title">Гостиницы, хостелы</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--cup">
+                        <h3 class="trademark-card__title"> Кафе</h3>
+                      </div>
+                </div>
+              </div>
+              <div class="btn-wrapper"><a class="btn-light js-show-content__btn" href="javascript:void(0)">Показать ещё</a></div>
+            </div>
+            <div class="tabs__content js-tabs__content js-show-content" id="mktu">
+              <div class="trademark-cards">
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--it">
+                        <h3 class="trademark-card__title">IT, Разработка</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--flower">
+                        <h3 class="trademark-card__title">Агрокомпании</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--bank">
+                        <h3 class="trademark-card__title">Банк, финансовые организации</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--money">
+                        <h3 class="trademark-card__title">Благотворительные организации</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--hostel">
+                        <h3 class="trademark-card__title">Гостиницы, хостелы</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--cup">
+                        <h3 class="trademark-card__title"> Кафе</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--it">
+                        <h3 class="trademark-card__title">IT, Разработка</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--flower">
+                        <h3 class="trademark-card__title">Агрокомпании</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--hostel">
+                        <h3 class="trademark-card__title">Гостиницы, хостелы</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--cup">
+                        <h3 class="trademark-card__title"> Кафе</h3>
+                      </div>
+                </div>
+              </div>
+              <div class="btn-wrapper"><a class="btn-light js-show-content__btn" href="javascript:void(0)">Показать ещё</a></div>
+            </div>
+            <div class="tabs__content js-tabs__content js-show-content" id="view">
+              <div class="trademark-cards">
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--it">
+                        <h3 class="trademark-card__title">IT, Разработка</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--flower">
+                        <h3 class="trademark-card__title">Агрокомпании</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--bank">
+                        <h3 class="trademark-card__title">Банк, финансовые организации</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--money">
+                        <h3 class="trademark-card__title">Благотворительные организации</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--hostel">
+                        <h3 class="trademark-card__title">Гостиницы, хостелы</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content">
+                      <div class="trademark-card trademark-card--cup">
+                        <h3 class="trademark-card__title"> Кафе</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--it">
+                        <h3 class="trademark-card__title">IT, Разработка</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--flower">
+                        <h3 class="trademark-card__title">Агрокомпании</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--hostel">
+                        <h3 class="trademark-card__title">Гостиницы, хостелы</h3>
+                      </div>
+                </div>
+                <div class="trademark-cards__element js-show-content__content _hide">
+                      <div class="trademark-card trademark-card--cup">
+                        <h3 class="trademark-card__title"> Кафе</h3>
+                      </div>
+                </div>
+              </div>
+              <div class="btn-wrapper"><a class="btn-light js-show-content__btn" href="javascript:void(0)">Показать ещё</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__left"><a class="footer__logo" href="javascript:void(0)"><img alt="Лого" src="../../templates/main/assets/images/logos/logo.svg"></a>
+            <address class="footer__contacts"><a class="footer__contacts-link" href="tel:+74951345732">+7 495 134-57-32</a><a class="footer__contacts-link" href="mailto:brandsearch.ru">Brandsearch.ru</a></address><a class="btn _sm-font footer__btn">Войти в личный кабинет</a>
+            <p class="footer__license-info"><span>Корпоративная политика в отношении персональных данных</span> <span>© 2005-2020 Brandsearch.ru</span></p>
+          </div>
+          <div class="footer__right">
+            <div class="footer__lists-wrapper">
+              <div class="footer__lists">
+                <div class="footer__lists-section"><a class="footer__lists-title" href="javascript:void(0)">Товарные знаки</a>
+                  <ul class="footer__list">
+                    <li><a class="footer__list-link" href="javascript:void(0)">Поиск товарного знака</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Поиск нарушений</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Поиск по изображениям</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Подборки по категориям</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Популярные товарные знаки</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">База товарных знаков</a></li>
+                  </ul>
+                </div>
+                <div class="footer__lists-section"><a class="footer__lists-title" href="javascript:void(0)">Фирменные наименования</a>
+                  <ul class="footer__list">
+                    <li><a class="footer__list-link" href="javascript:void(0)">База юридических лиц</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Поиск нарушений</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__lists">
+                <div class="footer__lists-section"><a class="footer__lists-title" href="javascript:void(0)">Доменные имена</a>
+                  <ul class="footer__list">
+                    <li><a class="footer__list-link" href="javascript:void(0)">Проверка занятости</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Как зарегистировать занятый домен</a></li>
+                  </ul>
+                </div>
+                <div class="footer__lists-section"><a class="footer__lists-title" href="javascript:void(0)">О сервисе</a>
+                  <ul class="footer__list">
+                    <li><a class="footer__list-link" href="javascript:void(0)">Алогоритм поиска</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Источники данных</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Конфиденциальность</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Новости</a></li>
+                    <li><a class="footer__list-link" href="javascript:void(0)">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="../../templates/main/js/core.min.js"></script>
+    <script type="text/javascript" src="../../templates/main/js/main.min.js"></script>
+  </body>
+</html>

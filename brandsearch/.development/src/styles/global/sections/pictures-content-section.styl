@@ -1,0 +1,17 @@
+.pictures-content-section
+	&__img-holder
+		@extend .text-center
+
+	&__row
+		&:not(:last-child)
+			margin-bottom 30px
+
+		+breakpoint-md()
+			&:not(:last-child)
+				margin-bottom 60px
+
+	&__btn
+		margin-top 22px
+
+		+breakpoint-up-to-md()
+			width 100%

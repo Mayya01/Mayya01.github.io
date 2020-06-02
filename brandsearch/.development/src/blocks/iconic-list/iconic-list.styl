@@ -1,0 +1,75 @@
+.iconic-list
+
+	&__title
+		font-weight 700
+		margin-bottom 2px
+
+	&__item
+		position relative
+		padding-left 60px
+
+		&::before
+			pseudo(absolute,40px,40px)
+			left 0
+			top 0
+			background-repeat no-repeat
+			background-size contain
+
+			+breakpoint-md()
+				size(80px,80px)
+
+		&._search
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-search.svg");
+
+			&-color
+				&::before
+					background-image: url("../../../templates/main/assets/images/icons/icon-search-color.svg");
+		&._time
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-time.svg");
+
+		&._diagram
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-diagram.svg");
+
+			&-color
+				&::before
+					background-image: url("../../../templates/main/assets/images/icons/icon-diagram-color.svg");
+
+		&._star
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-star.svg");
+
+		&._checked
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-checked.svg");
+
+		&._briefcase
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-briefcase.svg");
+
+		&._award
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-award.svg");
+
+		&._only-one
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-1.svg");
+
+		&._fast
+			&::before
+				background-image: url("../../../templates/main/assets/images/icons/icon-fast.svg");
+
+		&:not(:last-child)
+			margin-bottom 23px
+
+		+breakpoint-md()
+			padding-left 110px
+
+			&:not(:last-child)
+				margin-bottom 40px
+
+		p
+			&:not(:last-child)
+				margin-bottom 0

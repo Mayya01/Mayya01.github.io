@@ -1,0 +1,53 @@
+.intro-search-banner
+	text-align center
+	padding--x(30px, 20px)
+
+	+breakpoint-lg()
+		padding--x(45px, 246px)
+
+	&__title
+		h1-title($white, center)
+		margin-bottom 11px
+
+		+breakpoint-lg()
+			margin-bottom 18px
+
+	&__subtitle
+		font-rem(18)
+		line(26,18)
+		color $white
+		font-family $secondary-font-family
+		font-weight 300
+
+		+breakpoint-lg()
+			font-rem(30)
+			line(26,30)
+
+	&__form
+		width 100%
+		max-width 1070px
+		margin 23px auto 0  auto
+
+		+breakpoint-lg()
+			margin-top 56px
+			flex-block()
+
+	&__input
+		margin-bottom 10px
+		height 50px
+
+		+breakpoint-lg()
+			size(890px, 60px)
+			margin-bottom 0
+			radius(5px 0 0 5px)
+
+	&__btn
+		width 100%
+
+		+breakpoint-lg()
+			radius(0 5px 5px 0)
+			width calc('100% - 890px')
+
+		&:hover
+			background-color $color-highlighted
+			padding--x(15px, 15px)

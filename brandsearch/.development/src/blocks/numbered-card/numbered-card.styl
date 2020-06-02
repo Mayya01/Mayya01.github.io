@@ -1,0 +1,60 @@
+.numbered-feature
+	background-color $white
+	box-shadow $box-shadow
+	padding 20px
+	radius(5px)
+	height 100%
+	position relative
+	white-space normal
+
+	&::after
+		content counter(myCounter)
+		counter-increment myCounter
+		position absolute
+		color rgba($text-color, 0.1)
+		font-weight 900
+		font-rem(200)
+		line(234,200)
+		right 0
+		bottom -47px
+
+	+breakpoint-md()
+		padding 20px 28px 25px 19px
+
+	&__title
+		font-family $secondary-font-family
+		h4-title($link-color)
+		margin-bottom 16px
+
+	&__text
+		font-rem(18)
+		line(28,18)
+
+.numbered-features
+	counter-reset myCounter
+
+	+breakpoint-up-to-sm()
+		display flex
+		white-space nowrap
+		overflow hidden
+		overflow-x scroll
+
+	+breakpoint-lg()
+		make-row()
+
+	&__element
+		+breakpoint-up-to-sm()
+			width 300px
+			min-width 300px
+			display inline-block
+
+			&:not(:last-child)
+				margin-right 10px
+
+		+breakpoint-range($screen-sm, $screen-lg)
+			&:not(:last-child)
+				margin-bottom 15px
+
+		+breakpoint-lg()
+			make-col(3)
+			make-col-ready()

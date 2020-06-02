@@ -1,0 +1,151 @@
+.main-nav
+	width auto
+	font-family $secondary-font-family
+
+	+breakpoint-lg()
+		flex-block()
+		flex-grow 1
+		justify-content space-between
+	
+	&__list
+		margin-bottom 0
+		display none
+
+		+breakpoint-lg()
+			flex-block()
+			flex-grow 1
+			align-items center
+
+	&__item
+		position relative
+
+		+breakpoint-lg()
+			&:not(:last-child)
+				margin-right 2%
+
+		+breakpoint-xl()
+			&:not(:last-child)
+				margin-right 50px
+
+		&:hover
+			.main-nav__dropdown
+				display block
+
+	&__link
+		font-rem(18)
+		line(24, 19)
+		font-weight 700
+		display inline-block
+		position relative
+		color $white
+
+		+breakpoint-lg()
+			padding-right 20px
+			padding-bottom 9px
+			padding-top 2px
+
+			&::after
+				pseudo(absolute, 10px, 7px)
+				top 50%
+				margin-top -6px
+				right 0
+				background-repeat no-repeat
+				background-image url('../assets/images/icons/icon-arrow-down.svg')
+
+				&:hover
+					transform rotate(180deg)
+
+	&__toggle
+		position relative
+		size(30px, 25px)
+		display inline-block
+		outline none
+		border none
+		background-color transparent
+		cursor pointer
+		transition all 0.3s
+
+		+breakpoint-lg()
+			size(40px, 32px)
+
+		&::before
+			top 0
+
+		&::after
+			bottom 0
+
+		&::before
+		&::after
+			pseudo(absolute,25px, 3px)
+			radius(3px)
+			background-color $white
+			right 0
+
+			+breakpoint-lg()
+				size(36px, 4px)
+
+		span
+			position absolute
+			size(29px, 3px)
+			radius(3px)
+			right 0
+			background-color $white
+			top 50%
+			transform translateY(-50%)
+
+			+breakpoint-lg()
+				size(40px, 4px)
+
+		&._is-open
+			size(31px,31px)
+			z-index 999999
+			transform rotate(-90deg)
+			position absolute
+			top 20px
+			right 0
+
+			+breakpoint-lg()
+				top 40px
+
+			&::before
+			&::after
+				width 35px
+				top 15px
+
+			span
+				display none
+
+			&::after
+				transform rotate(-45deg)
+
+			&::before
+				transform rotate(45deg)
+
+	&__dropdown
+		display none
+		position absolute
+		left 0
+		top 35px
+		min-width 280px
+		radius(10px)
+		background-color $white
+
+		&-item
+			+breakpoint-lg()
+				display block
+				padding 13px 10px 12px 20px
+
+				&:hover
+					background-color $gray--lighten
+
+				&:last-child
+					radius(0 0 10px 10px)
+
+				&:first-child
+					radius(10px 10px 0 0 )
+
+		&-link
+			color $white
+
+			+breakpoint-lg()
+				color $text-color

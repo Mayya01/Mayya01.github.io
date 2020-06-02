@@ -1,0 +1,53 @@
+.tabs
+	&__content
+		display none
+
+		&._active
+			display block
+
+	&__list
+		margin-bottom 20px
+
+		+breakpoint-md()
+			text-align center
+			margin-bottom 40px
+
+		+breakpoint-up-to-md()
+			white-space nowrap
+			overflow-x scroll
+
+			&::-webkit-scrollbar
+				display none
+
+	&__tab
+		btn-style($link-color, transparent)
+		border 1px solid $link-color
+		font-rem(15)
+		line(18,15)
+		padding-top 8px
+		padding-bottom 8px
+
+		+breakpoint-md()
+			font-rem(18)
+			line(28,18)
+			padding-top 12px
+			padding-bottom 12px
+
+		&:not(._active)
+			border 1px solid $link-color
+
+			&:hover
+				border-color $color-highlighted
+				background-color transparent
+				color $text-color
+
+		&._active
+			background-color $main-bg
+			color $white
+			border none
+			padding-top 8px
+			padding-bottom 8px
+
+			+breakpoint-md()
+				padding-top 12px
+				padding-bottom 12px

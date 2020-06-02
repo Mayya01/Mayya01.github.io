@@ -1,0 +1,16 @@
+.section
+	padding-top 30px
+	padding-bottom 30px
+
+	+breakpoint-md()
+		padding-top 60px
+		padding-bottom 60px
+
+	&--light-gray
+		background-color darken($gray--lightest, 1.18)
+
+	&--lightest-gray
+		background-color $section-bg-lightest
+
+	&--lighten-gray
+		background-color $section-bg-lighten

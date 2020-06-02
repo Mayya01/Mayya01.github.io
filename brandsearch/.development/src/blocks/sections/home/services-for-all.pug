@@ -1,0 +1,121 @@
+include ../../../global/_mixins
+
+section.section.services-section
+	div.container
+		h2.heading-h2 Сервис один, польза для всех
+
+		div.js-tabs
+			ul.tabs__list.js-tabs__list
+				- for (var i = 0; i < servicesTabs.length; i++)
+					li(class!=servicesTabs[i].active data-id=servicesTabs[i].id).tabs__tab.js-tabs__tab= servicesTabs[i].text
+
+			div.tabs__body
+				div#businessman.tabs__content.js-tabs__content._active
+					p.services-section__subtitle Получите точную, полную и актуальную информацию для принятия правильных решений
+					div.row-md
+						div.col-md.col-md--2-5
+							-
+								var iconicListContent= [
+									{
+										class:'_search',
+										title:'Удобный поиск',
+										text:'Проверьте товарный знак перед регистрацией и оцените вероятность успеха, специальные знания не требуются.'
+									},
+									{
+										title:'Экономьте время',
+										class:'_time',
+										text:'Проверка по всем видам используемых обозначений: товарным знакам, доменам и фирменным наименованиям.'
+									},
+									{
+										class:'_diagram',
+										title:'Снизьте риски',
+										text:'Снизьте риски Полная картина и оценка большинства возможных рисков при регистрации товарных знаков.'
+									}
+								  ];
+							+iconic-list(iconicListContent)
+
+						div.col-md.col-md--3-5
+							div.services-section__img
+								img(alt='Предпринимателям' src='../../templates/main/assets/images/services-img/service-img-1.svg')
+
+				div#marketers.tabs__content.js-tabs__content
+					p.services-section__subtitle Создавайте яркие и запоминающие продукты, которые будут выделяться на фоне конкурентов
+
+					div.row-md
+						div.col-md.col-md--2-5
+							-
+								var iconicListContent= [
+								{
+									class:'_star',
+									title:'Ваш продукт узнаваем ',
+									text:'Выберите название, которое будет узнаваемым и запоминаемым на фоне конкурентов.'
+								},
+								{
+									title:'Он один такой',
+									class:'_only-one',
+									text:'Покупатели выбирают ваш продукт, потому что она заметен на полке магазина.'
+								},
+								{
+									class:'_fast',
+									title:'Быстро и без накладок',
+									text:' Все идет по плану, потому Ваши решения основаны на достоверных данных.'
+								}
+								];
+							+iconic-list(iconicListContent)
+
+						div.col-md.col-md--3-5
+							div.services-section__img
+								img(alt='Маркетологам' src='../../templates/main/assets/images/services-img/service-img-2.svg')
+
+				div#lawyers.tabs__content.js-tabs__content
+					p.services-section__subtitle Быстро находите нужную информацию в полном объеме и прогнозируйте результат
+
+					div.row-md
+						div.col-md.col-md--2-5
+							-
+								var iconicListContent= [
+								{
+									class:'_search-color',
+									title:'Удобный поиск',
+									text:' Быстро находите нужную информацию в полном объем, специальные знания не требуются.'
+								},
+								{
+									title:'Уверенность в результате',
+									class:'_diagram-color',
+									text:' Ваше спокойствие и уверенность основаны на объективных данных, а не ощущениях.'
+								},
+								];
+							+iconic-list(iconicListContent)
+
+						div.col-md.col-md--3-5
+							div.services-section__img
+								img(alt='Маркетологам' src='../../templates/main/assets/images/services-img/service-img-3.svg')
+
+				div#agencies.tabs__content.js-tabs__content
+					p.services-section__subtitle Выделитесь среди конкурентов делая больше и лучше, без лишних усилий
+
+					div.row-md
+						div.col-md.col-md--2-5
+							-
+								var iconicListContent= [
+								{
+									class:'_checked',
+									title:'Быстрые согласования',
+									text:'Легко обосновывайте выбранные решения перед заказчиком'
+								},
+								{
+									title:'С вами хотят работать ',
+									class:'_briefcase',
+									text:'Вы делаете больше чем другие дизайнеры и неймеры, вас рекомендуют друзьям.'
+								},
+								{
+									title:'Работайте уверенно',
+									class:'_award',
+									text:'Быстро и легко проверяйте все ваши креативы на охранопригодность'
+								},
+								];
+							+iconic-list(iconicListContent)
+
+						div.col-md.col-md--3-5
+							div.services-section__img
+								img(alt='Маркетологам' src='../../templates/main/assets/images/services-img/service-img-4.svg')

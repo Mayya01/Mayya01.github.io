@@ -1,0 +1,34 @@
+.social-links
+	font-size 0
+	display flex
+	margin-right -5.5px
+	margin-left -5.5px
+
+	&__item
+		display inline-block
+		padding 0 5.5px
+		width 50%
+		height 50px
+
+		&:not(:last-child)
+			margin-right 11px
+
+		+breakpoint-lg()
+			size(75px, 40px)
+
+	&__link
+		display inline-block
+		border 1px solid rgba($white, 0.2)
+		width 100%
+		height 100%
+		position relative
+		background-repeat no-repeat
+		background-position center
+		radius(5px)
+
+		&._fb
+			background-image: url("../../../templates/main/assets/images/icons/icon-fb.svg");
+
+		&._vk
+			background-image: url("../../../templates/main/assets/images/icons/icon-vk.svg");
+			

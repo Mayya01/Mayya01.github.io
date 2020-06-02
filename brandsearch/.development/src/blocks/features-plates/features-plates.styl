@@ -1,0 +1,129 @@
+.features-plates
+
+	&__top
+		padding-bottom 23px
+		position relative
+		margin-bottom 60px
+
+		+breakpoint-md()
+			padding-bottom 0
+			margin-bottom 11px
+
+	&__bottom
+		radius(5px)
+		text-align center
+		background-color $main-bg
+		position relative
+		padding 18.29% 25px 25px 25px
+
+		+breakpoint-md()
+			@extend .text-left
+			padding 55px 42px 63px 378px
+
+		&-link
+			left 50%
+			transform translateX(-50%)
+			position absolute
+			max-width 65%
+			top -18.29%
+
+			+breakpoint-md()
+				top auto
+				max-width 100%
+				transform none
+				bottom 22px
+				left 19px
+
+		&-text
+			color $white
+			line(26,18)
+			max-width 210px
+			margin 0 auto
+
+			+breakpoint-md()
+				margin 0
+				max-width none
+
+	&__slider
+		background-color $white
+		radius(5px)
+		box-shadow 0 10px 30px rgba(47, 34, 87, 0.2)
+		padding 20px 20px 18px 20px
+
+		+breakpoint-md()
+			position relative
+			padding 30px 30px 20px 30px
+
+	&__slide
+		&-heading
+			font-rem(28)
+			line(38,28)
+			margin-bottom 11px
+
+			+breakpoint-md()
+				font-rem(30)
+				line(38,30)
+				margin-bottom 16px
+
+	.slick
+
+		&-slider
+			outline none
+			border none
+
+		&-slider
+			position static
+
+		&-dots
+			margin-bottom 0
+			text-align right
+			position absolute
+
+			+breakpoint-up-to-md()
+				font-size 0
+				left 50%
+				transform translateX(-50%)
+				bottom 0
+
+			+breakpoint-md()
+				position relative
+				margin-top 21px
+
+			li
+				display inline-block
+				size(8px,8px)
+				margin 0 4px
+
+				+breakpoint-md()
+					size(38px,38px)
+					margin 0
+
+					&:not(:last-child)
+						margin-right 9px
+
+			button
+				size(100%,100%)
+				radius(50%)
+				display block
+				color $white
+				border none
+				cursor pointer
+				outline none
+				font-size 0
+				background-color $gray--darker
+
+				+breakpoint-md()
+					font-rem(15)
+					line(26,15)
+					@extend .text-center
+					background-color $color-highlighted--secondary
+
+		&-active
+			button
+				background-color $color-highlighted--secondary
+				color darken($gray--lightest, 35.29)
+
+				+breakpoint-md()
+					border 1px solid rgba($text-color, 0.2)
+					background-color transparent
+

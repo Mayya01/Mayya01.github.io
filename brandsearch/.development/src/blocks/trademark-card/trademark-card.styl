@@ -1,0 +1,83 @@
+.trademark-card
+	background-color $white
+	height 130px
+	box-shadow $box-shadow
+	position relative
+	radius(10px)
+	padding 15px 115px 15px 20px
+
+	&::after
+		pseudo(absolute, 100px, 100px)
+		background-repeat no-repeat
+		background-position center
+		radius(50%)
+		border 2px solid $color-highlighted--secondary
+		size(100px, 100px)
+		right 15px
+		top 15px
+
+		+breakpoint-xl()
+			size(120px, 120px)
+			right 25px
+			top 15px
+
+	&--it
+		&::after
+			background-image url('../../../templates/main/assets/images/icons/icon-tv.svg')
+
+	&--flower
+		&::after
+			background-image url('../../../templates/main/assets/images/icons/icon-flower.svg')
+
+	&--bank
+		&::after
+			background-image url('../../../templates/main/assets/images/icons/icon-bank.svg')
+
+	&--hostel
+		&::after
+			background-image url('../../../templates/main/assets/images/icons/icon-hostel.svg')
+
+	&--cup
+		&::after
+			background-image url('../../../templates/main/assets/images/icons/icon-coffee-cup.svg')
+
+	&--money
+		&::after
+			background-image url('../../../templates/main/assets/images/icons/icon-money-bag.svg')
+
+
+	+breakpoint-xl()
+		height 150px
+		padding 30px 175px 15px 30px
+
+	&__title
+		font-weight 700
+		font-rem(18)
+		line(28, 24)
+
+		+breakpoint-lg()
+			font-rem(20)
+
+		+breakpoint-xl()
+			font-rem(24)
+
+.trademark-cards
+	+breakpoint-md()
+		make-row()
+		margin-bottom -30px
+
+	&__element
+		+breakpoint-up-to-md()
+			&:not(:last-child)
+				margin-bottom 10px
+
+		+breakpoint-md()
+			margin-bottom 30px
+			make-col-ready()
+			make-col(6)
+
+		+breakpoint-lg()
+			make-col(4)
+		
+		&._hide
+			display none
