@@ -1,7 +1,7 @@
-section.section.section--lightest-gray.stats-section
+section.section._lightest-gray.stats-section
 	div.container
 		h2.heading-h2._left
-			span.heading-h2_wrap #[span.heading-h2__remark Обновлено 8 часов назад] Все базы и реестры
+			span.heading-h2__wrap #[span.heading-h2__remark Обновлено 8 часов назад] Все базы и реестры
 		div.row-lg
 			div.col-lg.col-lg--2-5
 				p Ваш бренд будет проверен по российской и международной базе товарных знаков, ЕГРЮЛ и реестрам доменов. Данные обновляются каждые 24 часа.
@@ -12,15 +12,15 @@ section.section.section--lightest-gray.stats-section
 					div.stats-section__wrap
 						ul.stats-section__list
 							li.stats-section__list-item
-								a(href='javascript:void(0)').stats-section__list-link.dotted База товарных знаков и заявок
+								a(href='/about/sources/' data-tooltip-content="#stats-section-2").stats-section__list-link.dotted.js-stats-tooltip База товарных знаков и заявок
 								span.stats-section__list-text 421 235 товарных знака действующих в России
 
 							li.stats-section__list-item
-								a(href='javascript:void(0)').stats-section__list-link.dotted База юрлиц
+								a(href='/about/sources/' data-tooltip-content="#stats-section-3").stats-section__list-link.dotted.js-stats-tooltip База юрлиц
 								span.stats-section__list-text 6 134 458 действующих юридических лиц
 
 							li.stats-section__list-item
-								a(href='javascript:void(0)').stats-section__list-link.dotted Реестры доменных имен
+								a(href='/about/sources/#domains' data-tooltip-content="#stats-section-1" ).stats-section__list-link.dotted.js-stats-tooltip Реестры доменных имен
 								span.stats-section__list-text  1 434 802 доменных имен в доменных зонах RU и РФ
 						img.hide-md.stats-section__img(alt='Статистика' src='../../templates/main/assets/images/img-stat-mobile.svg')
 						img.hide-up-to-md.stats-section__img(alt='Статистика'  src='../../templates/main/assets/images/img-stat.svg')

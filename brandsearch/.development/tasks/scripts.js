@@ -10,6 +10,8 @@ _.gulp.task('scripts:core:dist', function () {
 		'node_modules/backbone/backbone-min.js',
 		'bower_components/slick-carousel/slick/slick.min.js',
 		'bower_components/select2/dist/js/select2.min.js',
+		'bower_components/tooltipster/dist/js/tooltipster.bundle.min.js',
+		'bower_components/fancybox/source/jquery.fancybox.pack.js',
 		_.gulp.localSourcePath + '/js_core/*.js'
 	])
 		.pipe(_.$.concat('core.min.js'))

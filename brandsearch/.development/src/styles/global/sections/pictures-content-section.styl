@@ -1,14 +1,37 @@
-.pictures-content-section
+.pictures-content
 	&__img-holder
 		@extend .text-center
 
-	&__row
-		&:not(:last-child)
+		+breakpoint-up-to-md()
 			margin-bottom 30px
 
 		+breakpoint-md()
+			padding-top  10px
+
+	&__row
+		flex-block()
+		flex-direction column
+
+		+breakpoint-up-to-md()
+			&._transformed-on-mobile
+				flex-direction column-reverse
+
+			&:not(:last-child)
+				margin-bottom 30px
+
+		+breakpoint-md()
+			margin-left -15px
+			margin-right -15px
+			flex-direction row
+
 			&:not(:last-child)
 				margin-bottom 60px
+
+	&__col
+
+		+breakpoint-md()
+			make-col-ready()
+			make-col(6)
 
 	&__btn
 		margin-top 22px

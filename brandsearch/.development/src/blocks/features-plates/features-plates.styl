@@ -1,37 +1,38 @@
 .features-plates
 
 	&__top
-		padding-bottom 23px
+		padding-bottom 30px
 		position relative
 		margin-bottom 60px
 
-		+breakpoint-md()
+		+breakpoint-lg()
 			padding-bottom 0
 			margin-bottom 11px
 
 	&__bottom
 		radius(5px)
-		text-align center
+		@extend .text-center
 		background-color $main-bg
 		position relative
-		padding 18.29% 25px 25px 25px
+		padding 19.29% 25px 25px 25px
 
-		+breakpoint-md()
+		+breakpoint-xl()
 			@extend .text-left
 			padding 55px 42px 63px 378px
 
 		&-link
-			left 50%
-			transform translateX(-50%)
+			centered-absolute-x()
 			position absolute
-			max-width 65%
-			top -18.29%
+			max-width 95%
+			top -40px
 
-			+breakpoint-md()
-				top auto
+			+breakpoint-lg()
+				max-width 55%
+
+			+breakpoint-xl()
+				top -50px
 				max-width 100%
 				transform none
-				bottom 22px
 				left 19px
 
 		&-text
@@ -40,29 +41,28 @@
 			max-width 210px
 			margin 0 auto
 
-			+breakpoint-md()
+			+breakpoint-xl()
 				margin 0
 				max-width none
 
 	&__slider
-		background-color $white
 		radius(5px)
-		box-shadow 0 10px 30px rgba(47, 34, 87, 0.2)
+		shadow(0 10px 30px rgba(47, 34, 87, 0.2))
+		background-color $white
 		padding 20px 20px 18px 20px
 
-		+breakpoint-md()
+		+breakpoint-lg()
 			position relative
-			padding 30px 30px 20px 30px
+			padding 30px 20px 20px 30px
 
 	&__slide
+		outline none
+
 		&-heading
-			font-rem(28)
-			line(38,28)
+			h3-like-title()
 			margin-bottom 11px
 
-			+breakpoint-md()
-				font-rem(30)
-				line(38,30)
+			+breakpoint-lg()
 				margin-bottom 16px
 
 	.slick
@@ -79,13 +79,12 @@
 			text-align right
 			position absolute
 
-			+breakpoint-up-to-md()
+			+breakpoint-up-to-lg()
 				font-size 0
-				left 50%
-				transform translateX(-50%)
+				centered-absolute-x()
 				bottom 0
 
-			+breakpoint-md()
+			+breakpoint-lg()
 				position relative
 				margin-top 21px
 
@@ -94,7 +93,7 @@
 				size(8px,8px)
 				margin 0 4px
 
-				+breakpoint-md()
+				+breakpoint-lg()
 					size(38px,38px)
 					margin 0
 
@@ -104,6 +103,7 @@
 			button
 				size(100%,100%)
 				radius(50%)
+				padding 0
 				display block
 				color $white
 				border none
@@ -112,7 +112,7 @@
 				font-size 0
 				background-color $gray--darker
 
-				+breakpoint-md()
+				+breakpoint-lg()
 					font-rem(15)
 					line(26,15)
 					@extend .text-center
@@ -123,7 +123,7 @@
 				background-color $color-highlighted--secondary
 				color darken($gray--lightest, 35.29)
 
-				+breakpoint-md()
+				+breakpoint-lg()
 					border 1px solid rgba($text-color, 0.2)
 					background-color transparent
 

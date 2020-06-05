@@ -9,13 +9,13 @@ header.header
 				div.inner-menu.js-main-nav__inner-menu
 					div.container
 						div.inner-menu__row
-							div.inner-menu__col._order-4-on-desctop
+							div.inner-menu__col._order-4-on-desktop
 								div.inner-menu__list-section
 									div.inner-menu__title Что делать?
 									div.actions-plate
-										div.actions-plate__element._star Проверить #[br] товарный знак
-										div.actions-plate__element._burger Найти #[br] нарушения
-										div.actions-plate__element._loop Проанализировать #[br] конкурента
+										a(href="#").actions-plate__element._star Проверить #[br] товарный знак
+										a(href="#").actions-plate__element._burger Найти #[br] нарушения
+										a(href="#").actions-plate__element._loop Проанализировать #[br] конкурента
 
 							div.inner-menu__col._hidden-on-mobile
 								a.inner-menu__logo(href="javascript:void(0)")
@@ -24,31 +24,27 @@ header.header
 								p.inner-menu__license-info
 									a(href="javascript:void(0)") Политика в отношении обработки персональных данных
 									span © 2005-2020 #[br] Brandsearch
+
 							div.inner-menu__col
 								div.inner-menu__list-section
 									div.inner-menu__title Товарный знаки
-									-var innerMenu = ['Поиск товарного знака', 'Поиск нарушений', 'Поиск по изображениям']
+									-var innerMenu = ['Поиск товарного знака', 'Поиск нарушений', 'Анализ конкурентов','Как выбрать МКТУ', 'Логотипы по отраслям','База товарных знаков']
 									+dropdown-menu(innerMenu)(class='inner-menu__list')
 
 								div.inner-menu__list-section
-									div.inner-menu__title Название юрлиц
+									div.inner-menu__title Название компаний
 									- var innerMenu = ['База юридических лиц', 'Поиск нарушений']
 									+dropdown-menu(innerMenu)(class='inner-menu__list')
 
 								div.inner-menu__list-section
 									div.inner-menu__title Доменные имена
-									- var innerMenu = ['Проверка занятости', 'Если домен уже занят?']
-									+dropdown-menu(innerMenu)(class='inner-menu__list')
-
-								div.inner-menu__list-section
-									div.inner-menu__title Контакты
-									- var innerMenu = ['support@ip-id.ru', '+7 (495) 134-3412?']
+									- var innerMenu = ['Проверка занятости', 'Как зарегистировать занятый домен']
 									+dropdown-menu(innerMenu)(class='inner-menu__list')
 
 							div.inner-menu__col
 								div.inner-menu__list-section
 									div.inner-menu__title О сервисе
-									- var innerMenu = ['Алогоритм поиска', 'Источники данных', 'Конфиденциальность', 'Партнерам', 'Новости', 'Контакты', 'Зарегистрироваться' ]
+									- var innerMenu = ['Алгоритм', 'Источники данных', 'Конфиденциальность', 'Партнерам', 'Блог ', 'Контакты ' ]
 									+dropdown-menu(innerMenu)(class='inner-menu__list')
 
 								a(href="javascript:void(0)").btn.inner-menu__btn._sm-font Войти в личный кабинет
@@ -63,17 +59,17 @@ header.header
 				ul.main-nav__list
 					li.main-nav__item
 						a.main-nav__link(href='javascript:void(0)') Товарные знаки
-						- var dropdownMenuItem = ['Поиск товарного знака', 'Поиск нарушений', 'Поиск по изображениям']
+						-var dropdownMenuItem = ['Поиск товарного знака', 'Поиск нарушений', 'Анализ конкурентов','Как выбрать МКТУ', 'Логотипы по отраслям','База товарных знаков']
 						+dropdown-menu(dropdownMenuItem)(class='main-nav__dropdown')
 
 					li.main-nav__item
-						a.main-nav__link(href='javascript:void(0)') Название юрлиц
+						a.main-nav__link(href='javascript:void(0)') Название компаний
 						- var dropdownMenuItem = ['База юридических лиц', 'Поиск нарушений']
 						+dropdown-menu(dropdownMenuItem)(class='main-nav__dropdown')
 
 					li.main-nav__item
 						a.main-nav__link(href='javascript:void(0)') Доменные имена
-						- var dropdownMenuItem = ['Проверка занятости', 'Если домен уже занят?']
+						- var dropdownMenuItem = ['Проверка занятости', 'Как зарегистировать занятый домен']
 						+dropdown-menu(dropdownMenuItem)(class='main-nav__dropdown')
 
 					li.main-nav__item._hidden-on-open
@@ -83,4 +79,4 @@ header.header
 					span
 
 		div.header__bottom
-			include ../../blocks/intro-search-banner/intro-search-banner
+			include ../../blocks/intro-banner/intro-search-banner

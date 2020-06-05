@@ -8,16 +8,13 @@
 			padding-left 55px
 
 		+breakpoint-lg()
-			padding-left 0
+			padding-left 63px
 
 		&-underlined
 			left 0
 			color rgba($text-color, 0.5)
 			position absolute
 			line-height 1
-
-			+breakpoint-lg()
-				left -63px
 
 			&::before
 				pseudo(absolute,3px,100%)
@@ -37,10 +34,14 @@
 
 		+breakpoint-lg()
 			padding-top 119px
-			padding-left 108px
+			padding-left 50px
 
 		p
 			max-width 520px
+
+	&__text
+		+breakpoint-lg()
+			padding-left 61px
 
 	&__btn
 		margin-top 22px

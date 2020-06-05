@@ -4,16 +4,16 @@ section.section.services-section
 	div.container
 		h2.heading-h2 Сервис один, польза для всех
 
-		div.js-tabs
+		div.js-tabs.tabs
 			ul.tabs__list.js-tabs__list
 				- for (var i = 0; i < servicesTabs.length; i++)
 					li(class!=servicesTabs[i].active data-id=servicesTabs[i].id).tabs__tab.js-tabs__tab= servicesTabs[i].text
 
 			div.tabs__body
 				div#businessman.tabs__content.js-tabs__content._active
-					p.services-section__subtitle Получите точную, полную и актуальную информацию для принятия правильных решений
+					p.services-section__subtitle Получите точную, полную и актуальную информацию #[br.hide-up-to-md] для принятия правильных решений
 					div.row-md
-						div.col-md.col-md--2-5
+						div.col-md.col-lg--2-5
 							-
 								var iconicListContent= [
 									{
@@ -34,7 +34,10 @@ section.section.services-section
 								  ];
 							+iconic-list(iconicListContent)
 
-						div.col-md.col-md--3-5
+							div.services-section__btn-holder
+								a(href="javascript:void(0)").btn.services-section__btn Попробовать
+
+						div.col-md.col-lg--3-5.hide-up-to-lg
 							div.services-section__img
 								img(alt='Предпринимателям' src='../../templates/main/assets/images/services-img/service-img-1.svg')
 
@@ -42,7 +45,7 @@ section.section.services-section
 					p.services-section__subtitle Создавайте яркие и запоминающие продукты, которые будут выделяться на фоне конкурентов
 
 					div.row-md
-						div.col-md.col-md--2-5
+						div.col-md.col-lg--2-5
 							-
 								var iconicListContent= [
 								{
@@ -63,7 +66,11 @@ section.section.services-section
 								];
 							+iconic-list(iconicListContent)
 
-						div.col-md.col-md--3-5
+							div.services-section__btn-holder
+								a(href="javascript:void(0)").btn.services-section__btn Попробовать
+
+
+						div.col-md.col-lg--3-5.hide-up-to-lg
 							div.services-section__img
 								img(alt='Маркетологам' src='../../templates/main/assets/images/services-img/service-img-2.svg')
 
@@ -71,7 +78,7 @@ section.section.services-section
 					p.services-section__subtitle Быстро находите нужную информацию в полном объеме и прогнозируйте результат
 
 					div.row-md
-						div.col-md.col-md--2-5
+						div.col-md.col-lg--2-5
 							-
 								var iconicListContent= [
 								{
@@ -87,7 +94,11 @@ section.section.services-section
 								];
 							+iconic-list(iconicListContent)
 
-						div.col-md.col-md--3-5
+							div.services-section__btn-holder
+								a(href="javascript:void(0)").btn.services-section__btn Попробовать
+
+
+						div.col-md.col-lg--3-5.hide-up-to-lg
 							div.services-section__img
 								img(alt='Маркетологам' src='../../templates/main/assets/images/services-img/service-img-3.svg')
 
@@ -95,7 +106,7 @@ section.section.services-section
 					p.services-section__subtitle Выделитесь среди конкурентов делая больше и лучше, без лишних усилий
 
 					div.row-md
-						div.col-md.col-md--2-5
+						div.col-md.col-lg--2-5
 							-
 								var iconicListContent= [
 								{
@@ -116,6 +127,10 @@ section.section.services-section
 								];
 							+iconic-list(iconicListContent)
 
-						div.col-md.col-md--3-5
+							div.services-section__btn-holder
+								a(href="javascript:void(0)").btn.services-section__btn Попробовать
+
+
+						div.col-md.col-lg--3-5.hide-up-to-lg
 							div.services-section__img
 								img(alt='Маркетологам' src='../../templates/main/assets/images/services-img/service-img-4.svg')

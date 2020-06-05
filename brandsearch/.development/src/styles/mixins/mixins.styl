@@ -87,7 +87,7 @@ line($line-height = 28, $font-size = 18)
 	line-height ($line-height / $font-size)
 
 //тень
-shadow($value)
+shadow($value = $box-shadow )
 	box-shadow $value
 
 //радиус
@@ -125,6 +125,15 @@ h3-title($color = $text-color, $position = left)
 	+breakpoint-md()
 		font-rem(35)
 		line(45,35)
+
+h3-like-title()
+	font-rem(28)
+	line(38,28)
+
+	+breakpoint-md()
+		font-rem(30)
+		line(38,30)
+
 
 h4-title($color = $text-color, $position = left)
 	text-align $position
@@ -191,6 +200,6 @@ padding--x($top, $bottom)
 	padding-top $top
 	padding-bottom $bottom
 
-centered-absolute-x
+centered-absolute-x()
 	left 50%
 	transform translateX(-50%)

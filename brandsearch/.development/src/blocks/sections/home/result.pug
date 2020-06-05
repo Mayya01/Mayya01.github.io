@@ -1,20 +1,35 @@
-section.result-section.section
+section.result-section.section._lightest-gray
 	div.container
-		- var slides = [{heading: 'Полнота, актуальность, достоверность', text: 'Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.', linkText:'Какие данные используете?'},{heading: 'Полнота, актуальность, достоверность', text: 'Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.', linkText:'Какие данные используете?'},{heading: 'Полнота, актуальность, достоверность', text: 'Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.', linkText:'Какие данные используете?'}]
-		div.row-md
-			div.col-md.col-md--1-2
-				div.features-plates
+		- var slides = [{heading: 'Полнота, актуальность, достоверность', text: 'Все источники данных для принятия правильного решения: товарные знаки, включая заявки, названия компаний и домены — информация обновляется ежедневно.', linkText:'Какие данные используете?', href:'/about/sources/ '},{heading: 'Совершенные алгоритмы поиска', text: 'Уникальный алгоритм поиска обеспечивает высокое качество и полноту проверки схожести не только по товарным знакам, но и фирменным наименования и доменным именам.', linkText:'Что за алгоритм?', href:'/about/algorithm/#lean-more'},{heading: 'Простой, полный и качественный поиск', text: 'Самый полный и точный сервис поиска по базам товарных знаков, ЕГРЮЛ и реестру доменов.', linkText:'Узнать больше ', href:'/about/algorithm/'}]
+		div.row-lg
+			div.col-lg.col-lg--1-2
+				div.features-plates.result-section__features
 					div.features-plates__top
 						div.features-plates__slider
 							div.js-features-plates
 								each slide in slides
 									div.features-plates__slide
-										h2.features-plates__slide-heading= slide.heading
+										h3.features-plates__slide-heading= slide.heading
 										p= slide.text
-										a(href="javascript:void(0)").bordered.features-plates__slide-link= slide.linkText
+										a(href=slide.href).bordered.features-plates__slide-link= slide.linkText
 					div.features-plates__bottom
-						a(href="javascript:void(0)").features-plates__bottom-link
+						a(href="https://www.youtube.com/embed/gINwEhM6r1U" data-fancybox-type="iframe" ).features-plates__bottom-link.js-fancy-media
 							img(alt='Предпринимателям' src='../../templates/main/assets/images/img-tv.png')
 						div.features-plates__bottom-text Посмотреть видео о том как это работает
 
-			div.col-md.col-md--1-2
+			div.col-lg.col-lg--1-2
+				div.stats-info.result-section__stats
+					h3.stats-info__heading Качество поиска определяет результат
+					div.stats-info__row
+						div.stats-info__section
+							div.stats-info__top
+								span.stats-info__top-number._red 9
+								span.stats-info__top-delimiter из
+								span.stats-info__top-number 10
+
+							p.stats-info__text Сервисов поиска товарных знаков не используют в своих алгоритмах проверку по доменным именам и названиям юрлиц.
+						div.stats-info__section
+							div.stats-info__top
+								span.stats-info__top-number 5 200
+
+							p.stats-info__text В 2019 году некачественно проведенный поиск стал причной отказа 5200 заявителям в регистрации товарных знаков.

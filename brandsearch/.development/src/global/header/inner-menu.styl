@@ -7,7 +7,7 @@
 	top 0
 	background-color $main-bg
 	height 100vh
-	padding 30px 0 50px 0
+	padding 30px 0 60px 0
 	font-family $primary-font-family
 	overflow-y scroll
 
@@ -19,29 +19,28 @@
 
 
 	&__row
-		flex-block()
+		display flex
 		flex-direction column
 
-		+breakpoint-md()
+		+breakpoint-lg()
 			make-row()
 			flex-direction row
 
-
 	&__col
-		+breakpoint-up-to-md()
+		+breakpoint-up-to-lg()
 			&:not(:last-child)
 				margin-bottom 30px
 
-		+breakpoint-md()
+		+breakpoint-lg()
 			make-col(3)
 			make-col-ready()
 
 		&._hidden-on-mobile
-			+breakpoint-up-to-md()
+			+breakpoint-up-to-lg()
 				display none
 
-		&._order-4-on-desctop
-			+breakpoint-md()
+		&._order-4-on-desktop
+			+breakpoint-lg()
 				order 4
 
 	&__list
@@ -49,17 +48,17 @@
 
 		&-section
 			&:first-child
-				+breakpoint-md()
+				+breakpoint-lg()
 					padding-top 16px
 
 			&:not(:last-child)
 				margin-bottom 30px
 
 		&-link
-			color rgba($white, 0.5)
-			display inline-block
 			line(25, 18)
 			font-rem(18)
+			color rgba($white, 0.5)
+			display inline-block
 
 		&-item
 			&:not(:last-child)
@@ -81,15 +80,26 @@
 			color $text-color--secondary
 
 	&__title
-		color $white
-		font-weight 700
 		font-rem(25)
 		line(33, 25)
-		margin-bottom 29px
+		color $white
+		font-weight 700
+		margin-bottom 18px
 		font-family $secondary-font-family
+
+		+breakpoint-lg()
+			margin-bottom 29px
 
 	&__btn
 		margin-top 10px
+		width 100%
+		padding-bottom 16px
+		padding-top 16px
+
+		+breakpoint-lg()
+			padding-bottom 11px
+			padding-top 11px
+			width auto
 
 		&:hover
 			background-color $color-highlighted

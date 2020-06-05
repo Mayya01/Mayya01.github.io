@@ -1,0 +1,47 @@
+.stats-info
+	&__heading
+		h3-like-title()
+		margin-bottom 21px
+
+		+breakpoint-md()
+			margin-bottom 26px
+
+	&__row
+		+breakpoint-md()
+			make-row()
+
+	&__section
+		+breakpoint-up-to-md()
+			&:not(:last-child)
+				margin-bottom 23px
+
+		+breakpoint-md()
+			make-col-ready()
+			make-col(6)
+
+	&__text
+		line(26,18)
+
+	&__top
+		margin-bottom 11px
+
+		+breakpoint-md()
+			margin-bottom 28px
+
+		&-number
+			font-rem(60)
+			line(60,60)
+			font-weight 900
+			display inline-block
+			vertical-align middle
+
+			&._red
+				color $color-highlighted
+
+		&-delimiter
+			font-rem(30)
+			line(60,30)
+			color rgba($text-color, 0.5)
+			display inline-block
+			vertical-align middle
+			margin-left 4px

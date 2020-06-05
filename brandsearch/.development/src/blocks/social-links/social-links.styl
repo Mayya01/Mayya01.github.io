@@ -7,14 +7,14 @@
 	&__item
 		display inline-block
 		padding 0 5.5px
-		width 50%
-		height 50px
-
-		&:not(:last-child)
-			margin-right 11px
+		size(50%, 50px)
 
 		+breakpoint-lg()
 			size(75px, 40px)
+			padding 0
+
+			&:not(:last-child)
+				margin-right 11px
 
 	&__link
 		display inline-block

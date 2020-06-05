@@ -1,0 +1,30 @@
+include ../../../global/_mixins
+
+section.section._lightest-gray
+	div.container
+		h2.heading-h2 Подборки товарных знаков
+		div.tabs.js-tabs
+			ul.tabs__list.js-tabs__list._center
+				each val in trademarkTabs
+					li(class!=val.active data-id=val.id).tabs__tab.js-tabs__tab= val.text
+
+			div.tabs__body
+				each val in trademarkTabs
+					if val.active
+						div(class!=val.active id=val.id).tabs__content.js-tabs__content.js-show-content
+							div.trademark-cards
+								each val in trademarks
+									div.trademark-cards__element.js-show-content__content(class!=val.hiddenClass)
+										+trademark-card(val.text)(class='trademark-card--' + val.class)
+							div.btn-wrapper
+								a(href="javascript:void(0)").btn-light.js-show-content__btn Показать ещё
+
+					else
+						div(id=val.id).tabs__content.js-tabs__content.js-show-content
+							div.categories-cards
+								each val in categories
+									div.categories-cards__element.js-show-content__content(class!=val.hiddenClass)
+										+category-card(val)
+
+							div.btn-wrapper
+								a(href="javascript:void(0)").btn-light.js-show-content__btn Показать ещё

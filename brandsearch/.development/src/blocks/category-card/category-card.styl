@@ -1,0 +1,88 @@
+.category-card
+	flex-block()
+	radius(5px)
+	shadow()
+	position relative
+	background-color $white
+	height 120px
+
+	+breakpoint-md()
+		min-height  120px
+		height 100%
+
+
+	&__remark
+		radius(0 0 3px 0)
+		font-rem(11)
+		line(20,11)
+		@extend .text-center
+		padding 4px 8px
+		text-transform uppercase
+		position absolute
+		left 0
+		top 0
+		display inline-block
+		font-weight 700
+		color $white
+		background-color $color-highlighted--tertiary
+
+	&__img
+		size(100%,100%)
+		max-width 120px
+
+		+breakpoint-xl()
+			max-width 150px
+
+		img
+			vertical-align middle
+			height 100%
+
+	&__title
+		font-rem(15)
+		line(26,20)
+		margin-bottom 0
+
+		+breakpoint(360px)
+			font-rem(20)
+
+		+breakpoint-lg()
+			font-rem(18)
+
+		+breakpoint-xl()
+			font-rem(24)
+			line(28,24)
+
+	&__text
+		width calc( "100% - 120px" )
+		padding 32px 10px 15px 10px
+
+		+breakpoint(360px)
+			padding-top 27px
+
+		+breakpoint-lg()
+			padding 29px 10px 10px 20px
+
+		+breakpoint-xl()
+			padding 40px 15px 26px 30px
+			width calc( "100% - 150px" )
+
+.categories-cards
+	+breakpoint-md()
+		make-row()
+		margin-bottom -27px
+
+	&__element
+		+breakpoint-up-to-md()
+			margin-bottom 10px
+
+		+breakpoint-md()
+			make-col(6)
+			make-col-ready()
+			margin-bottom 27px
+
+		+breakpoint-lg()
+			make-col(4)
+
+		&._hide
+			display none
+

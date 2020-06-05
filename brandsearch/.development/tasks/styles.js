@@ -6,6 +6,8 @@ var _ = require('underscore');
 _.gulp.task('styles:core', function () {
 	return _.gulp.src([
 		'bower_components/slick-carousel/slick/slick.css',
+		'bower_components/tooltipster/dist/css/tooltipster.bundle.min.css',
+		'bower_components/fancybox/source/jquery.fancybox.css'
 	])
 		.pipe(_.$.concat('core.css'))
 		.pipe(_.gulp.dest(_.gulp.localDistributivePath + '/styles'));

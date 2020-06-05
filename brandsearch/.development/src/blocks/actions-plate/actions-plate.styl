@@ -3,11 +3,22 @@
 		font-rem(18)
 		line(25,18)
 		radius(10px)
+		display block
 		color $white
 		font-weight 700
 		border 1px solid rgba($white,0.2)
 		position relative
 		padding 15px 52px 15px 85px
+
+		+breakpoint-md()
+			font-rem(16)
+			padding-left 60px
+			padding-right 20px
+
+		+breakpoint-xl()
+			font-rem(18)
+			padding-left 85px
+			padding-right 52px
 
 		&::before
 			pseudo(absolute, 46px, 46px)
@@ -16,6 +27,13 @@
 			margin-top -23px
 			background-position center
 			background-repeat no-repeat
+
+			+breakpoint-md()
+				left 10px
+
+			+breakpoint-xl()
+				left 20px
+
 
 		&._star
 			&::before

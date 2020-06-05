@@ -1,5 +1,18 @@
 .services-section
 
+	&__btn-holder
+		margin-top 32px
+
+		+breakpoint-lg()
+			padding-left 110px
+			margin-top 52px
+
+	&__btn
+		width 100%
+
+		+breakpoint-lg()
+			width auto
+
 	&__subtitle
 		margin-bottom 32px
 
@@ -10,6 +23,10 @@
 
 	&__img
 		@extend .text-center
+		margin-top 15px
+
+		+breakpoint-lg()
+			margin-top 0
 
 		img
 			vertical-align middle

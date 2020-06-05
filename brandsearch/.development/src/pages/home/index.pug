@@ -3,13 +3,40 @@ extends ../../templates/main.pug
 block variables
 	- var isPage = 'homePage'
 	- var trademarks =    [{class:'it', text:'IT, Разработка'},{class:'flower', text:'Агрокомпании'},{class:'bank', text:'Банк, финансовые организации'},{class:'money', text:'Благотворительные организации'},{class:'hostel', text:'Гостиницы, хостелы'},{class:'cup', text:' Кафе'},{class:'it',hiddenClass:'_hide', text:'IT, Разработка'},{class:'flower',hiddenClass:'_hide', text:'Агрокомпании'},{class:'hostel',hiddenClass:'_hide',text:'Гостиницы, хостелы'},{class:'cup',hiddenClass:'_hide', text:' Кафе'}];
-	- var trademarkTabs = [{text:'По категориям', active:'_active', id:'category'},{text:'По МКТУ',id:'mktu'}, {text:'По образам',id:'view'}];
-	- var servicesTabs =  [{text:'Предпринимателям', active:'_active', id:'businessman'},{text:'Маркетологам',id:'marketers'}, {text:'Юристам',id:'lawyers'}, {text:'Креативным агентствам',id:'agencies'}];
+	- var trademarkTabs = [{text:'По категориям', active:'_active', id:'category'},{text:'По МКТУ',id:'mktu'}];
+	-
+		var servicesTabs =
+		[
+			{text:'Предпринимателям', active:'_active', id:'businessman'},
+			{text:'Маркетологам',id:'marketers'}, {text:'Юристам',id:'lawyers'},
+			{text:'Креативным агентствам',id:'agencies'}
+			];
+	-
+		var categories =
+		[
+		  {text:'Химические продукты', imgSrc:'img-category-chemistry.jpg',class:1},
+		  {text:'Краски, олифы, лаки',imgSrc:'img-category-paints.jpg',class:2},
+		  {text:'Препараты для чистки, парфюмерия и косметика',imgSrc:'img-category-parfume.jpg',class:3},
+		  {text:'Технические масла, смазки, топлива',imgSrc:'img-category-technical.jpg',class:4},
+		  {text:'Фармацевтические препараты',imgSrc:'img-category-pharmacy.jpg',class:5},
+		  {text:'Обычные металлы и сплавы',imgSrc:'img-category-metals.jpg',class:6},
+		  {text:'Машины, станки и двигатели',imgSrc:'img-category-engines.jpg',class:7},
+		  {text:'Ручные инструмены',imgSrc:'img-category-tools.jpg',class:8},
+		  {text:'Приборы, инструменты, оборудование',imgSrc:'img-category-equipment.jpg',class:9},
+		  {text:'Химические продукты',hiddenClass:'_hide', imgSrc:'img-category-chemistry.jpg',class:1},
+		  {text:'Краски, олифы, лаки',hiddenClass:'_hide',imgSrc:'img-category-paints.jpg',class:2},
+		  {text:'Препараты для чистки, парфюмерия и косметика',hiddenClass:'_hide',imgSrc:'img-category-parfume.jpg',class:3},
+		  {text:'Технические масла, смазки, топлива',hiddenClass:'_hide',imgSrc:'img-category-technical.jpg',class:4},
+		]
 
 block main-content
-	include ../../blocks/sections/home/result
-	include ../../blocks/sections/home/databases-and-registries
-	include ../../blocks/sections/home/search-section
-	include ../../blocks/sections/home/services-for-all
-	include ../../blocks/sections/home/why
-	include ../../blocks/sections/home/trademark-sign
+	main
+		include ../../blocks/sections/home/result
+		include ../../blocks/sections/home/databases-and-registries
+		include ../../blocks/sections/home/search-section
+		include ../../blocks/sections/home/services-for-all
+		include ../../blocks/sections/home/why
+		include ../../blocks/sections/home/trademark
+
+block modal
+	include ../../blocks/sections/home/tooltip-content

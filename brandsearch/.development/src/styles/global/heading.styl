@@ -1,11 +1,17 @@
 .heading
+	&-h1
+		h1-title()
+
+		&._white
+			color $white
+
 	&-h2
 		h1-title()
 
 		&._left
 			@extend .text-left
 
-		&_wrap
+		&__wrap
 			position relative
 			display inline-block
 
@@ -17,6 +23,7 @@
 			line(20,15)
 			radius(3px)
 			@extend .text-center
+			margin-bottom 5px
 			font-family $primary-font-family
 			padding 4px 12px
 			color $white
@@ -29,6 +36,7 @@
 				position absolute
 				top 9px
 				right 0
+				margin-bottom 0
 
 	&-h3
 		h3-title()
