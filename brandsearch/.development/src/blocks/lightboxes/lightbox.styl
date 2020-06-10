@@ -1,0 +1,35 @@
+.lightbox
+	background-color $section-bg-lighten
+	height 100%
+
+	&._open
+		display block
+
+	&__center-wrapper
+		flex-block()
+		align-items center
+		justify-content center
+		height 100%
+
+	&__form
+		flex-block()
+		max-width 1110px
+		padding 0 20px
+		width 100%
+		margin 0 auto
+
+	&__input
+		width 100%
+		margin-bottom 10px
+
+		+breakpoint-lg()
+			radius(5px 0 0 5px)
+			height 60px
+			margin-bottom 0
+			width calc('100% - 180px')
+
+	&__btn
+		width 100%
+
+		+breakpoint-lg()
+			max-width 180px

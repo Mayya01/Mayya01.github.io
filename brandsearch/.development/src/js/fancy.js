@@ -21,3 +21,27 @@ App.Control.install({
     });
   }
 });
+
+App.Control.install({
+  el: '.js-fancy-lightbox',
+  name: 'FancyMedia',
+  initialize: function () {
+    var self = this;
+
+    this.$el.fancybox({
+      autoResize: true,
+      wrapCSS: 'fancy-lightbox',
+      maxWidth: '100%',
+      padding:0,
+      width: "100%",
+      height:'100%',
+      helpers: {
+        overlay: {
+          css: {
+            'background': 'rgba(27, 71, 105, 0.7)'
+          }
+        }
+      }
+    });
+  }
+});

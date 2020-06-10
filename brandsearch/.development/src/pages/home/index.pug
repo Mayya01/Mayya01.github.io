@@ -2,8 +2,26 @@ extends ../../templates/main.pug
 
 block variables
 	- var isPage = 'homePage'
-	- var trademarks =    [{class:'it', text:'IT, Разработка'},{class:'flower', text:'Агрокомпании'},{class:'bank', text:'Банк, финансовые организации'},{class:'money', text:'Благотворительные организации'},{class:'hostel', text:'Гостиницы, хостелы'},{class:'cup', text:' Кафе'},{class:'it',hiddenClass:'_hide', text:'IT, Разработка'},{class:'flower',hiddenClass:'_hide', text:'Агрокомпании'},{class:'hostel',hiddenClass:'_hide',text:'Гостиницы, хостелы'},{class:'cup',hiddenClass:'_hide', text:' Кафе'}];
-	- var trademarkTabs = [{text:'По категориям', active:'_active', id:'category'},{text:'По МКТУ',id:'mktu'}];
+	-
+		var trademarks =
+		[
+		  	{class:'_it', text:'IT, Разработка'},
+			{class:'_flower', text:'Агрокомпании'},
+			{class:'_bank', text:'Банк, финансовые организации'},
+			{class:'_money', text:'Благотворительные организации'},
+			{class:'_hostel', text:'Гостиницы, хостелы'},
+			{class:'_cup', text:' Кафе'},
+			{class:'_it',hiddenClass:'_hide', text:'IT, Разработка'},
+			{class:'_flower',hiddenClass:'_hide', text:'Агрокомпании'},
+			{class:'_hostel',hiddenClass:'_hide',text:'Гостиницы, хостелы'},
+			{class:'_cup',hiddenClass:'_hide', text:' Кафе'}
+		];
+	-
+		var trademarkTabs =
+		[
+		  	{text:'По категориям', active:'_active', id:'category'},
+			{text:'По МКТУ',id:'mktu'}
+		];
 	-
 		var servicesTabs =
 		[
@@ -40,3 +58,4 @@ block main-content
 
 block modal
 	include ../../blocks/sections/home/tooltip-content
+	include ../../blocks/lightboxes/lightbox
