@@ -5,7 +5,7 @@
 	&__logo
 		display inline-block
 		width 100%
-		max-width 120px
+		max-width 125px
 
 		+breakpoint-md()
 			max-width 224px
@@ -20,13 +20,14 @@
 			vertical-align middle
 
 	&__top
-		padding 10px 0
+		padding 12px 0 10px 0
 		border-bottom 1px solid rgba($white, 0.1)
 		position relative
-		flex-block()
+		display flex
 		align-items center
 		justify-content space-between
 
 		+breakpoint-lg()
+			flex-wrap wrap
 			justify-content normal
 			padding 42px 0 31px 0
