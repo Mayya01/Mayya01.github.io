@@ -3585,6 +3585,49 @@ var MainSlider = {
 };
 
 App.Control.install(MainSlider);
+var VisitedPages = {
+	el: '.js-visited-pages',
+	name: 'VisitedPages',
+
+	initialize: function() {
+		this.mainSlider = $('.main-slider');
+		this.mainSliderOffsetTop = this.mainSlider.offset().top;
+		this.mainSliderHeight = this.mainSlider.outerHeight();
+
+		this.container = this.$el.parent('.container');
+		this.containerWidth = this.container.outerWidth();
+		this.elWidth = ($(window).width() - this.containerWidth) / 2;
+
+		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
+
+		var self = this;
+
+		this.setStickyBlockWidth();
+
+		$(window).bind('resize', function() {
+			self.elWidth = ($(window).width() - self.containerWidth) / 2;
+			self.setStickyBlockWidth();
+		});
+
+		$(window).bind('scroll', function() {
+			self.stickyOnScroll();
+		});
+	},
+
+	setStickyBlockWidth: function() {
+		this.$el.css({'width': this.elWidth});
+	},
+
+	stickyOnScroll: function() {
+		if($(window).scrollTop() >= this.pushPoint) {
+			this.$el.addClass('visited-pages--fixed');
+		} else {
+			this.$el.removeClass('visited-pages--fixed');
+		}
+	}
+};
+
+App.Control.install(VisitedPages);
 var MainSliderRd = {
 	el: '.js-main-slider-rd',
 	name: 'MainSliderRd',
@@ -3639,49 +3682,6 @@ var MainSliderRd = {
 
 App.Control.install(MainSliderRd);
 
-var VisitedPages = {
-	el: '.js-visited-pages',
-	name: 'VisitedPages',
-
-	initialize: function() {
-		this.mainSlider = $('.main-slider');
-		this.mainSliderOffsetTop = this.mainSlider.offset().top;
-		this.mainSliderHeight = this.mainSlider.outerHeight();
-
-		this.container = this.$el.parent('.container');
-		this.containerWidth = this.container.outerWidth();
-		this.elWidth = ($(window).width() - this.containerWidth) / 2;
-
-		this.pushPoint = this.mainSliderOffsetTop + this.mainSliderHeight;
-
-		var self = this;
-
-		this.setStickyBlockWidth();
-
-		$(window).bind('resize', function() {
-			self.elWidth = ($(window).width() - self.containerWidth) / 2;
-			self.setStickyBlockWidth();
-		});
-
-		$(window).bind('scroll', function() {
-			self.stickyOnScroll();
-		});
-	},
-
-	setStickyBlockWidth: function() {
-		this.$el.css({'width': this.elWidth});
-	},
-
-	stickyOnScroll: function() {
-		if($(window).scrollTop() >= this.pushPoint) {
-			this.$el.addClass('visited-pages--fixed');
-		} else {
-			this.$el.removeClass('visited-pages--fixed');
-		}
-	}
-};
-
-App.Control.install(VisitedPages);
 App.Control.install({
     el: '.input-checkbox',
     name: 'InputCheckbox',
