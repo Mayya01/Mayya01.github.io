@@ -58,15 +58,15 @@
     <section class="start-banner">
       <div class="container">
         <div class="remark-red">Тарифы Управленки</div>
-        <h1 class="heading-h1">14 дней бесплатного функционала</h1>
+        <h1 class="heading-h1">14 дней бесплатного <br class="hide-up-to-md"> функционала</h1>
         <div class="start-banner__price">
-          <div class="price-cards price-cards--no-indent price-cards--centered">
-            <div class="price-card">
-              <div class="price-card__wrap">
-                <div class="price-card__top">
-                  <h2 class="heading-h2 heading-h2--sm price-card__heading">Тариф «Базовый»</h2><span class="lead-md">от ХХХХ  в месяц</span>
+          <div class="info-cards info-cards--no-indent info-cards--centered">
+            <div class="info-card">
+              <div class="info-card__wrap">
+                <div class="info-card__top">
+                  <h2 class="heading-h2 heading-h2--sm info-card__heading">Тариф «Базовый»</h2><span class="lead-md">от ХХХХ ₽   в месяц</span>
                 </div>
-                <div class="price-card__content">
+                <div class="info-card__content">
                       <ul class="checked-bullet-list">
                         <li>Автоматическая загрузка выписок</li>
                         <li>Автоматическая разноска операций</li>
@@ -76,16 +76,16 @@
                         <li>Техническая поддержка</li>
                       </ul>
                 </div>
-                <div class="price-card__bottom"><a class="btn-linear price-card__btn" href="#">Попробовать бесплатно</a></div>
+                <div class="info-card__bottom"><a class="btn-linear info-card__btn" href="#">Попробовать бесплатно</a></div>
               </div>
             </div>
-            <div class="price-card price-card--active">
-              <div class="price-card__wrap">
-                <div class="price-card__top">
-                  <h2 class="heading-h2 heading-h2--sm price-card__heading">Тариф «Полный»</h2><span class="lead-md">от ХХХХ  в месяц</span>
+            <div class="info-card info-card--active">
+              <div class="info-card__wrap">
+                <div class="info-card__top">
+                  <h2 class="heading-h2 heading-h2--sm info-card__heading">Тариф «Полный»</h2><span class="lead-md">от ХХХХ  ₽  в месяц</span>
                 </div>
-                <div class="price-card__content">
-                  <h3 class="price-card__h3">Все функции тарифа «Базовый», плюс:</h3>
+                <div class="info-card__content">
+                  <h3 class="info-card__h3">Все функции тарифа «Базовый», плюс:</h3>
                       <ul class="checked-bullet-list checked-bullet-list--green">
                         <li>Настройка специалистом модулей автоматизации</li>
                         <li>Разработка и реализация индивидуальной методологии управленческого учета</li>
@@ -96,7 +96,7 @@
                         <li>Настройка отчетов в соответствии с разработанной методикой</li>
                       </ul>
                 </div>
-                <div class="price-card__bottom"><a class="btn-orange price-card__btn" href="#">Попробовать бесплатно</a></div>
+                <div class="info-card__bottom"><a class="btn-orange info-card__btn" href="#">Попробовать бесплатно</a></div>
               </div>
             </div>
           </div>
@@ -331,8 +331,8 @@
     <div class="modal" id="fancy-tabs">
       <div class="modal-tabs js-tabs">
         <ul class="modal-tabs__list js-tabs__list">
-          <li class="modal-tabs__item"><a class="modal-tabs__link js-tabs__tab is-active" href="javascript:void(0);" data-id="demo-dannye"> Демо-данные</a></li>
-          <li class="modal-tabs__item"><a class="modal-tabs__link js-tabs__tab" href="javascript:void(0);" data-id="demo-dannye-2"> Демо на ваших данных</a></li>
+          <li class="modal-tabs__item"><a class="modal-tabs__link js-tabs__tab is-active" href="javascript:void(0);" data-id="demo-dannye"> Демо-<br class="hide-md">данные</a></li>
+          <li class="modal-tabs__item"><a class="modal-tabs__link js-tabs__tab" href="javascript:void(0);" data-id="demo-dannye-2"> Демо на <br class="hide-md"> ваших данных</a></li>
         </ul>
         <div class="modal-tabs__body">
           <div class="modal-tabs__content js-tabs__content is-active" id="demo-dannye">
@@ -340,6 +340,7 @@
               <div class="modal-tabs__col">
                 <h4 class="heading-h4">Получите бесплатный <br class="hide-up-to-md"> доступ с демо-данными</h4>
                 <p>Вы можете познакомиться с сервисом на готовых демонстрационных данных.</p>
+                <p class="modal-tabs__remark hide-up-to-md">Пожалуйста, заполните все поля.</p>
               </div>
               <div class="modal-tabs__col">
                 <form class="form">
@@ -359,10 +360,11 @@
                     <button class="btn form__btn" type="submit">Начать</button>
                     <div class="form__group">
                       <input class="form__checkbox" type="checkbox" id="privacy-2">
-                      <label class="form__checkbox-label" for="privacy-2">Соглашаюсь на обработку <a href="#">персональных данных</a></label>
+                      <label class="form__checkbox-label" for="privacy-2">Соглашаюсь на обработку <a class="bordered-red" href="#">персональных данных</a></label>
                     </div>
                   </div>
                 </form>
+                <p class="modal-tabs__remark hide-md">Пожалуйста, заполните все поля.</p>
               </div>
             </div>
           </div>
@@ -378,6 +380,7 @@
                       <li>или все сразу</li>
                     </ul>
                 <p>Мы с радостью все настроим и покажем. <br> Будет интересно!</p>
+                <p class="modal-tabs__remark hide-up-to-md">Пожалуйста, заполните все поля.</p>
               </div>
               <div class="modal-tabs__col">
                 <form class="form">
@@ -409,10 +412,11 @@
                     <button class="btn form__btn" type="submit">Отправить</button>
                     <div class="form__group">
                       <input class="form__checkbox" type="checkbox" id="privacy-1">
-                      <label class="form__checkbox-label" for="privacy-1">Соглашаюсь на обработку <a href="#">персональных данных</a></label>
+                      <label class="form__checkbox-label" for="privacy-1">Соглашаюсь на обработку <a class="bordered-red" href="#">персональных данных</a></label>
                     </div>
                   </div>
                 </form>
+                <p class="modal-tabs__remark hide-md">Пожалуйста, заполните все поля.</p>
               </div>
             </div>
           </div>
