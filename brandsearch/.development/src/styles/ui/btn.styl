@@ -1,17 +1,37 @@
 .btn
-	btn-style()
 	shadow($highlighted-box-shadow)
+	radius(5px)
+	font-rem(18)
+	line(28,18)
+	color $white
+	background-color $color-highlighted
+	display inline-block
+	text-align center
+	padding 11px 20px
+	cursor pointer
+
+	&:hover
+		background-color $main-bg
+		color $white
+		border none
 
 	&._sm-font
 		font-rem(15)
 		line(18,15)
 
 .btn-light
-	btn-style($link-color, transparent)
+	@extend .btn
+	box-shadow none
+	color $link-color
+	background-color transparent
 	border 1px solid $link-color
 
 	&:hover
 		border 1px solid transparent
+
+	&._hidden
+		display none
+
 
 .btn-wrapper
 	text-align center

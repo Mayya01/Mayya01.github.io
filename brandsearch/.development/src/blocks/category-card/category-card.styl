@@ -10,6 +10,9 @@
 		min-height  120px
 		height 100%
 
+	&:hover
+		.category-card__title
+			color $link-color
 
 	&__remark
 		radius(0 0 3px 0)
@@ -40,6 +43,7 @@
 	&__title
 		font-rem(15)
 		line(26,20)
+		color $text-color
 		margin-bottom 0
 
 		+breakpoint(360px)
@@ -57,7 +61,7 @@
 		padding 32px 10px 15px 10px
 
 		+breakpoint(360px)
-			padding-top 27px
+			padding-top 35px
 
 		+breakpoint-lg()
 			padding 29px 10px 10px 20px

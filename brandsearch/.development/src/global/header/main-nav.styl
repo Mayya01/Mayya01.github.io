@@ -2,6 +2,9 @@
 	width auto
 	font-family $secondary-font-family
 
+	+breakpoint-up-to-lg()
+		float right
+
 	+breakpoint-lg()
 		flex-block()
 		flex-grow 1
@@ -97,7 +100,7 @@
 				size(40px, 4px)
 
 		&._is-open
-			size(31px,31px)
+			size(25px,25px)
 			z-index 999999
 			transform rotate(-90deg)
 			position absolute
@@ -105,12 +108,16 @@
 			right 0
 
 			+breakpoint-lg()
+				size(31px,31px)
 				top 40px
 
 			&::before
 			&::after
-				width 35px
+				width 25px
 				top 15px
+
+				+breakpoint-lg()
+					width 35px
 
 			span
 				display none
@@ -125,7 +132,7 @@
 		display none
 		position absolute
 		left 0
-		top 35px
+		top 33px
 		min-width 280px
 		radius(10px)
 		background-color $white
@@ -133,7 +140,6 @@
 		&-item
 			+breakpoint-lg()
 				display block
-				padding 13px 10px 12px 20px
 
 				&:hover
 					background-color $gray--lighten
@@ -146,6 +152,8 @@
 
 		&-link
 			color $white
+			display block
 
 			+breakpoint-lg()
+				padding 13px 10px 12px 20px
 				color $text-color

@@ -1,0 +1,8 @@
+include ../../../global/_mixins
+
+section.section
+	div.container
+		div.blog-list
+			each blogElement in blogList
+				div.blog-list__element(class!=blogElement.elementClass)
+					+blog-element(blogElement)

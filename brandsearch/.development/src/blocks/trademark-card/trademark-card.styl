@@ -1,10 +1,15 @@
 .trademark-card
 	shadow()
+	display block
 	background-color $white
 	height 130px
 	position relative
 	radius(10px)
 	padding 15px 115px 15px 20px
+
+	&:hover
+		.trademark-card__title
+			color $link-color
 
 	&::after
 		pseudo(absolute, 100px, 100px)
@@ -54,6 +59,7 @@
 		font-weight 700
 		font-rem(18)
 		line(28, 24)
+		color $text-color
 
 		+breakpoint-lg()
 			font-rem(20)

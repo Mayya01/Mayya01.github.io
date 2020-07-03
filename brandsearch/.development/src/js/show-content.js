@@ -17,6 +17,9 @@ var ShowContent = {
 		e.preventDefault();
 
 		this.hiddenContent.slideDown().removeClass('_hidden');
+		if(this.btn.filter('[data-hidden]')) {
+			this.btn.addClass('_hidden');
+		}
 
 		// Если скрытую информацию и кнопку-триггер невозможно разместить в общем контейнере
 		// Или скрытая информация расположена не после кнопки-триггера

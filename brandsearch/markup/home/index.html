@@ -108,7 +108,7 @@
             <h1 class="heading-h1 _white">Тотальная проверка вашего бренда</h1>
             <p class="intro-banner__subtitle">Уникальный сервис простого поиска по базам товарных знаков, ЕГРЮЛ и доменов.</p>
             <form class="intro-banner__form">
-              <input class="field intro-banner__input" type="text" placeholder="Компания">
+              <input class="field intro-banner__input" type="text" placeholder="Название">
               <button class="btn intro-banner__btn js-fancy-lightbox" type="submit" data-fancybox-type="inline" data-fancybox-href="#lightbox">Проверить</button>
             </form>
           </div>
@@ -164,7 +164,7 @@
       </section>
       <section class="section _lightest-gray stats-section">
         <div class="container">
-          <h2 class="heading-h2 _left"><span class="heading-h2__wrap"><span class="heading-h2__remark">Обновлено 8 часов назад</span> Все базы и реестры</span></h2>
+          <h2 class="heading-h2 _left"><span class="heading-h2__wrap"><span class="heading-h2__remark">Обновлено 8 часов назад</span> IP-ID на Brandsearch</span></h2>
           <div class="row-lg">
             <div class="col-lg col-lg--2-5">
               <p>Ваш бренд будет проверен по российской и международной базе товарных знаков, ЕГРЮЛ и реестрам доменов. Данные обновляются каждые 24 часа.</p>
@@ -386,167 +386,121 @@
             <div class="tabs__body">
               <div class="_active tabs__content js-tabs__content js-show-content" id="category">
                 <div class="trademark-cards">
-                  <div class="trademark-cards__element js-show-content__content">
-                          <div class="trademark-card _it">
-                            <h3 class="trademark-card__title">IT, Разработка</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content"><a class="trademark-card _it" href="#">
+                            <h3 class="trademark-card__title">IT, Разработка</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content">
-                          <div class="trademark-card _flower">
-                            <h3 class="trademark-card__title">Агрокомпании</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content"><a class="trademark-card _flower" href="#">
+                            <h3 class="trademark-card__title">Агрокомпании</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content">
-                          <div class="trademark-card _bank">
-                            <h3 class="trademark-card__title">Банк, финансовые организации</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content"><a class="trademark-card _bank" href="#">
+                            <h3 class="trademark-card__title">Банк, финансовые организации</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content">
-                          <div class="trademark-card _money">
-                            <h3 class="trademark-card__title">Благотворительные организации</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content"><a class="trademark-card _money" href="#">
+                            <h3 class="trademark-card__title">Благотворительные организации</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content">
-                          <div class="trademark-card _hostel">
-                            <h3 class="trademark-card__title">Гостиницы, хостелы</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content"><a class="trademark-card _hostel" href="#">
+                            <h3 class="trademark-card__title">Гостиницы, хостелы</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content">
-                          <div class="trademark-card _cup">
-                            <h3 class="trademark-card__title"> Кафе</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content"><a class="trademark-card _cup" href="#">
+                            <h3 class="trademark-card__title"> Кафе</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content _hide">
-                          <div class="trademark-card _it">
-                            <h3 class="trademark-card__title">IT, Разработка</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content _hide"><a class="trademark-card _it" href="#">
+                            <h3 class="trademark-card__title">IT, Разработка</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content _hide">
-                          <div class="trademark-card _flower">
-                            <h3 class="trademark-card__title">Агрокомпании</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content _hide"><a class="trademark-card _flower" href="#">
+                            <h3 class="trademark-card__title">Агрокомпании</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content _hide">
-                          <div class="trademark-card _hostel">
-                            <h3 class="trademark-card__title">Гостиницы, хостелы</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content _hide"><a class="trademark-card _hostel" href="#">
+                            <h3 class="trademark-card__title">Гостиницы, хостелы</h3></a>
                   </div>
-                  <div class="trademark-cards__element js-show-content__content _hide">
-                          <div class="trademark-card _cup">
-                            <h3 class="trademark-card__title"> Кафе</h3>
-                          </div>
+                  <div class="trademark-cards__element js-show-content__content _hide"><a class="trademark-card _cup" href="#">
+                            <h3 class="trademark-card__title"> Кафе</h3></a>
                   </div>
                 </div>
-                <div class="btn-wrapper"><a class="btn-light js-show-content__btn" href="javascript:void(0)">Показать ещё</a></div>
+                <div class="btn-wrapper"><a class="btn-light js-show-content__btn" href="javascript:void(0)" data-hidden="true">Показать ещё</a></div>
               </div>
               <div class="tabs__content js-tabs__content js-show-content" id="mktu">
                 <div class="categories-cards">
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 1</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 1</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Химические продукты</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Химические продукты" src="../../templates/main/assets/images/categories/img-category-chemistry.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Химические продукты" src="../../templates/main/assets/images/categories/img-category-chemistry.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 2</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 2</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Краски, олифы, лаки</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Краски, олифы, лаки" src="../../templates/main/assets/images/categories/img-category-paints.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Краски, олифы, лаки" src="../../templates/main/assets/images/categories/img-category-paints.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 3</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 3</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Препараты для чистки, парфюмерия и косметика</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Препараты для чистки, парфюмерия и косметика" src="../../templates/main/assets/images/categories/img-category-parfume.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Препараты для чистки, парфюмерия и косметика" src="../../templates/main/assets/images/categories/img-category-parfume.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 4</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 4</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Технические масла, смазки, топлива</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Технические масла, смазки, топлива" src="../../templates/main/assets/images/categories/img-category-technical.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Технические масла, смазки, топлива" src="../../templates/main/assets/images/categories/img-category-technical.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 5</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 5</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Фармацевтические препараты</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Фармацевтические препараты" src="../../templates/main/assets/images/categories/img-category-pharmacy.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Фармацевтические препараты" src="../../templates/main/assets/images/categories/img-category-pharmacy.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 6</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 6</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Обычные металлы и сплавы</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Обычные металлы и сплавы" src="../../templates/main/assets/images/categories/img-category-metals.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Обычные металлы и сплавы" src="../../templates/main/assets/images/categories/img-category-metals.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 7</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 7</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Машины, станки и двигатели</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Машины, станки и двигатели" src="../../templates/main/assets/images/categories/img-category-engines.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Машины, станки и двигатели" src="../../templates/main/assets/images/categories/img-category-engines.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 8</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 8</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Ручные инструмены</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Ручные инструмены" src="../../templates/main/assets/images/categories/img-category-tools.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Ручные инструмены" src="../../templates/main/assets/images/categories/img-category-tools.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content">
-                          <div class="category-card"><span class="category-card__remark"> класс 9</span>
+                  <div class="categories-cards__element js-show-content__content"><a class="category-card" href="#"><span class="category-card__remark"> класс 9</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Приборы, инструменты, оборудование</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Приборы, инструменты, оборудование" src="../../templates/main/assets/images/categories/img-category-equipment.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Приборы, инструменты, оборудование" src="../../templates/main/assets/images/categories/img-category-equipment.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content _hide">
-                          <div class="category-card"><span class="category-card__remark"> класс 1</span>
+                  <div class="categories-cards__element js-show-content__content _hide"><a class="category-card" href="#"><span class="category-card__remark"> класс 1</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Химические продукты</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Химические продукты" src="../../templates/main/assets/images/categories/img-category-chemistry.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Химические продукты" src="../../templates/main/assets/images/categories/img-category-chemistry.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content _hide">
-                          <div class="category-card"><span class="category-card__remark"> класс 2</span>
+                  <div class="categories-cards__element js-show-content__content _hide"><a class="category-card" href="#"><span class="category-card__remark"> класс 2</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Краски, олифы, лаки</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Краски, олифы, лаки" src="../../templates/main/assets/images/categories/img-category-paints.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Краски, олифы, лаки" src="../../templates/main/assets/images/categories/img-category-paints.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content _hide">
-                          <div class="category-card"><span class="category-card__remark"> класс 3</span>
+                  <div class="categories-cards__element js-show-content__content _hide"><a class="category-card" href="#"><span class="category-card__remark"> класс 3</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Препараты для чистки, парфюмерия и косметика</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Препараты для чистки, парфюмерия и косметика" src="../../templates/main/assets/images/categories/img-category-parfume.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Препараты для чистки, парфюмерия и косметика" src="../../templates/main/assets/images/categories/img-category-parfume.jpg"></div></a>
                   </div>
-                  <div class="categories-cards__element js-show-content__content _hide">
-                          <div class="category-card"><span class="category-card__remark"> класс 4</span>
+                  <div class="categories-cards__element js-show-content__content _hide"><a class="category-card" href="#"><span class="category-card__remark"> класс 4</span>
                             <div class="category-card__text">
                               <h3 class="category-card__title">Технические масла, смазки, топлива</h3>
                             </div>
-                            <div class="category-card__img"><img alt="Технические масла, смазки, топлива" src="../../templates/main/assets/images/categories/img-category-technical.jpg"></div>
-                          </div>
+                            <div class="category-card__img"><img alt="Технические масла, смазки, топлива" src="../../templates/main/assets/images/categories/img-category-technical.jpg"></div></a>
                   </div>
                 </div>
-                <div class="btn-wrapper"><a class="btn-light js-show-content__btn" href="javascript:void(0)">Показать ещё</a></div>
+                <div class="btn-wrapper"><a class="btn-light js-show-content__btn" href="javascript:void(0)" data-hidden="true">Показать ещё</a></div>
               </div>
             </div>
           </div>

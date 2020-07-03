@@ -1,0 +1,5 @@
+mixin blog-element(blog)
+	a.blog-element(href="javascript:void(0)" class!=blog.blogClass)
+		span.blog-element__remark= blog.remarkText
+		h3.blog-element__title= blog.title
+		p.blog-element__text= blog.mainText

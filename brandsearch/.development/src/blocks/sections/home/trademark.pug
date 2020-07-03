@@ -17,7 +17,7 @@ section.section._lightest-gray
 									div.trademark-cards__element.js-show-content__content(class!=val.hiddenClass)
 										+trademark-card(val.text)(class= val.class)
 							div.btn-wrapper
-								a(href="javascript:void(0)").btn-light.js-show-content__btn Показать ещё
+								a(href="javascript:void(0)" data-hidden='true').btn-light.js-show-content__btn Показать ещё
 
 					else
 						div(id=val.id).tabs__content.js-tabs__content.js-show-content
@@ -27,4 +27,5 @@ section.section._lightest-gray
 										+category-card(val)
 
 							div.btn-wrapper
-								a(href="javascript:void(0)").btn-light.js-show-content__btn Показать ещё
+								a(href="javascript:void(0)" data-hidden='true').btn-light.js-show-content__btn Показать ещё
+

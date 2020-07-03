@@ -1,0 +1,95 @@
+.blog-element
+	radius(5px)
+	shadow($box-shadow)
+	height 100%
+	overflow hidden
+	padding 20px 20px 60px 20px
+	position relative
+	background-color $white
+	display block
+
+	&::after
+		pseudo(absolute,40px,40px)
+		radius(50%)
+		right 20px
+		bottom 20px
+		background url("../../../templates/main/assets/images/icons/icon-link-arrow.svg")  $gray--lighten no-repeat center
+
+	+breakpoint-lg()
+		min-height 358px
+
+	&._highlighted
+		background url("../../../templates/main/assets/images/backgrounds/blog-bg.jpg") $highlighted-bg no-repeat
+
+		&::after
+			background url("../../../templates/main/assets/images/icons/icon-link-arrow-white.svg") darken(desaturate($color-highlighted--secondary, 16.82), 8.82) no-repeat center
+
+		.blog-element
+			&__title
+				max-width 496px
+				color $white
+
+				+breakpoint-lg()
+					font-rem(35)
+					line(45,35)
+					margin-bottom 20px
+
+			&__text
+				max-width 496px
+
+	&__title
+		font-rem(24)
+		line(32,24)
+		margin-bottom 8px
+		color $text-color
+
+		+breakpoint-lg()
+			font-rem(28)
+			line(38,28)
+
+	&__text
+		margin-bottom 0
+		color #808895
+
+	&__remark
+		font-rem(15)
+		line(20)
+		radius(3px)
+		@extend .bold
+		padding 4px 12px
+		display inline-block
+		color $white
+		margin-bottom 14px
+		text-transform uppercase
+		background-color $color-highlighted--secondary
+
+		+breakpoint-md()
+			margin-bottom 20px
+
+.blog-list
+	+breakpoint-md()
+		make-row()
+		margin-bottom -32px
+
+	&__element
+		+breakpoint-up-to-md()
+			&:not(:last-child)
+				margin-bottom 10px
+
+		+breakpoint-md()
+			make-col-ready()
+			make-col(6)
+			margin-bottom 32px
+
+		+breakpoint-lg()
+			make-col(4)
+
+		&._w70
+			@extend .hide-up-to-md
+
+			+breakpoint-md()
+				make-col(6)
+
+			+breakpoint-lg()
+				make-col(8)
+
