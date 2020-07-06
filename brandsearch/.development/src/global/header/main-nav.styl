@@ -3,7 +3,8 @@
 	font-family $secondary-font-family
 
 	+breakpoint-up-to-lg()
-		size(30px, 20px)
+		size(40px, 30px)
+		margin-right -3px
 
 	+breakpoint-lg()
 		flex-block()
@@ -59,7 +60,8 @@
 					transform rotate(180deg)
 
 	&__toggle
-		size(30px, 20px)
+		size(40px, 30px)
+		padding 0
 		position relative
 		display block
 		outline none
@@ -72,10 +74,14 @@
 			size(40px, 32px)
 
 		&::before
-			top 0
+			top 5px
+			+breakpoint-lg()
+				top 0
 
 		&::after
-			bottom 0
+			bottom 5px
+			+breakpoint-lg()
+				bottom 0
 
 		&::before
 		&::after
