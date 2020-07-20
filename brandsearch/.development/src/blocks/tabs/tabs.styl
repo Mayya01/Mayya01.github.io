@@ -17,6 +17,7 @@
 		+breakpoint-up-to-md()
 			white-space nowrap
 			overflow-x scroll
+			margin-left -20px
 			margin-right -20px
 
 			&::-webkit-scrollbar
@@ -35,6 +36,10 @@
 		display inline-block
 		border 1px solid $link-color
 		padding 8px 20px
+
+		+breakpoint-up-to-md()
+			&:first-child
+				margin-left 20px
 
 		&:not(:last-child)
 			margin-right 10px
