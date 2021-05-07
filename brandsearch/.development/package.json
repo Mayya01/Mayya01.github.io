@@ -44,7 +44,7 @@
     "gulp-gzip": "^1.4.2",
     "sprity": "^1.0.8",
     "trycatch": "^1.5.21",
-    "underscore": "^1.10.2",
+    "underscore": "^1.12.1",
     "vinyl-buffer": "^1.0.1",
     "browser-sync": "^2.26.7"
   },
